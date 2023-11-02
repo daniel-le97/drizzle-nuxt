@@ -1,0 +1,31 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "migrations": "drizzle-kit generate:pg",
+    "studio": "drizzle-kit studio",
+    "sync": "drizzle-kit push:pg"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "dotenv": "^16.3.1",
+    "drizzle-kit": "^0.19.13",
+    "drizzle-zod": "^0.5.1",
+    "nuxt": "^3.8.0",
+    "nuxt-icon": "^0.6.1",
+    "pg": "^8.11.3",
+    "vue": "^3.3.7",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.28.6",
+    "postgres": "^3.4.2",
+    "trpc-nuxt": "^0.10.12"
+  }
+}
