@@ -1,7 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import {createResolver} from 'nuxt/kit'
-
-const { resolve } = createResolver(import.meta.url)
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -9,6 +6,16 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'nuxt-icon'
   ],
+  // css: ['~/assets/css/main.css'],
+  tailwindcss:{
+    config:{
+     content: [
+     "./node_modules/flowbite/**/*.{js,ts}"],
+     plugins: [require('flowbite/plugin')]
+    },
+    exposeConfig: true,
+    injectPosition: 'last'
+  },
   build: {
     transpile: [
       'trpc-nuxt'
@@ -16,8 +23,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     db: {
-      url: process.env.PG_DB_URL,
-      dir: resolve('./server/db')
+      url: process.env.PG_DB_URL!,
+      dir: './server/db'
     }
   }
 })

@@ -16,7 +16,7 @@ export const insertAuthor = publicProcedure
     .mutation(async ({ input }) => {
         const db = useDb()
 
-        await db.insert(authors).values(input)
+        return await db.insert(authors).values(input)
     })
 
 export const deleteAuthor = publicProcedure

@@ -8,7 +8,7 @@ import postgres from 'postgres';
 // neonConfig.fetchConnectionCache = true;
 
 let sql: postgres.Sql<{}> | null;
-let db: PostgresJsDatabase<Record<string, never>>
+let db: PostgresJsDatabase<Record<string, never>> | null
 
 export const useDb = () => {
     const config = useRuntimeConfig();
@@ -20,7 +20,7 @@ export const useDb = () => {
         throw new Error('Missing db.url in runtime config')
     }
 
-    sql = postgres( config.db.url );
+    sql = postgres( config.db.url, {max: 1} );
     db = drizzle(sql);
 
     return db

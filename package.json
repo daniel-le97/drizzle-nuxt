@@ -14,9 +14,12 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.9.1",
     "dotenv": "^16.3.1",
     "drizzle-kit": "^0.19.13",
     "drizzle-zod": "^0.5.1",
+    "flowbite": "^2.0.0",
+    "flowbite-vue": "^0.1.0",
     "nuxt": "^3.8.0",
     "nuxt-icon": "^0.6.1",
     "pg": "^8.11.3",
@@ -24,8 +27,9 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "0d": "^0.0.1",
     "drizzle-orm": "^0.28.6",
-    "postgres": "^3.4.2",
+    "postgres": "^3.4.3",
     "trpc-nuxt": "^0.10.12"
   }
 }

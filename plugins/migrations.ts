@@ -1,7 +1,9 @@
-import { migrate } from 'drizzle-orm/postgres-js/migrator.js'
+import { migrate } from 'drizzle-orm/postgres-js/migrator'
 import { join } from 'pathe'
 import { useDb } from '../server/utils/db'
-export default defineNitroPlugin(async(nitroApp) => {
+
+
+export default defineNuxtPlugin(async(nuxtApp) => {
     if (process.dev) {
         const { db } = useRuntimeConfig()
 
@@ -9,7 +11,7 @@ export default defineNitroPlugin(async(nitroApp) => {
             throw new Error('Missing db.url in runtime config')
         }
 
-        await migrate(useDb(), { migrationsFolder: join(db.dir, './migrations') }).catch(console.error)
+        await migrate(useDb(), { migrationsFolder: join(db.dir, './migrations') }).catch(() =>console.error('db'))
 
         console.log('Schema and database synced')
     }
