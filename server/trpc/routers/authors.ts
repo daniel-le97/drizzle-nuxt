@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { eq } from 'drizzle-orm'
 import { publicProcedure } from '../trpc'
-import { authors, insertAuthorSchema, selectAuthorSchema } from '../../db/authors'
+import { authors, insertAuthorSchema, selectAuthorSchema } from '../../db/todos'
 
 export const getAuthors = publicProcedure
   .input(selectAuthorSchema)
