@@ -11,12 +11,12 @@ const runtimeConfig = useRuntimeConfig()
 
 // Refer to Auth.js docs for more details
 export const authOptions: AuthConfig = {
-  secret: runtimeConfig.auth.secret,
+  secret: runtimeConfig.authJs.secret,
   adapter: DrizzleAdapter(useDb()),
   providers: [
     GithubProvider({
-      clientId: runtimeConfig.auth.github.clientId,
-      clientSecret: runtimeConfig.auth.github.clientSecret
+      clientId: runtimeConfig.github.clientId,
+      clientSecret: runtimeConfig.github.clientSecret
     })
   ]
 }

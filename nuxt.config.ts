@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  experimental: {
+    componentIslands: true
+  },
   alias: {
     // if not using pnpm
     // cookie: resolve(__dirname, "node_modules/cookie")
@@ -26,10 +29,10 @@ export default defineNuxtConfig({
   },
   authJs: {
     // default configuration
-    verifyClientOnEveryRequest: true,
-    guestRedirectTo: '/', // where to redirect if the user is not authenticated
-    authenticatedRedirectTo: '/', // where to redirect if the user is authenticated
-    baseUrl: 'http://localhost:3000' // should be something like https://www.my-app.com
+    // verifyClientOnEveryRequest: true,
+    guestRedirectTo: '/' // where to redirect if the user is not authenticated
+    // authenticatedRedirectTo: '/', // where to redirect if the user is authenticated
+    // baseUrl: 'http://localhost:3000' // should be something like https://www.my-app.com
   },
   tailwindcss: {
     config: {
@@ -49,12 +52,12 @@ export default defineNuxtConfig({
         verifyClientOnEveryRequest: true, // whether to hit the /auth/session endpoint on every client request
       },
     },
-    auth: {
-      secret: process.env.NUXT_NEXTAUTH_SECRET,
-      github: {
-        clientId: process.env.NUXT_GITHUB_CLIENT_ID,
-        clientSecret: process.env.NUXT_GITHUB_CLIENT_SECRET,
-      },
+    authJs: {
+      secret: process.env.NUXT_NEXTAUTH_SECRET
+    },
+    github: {
+      clientId: process.env.NUXT_GITHUB_CLIENT_ID,
+      clientSecret: process.env.NUXT_GITHUB_CLIENT_SECRET
     },
     db: {
       url: process.env.PG_DB_URL!,
