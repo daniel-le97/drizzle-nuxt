@@ -10,6 +10,16 @@
           Books
         </nuxt-link>
   </div>
+
+<ThemeButton/>
+
+
+
+
+
+
+
+
   <div class="flex lg:hidden ">
   
     <div class="dropdown dropdown-end">
@@ -31,3 +41,7 @@
 </nav>
 
 </template>
+
+<script setup lang="ts">
+import ThemeButton from './ThemeButton.vue';
+</script>

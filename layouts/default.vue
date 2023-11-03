@@ -1,5 +1,5 @@
 <template>
-  <div class=" min-h-screen">
+  <div class=" bg-white min-h-screen">
     <!-- <header class="flex items-center justify-center border-b-2">
       <nav class="flex justify-center gap-8">
         <nuxt-link to="/" class="p-2">

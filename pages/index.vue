@@ -19,9 +19,7 @@ const handleDelete = async (id: string): Promise<void> => {
 
 <template>
   <Hero />
-  <main
-    class="p-8 mt-48 flex flex-col items-center justify-start gap-8 "
-  >
+  <main class="p-8 mt-48 flex flex-col items-center justify-start gap-8">
     <section>
       <h1 class="mb-8 font-bold text-xl">Authors</h1>
       <table class="table bg-white min-w-[300px]">
@@ -52,27 +50,139 @@ const handleDelete = async (id: string): Promise<void> => {
       <AuthorForm />
     </section>
 
-
-
-
     <section>
-
-<div class="rounded-md p-2 card glass w-full">
-
-<div class="flex space-x-4 mx-auto">
-  <div >
-    <img src="https://imgs.search.brave.com/H-lJ3BpWOxay8dqqBF5qIjMeRk2AKZCwa09lkFZymPw/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9kZXZl/bG9wMzY1LmdpdGxh/Yi5pby9udXh0anMt/Mi44LlgtZG9jL2Vu/L2xvZ29zL251eHQu/c3Zn.svg" alt="" class="w-24 h-24">
-  </div>
-  <div >
-    <img src="https://pbs.twimg.com/profile_images/1710017636166193152/7aUeiYMx_400x400.jpg" alt="" class="w-24 h-24 rounded-full">
-  </div>
-  <div >
-    <img src="https://imgs.search.brave.com/M-y4eFtW0iLiem_QarqonoXy8JBysIPMTTo_6-ZaOoE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zZWVr/bG9nby5jb20vaW1h/Z2VzL1QvdGFpbHdp/bmQtY3NzLWxvZ28t/NUFENDE3NTg5Ny1z/ZWVrbG9nby5jb20u/cG5n" alt="" class="w-24 h-24 object-fit">
-  </div>
-</div>
-</div>
-
+      <div class="rounded-md p-2 card glass w-full">
+        <div class="flex space-x-4 mx-auto">
+          <div>
+            <img
+              src="https://imgs.search.brave.com/H-lJ3BpWOxay8dqqBF5qIjMeRk2AKZCwa09lkFZymPw/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9kZXZl/bG9wMzY1LmdpdGxh/Yi5pby9udXh0anMt/Mi44LlgtZG9jL2Vu/L2xvZ29zL251eHQu/c3Zn.svg"
+              alt=""
+              class="w-24 h-24"
+            />
+          </div>
+          <div>
+            <img
+              src="https://pbs.twimg.com/profile_images/1710017636166193152/7aUeiYMx_400x400.jpg"
+              alt=""
+              class="w-24 h-24 rounded-full"
+            />
+          </div>
+          <div>
+            <img
+              src="https://imgs.search.brave.com/M-y4eFtW0iLiem_QarqonoXy8JBysIPMTTo_6-ZaOoE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zZWVr/bG9nby5jb20vaW1h/Z2VzL1QvdGFpbHdp/bmQtY3NzLWxvZ28t/NUFENDE3NTg5Ny1z/ZWVrbG9nby5jb20u/cG5n"
+              alt=""
+              class="w-24 h-24 object-fit"
+            />
+          </div>
+        </div>
+      </div>
     </section>
+
+    <div class="flex mx-auto space-x-4">
+      <div
+        class="rounded-2xl bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-1"
+      >
+        <div class="card shadow-xl bg-white">
+          <div class="card-body items-center text-center">
+            <h2 class="mb-4">Essential</h2>
+            <div
+              class="radial-progress text-indigo-500"
+              style="--value: 20; --size: 10rem; --thickness: 4px"
+            ></div>
+            <div class="stat">
+              <div class="flex items-end mx-auto">
+                <div class="stat-value text-indigo-500">$5</div>
+                <div class="text-sm">/mo</div>
+              </div>
+              <div class="mt-5">
+                Unlimited projects <br />
+                Limited core reports
+                <br />
+                60 day data history
+                <br />7 3 members / projects
+                <br />
+                A/B Testing
+              </div>
+            </div>
+
+            <button class="btn btn-active btn-ghost">Ghost</button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card shadow-xl bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500"
+      >
+        <div class="card-body items-center text-center">
+          <h2 class="mb-4">Premium</h2>
+          <div
+            class="radial-progress text-white"
+            style="--value: 50; --size: 10rem; --thickness: 4px"
+          ></div>
+          <div class="stat">
+            <div class="flex items-end mx-auto">
+              <div class="stat-value text-white">$15</div>
+              <div class="text-sm text-white">/mo</div>
+            </div>
+            <div class="mt-5 text-white">
+              Unlimited projects <br />
+              Limited core reports
+              <br />
+              60 day data history
+              <br />7 3 members / projects
+              <br />
+              A/B Testing
+            </div>
+          </div>
+          <button class="btn text-pink-500 bg-white border-white outline-white">
+            Ghost
+          </button>
+        </div>
+      </div>
+
+    
+          <div
+        class="rounded-2xl bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-1"
+      >
+        <div class="card shadow-xl bg-white">
+          <div class="card-body items-center text-center">
+            <h2 class="mb-4">Essential</h2>
+            <div
+              class="radial-progress text-indigo-500"
+              style="--value: 20; --size: 10rem; --thickness: 4px"
+            ></div>
+            <div class="stat">
+              <div class="flex items-end mx-auto">
+                <div class="stat-value text-indigo-500">$5</div>
+                <div class="text-sm">/mo</div>
+              </div>
+              <div class="mt-5">
+                Unlimited projects <br />
+                Limited core reports
+                <br />
+                60 day data history
+                <br />7 3 members / projects
+                <br />
+                A/B Testing
+              </div>
+            </div>
+
+            <button class="btn btn-active btn-ghost">Ghost</button>
+          </div>
+        </div>
+      </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    '
+    </div>
   </main>
 
   <!-- <section class="flex flex-col space-y-4 justify-center items-center p-10">
