@@ -1,5 +1,5 @@
 <template>
-<div class="text-center flex-col justify-center flex items-center text-indigo-950 mb-8" >
+<div class="text-center flex-col justify-center flex items-center  mb-8" >
 
   <div class="text-4xl font-bold text-center  mb-4">The Pricing Plan</div>
   <div class=" text-center  w-1/2">The most powerful analytics to understand how people use your app or website. Choose from any of our pricing plans that work to fit you as you grow.</div>
@@ -10,7 +10,7 @@
       class="rounded-2xl bg-gradient-to-b from-indigo-500 via-orange-500 to-pink-500 flex items-center justify-center p-1"
     >
       <div class="card shadow-xl bg-white">
-        <div class="card-body items-center text-center text-indigo-950">
+        <div class="card-body items-center text-center text-indigo-950 ">
           <h2 class="mb-4">Starter</h2>
           <div
             class="radial-progress text-indigo-500"

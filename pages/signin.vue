@@ -3,7 +3,7 @@ const { signIn, signOut, session, status, cookies } = useAuth()
 </script>
 
 <template>
-  <div>
+  <div class="pt-24">
     <div class="flex justify-between">
       <a href="/api/auth/signin" class="buttonPrimary">Native Link Sign in</a>
       <button @click="signIn()">

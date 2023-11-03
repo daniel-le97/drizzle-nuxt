@@ -1,7 +1,7 @@
 <template>
   <div
+    class="navbar glass flex-row fixed top-0 w-full p-4 transition-transform duration-500 ease-in-out "
     ref="nav"
-    class="navbar bg-white text-black fixed top-0 w-full p-4 transition-transform duration-500 ease-in-out"
     :style="{ transform: navTransform }"
   >
     <div class="navbar-start">
@@ -50,21 +50,24 @@
         </li>
         <li>
           <NuxtLink to="/signin" exact-active-class="active-link">
-            signin
+            Login
           </NuxtLink>
         </li>
       </ul>
     </div>
-    <div class="navbar-end">
+    <div class="navbar-end space-x-4">
+     <SearchBar/>
+      <ThemeButton />
       <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
           <div class="w-10 rounded-full">
-            <img src="https://i.pravatar.cc">
+
+            <img :src="session?.user?.image ?? 'https://i.pravatar.cc'" />
           </div>
         </label>
         <ul
           tabindex="0"
-          class="menu menu-sm rounded-sm  dropdown-content mt-5 z-[1] shadow-md p-2 bg-white  rounded-box w-52"
+          class="menu menu-sm rounded-sm dropdown-content mt-5 z-[1] shadow-md p-2 bg-white rounded-box w-52"
         >
           <li>
             <a class="justify-between">
@@ -73,7 +76,7 @@
             </a>
           </li>
           <li><a>Settings</a></li>
-          <li><ThemeButton /></li>
+
           <li><a>Logout</a></li>
         </ul>
       </div>
@@ -82,10 +85,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import ThemeButton from './ThemeButton.vue'
-
-const nav = ref(null)
+import ThemeButton from "./ThemeButton.vue";
+import { ref } from "vue";
+const {session} = useAuth()
+const nav = ref(null);
 
 const navTransform = ref('translateY(0)')
 let lastScrollPosition = 0
