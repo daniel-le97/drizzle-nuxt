@@ -27,9 +27,9 @@ export default defineNuxtConfig({
   authJs: {
     // default configuration
     verifyClientOnEveryRequest: true,
-    guestRedirectTo: "/", // where to redirect if the user is not authenticated
-    authenticatedRedirectTo: "/", // where to redirect if the user is authenticated
-    baseUrl: "", // should be something like https://www.my-app.com
+    guestRedirectTo: '/', // where to redirect if the user is not authenticated
+    authenticatedRedirectTo: '/', // where to redirect if the user is authenticated
+    baseUrl: 'http://localhost:3000' // should be something like https://www.my-app.com
   },
   tailwindcss: {
     config: {
