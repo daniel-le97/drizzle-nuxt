@@ -1,3 +1,4 @@
+/* eslint-disable node/prefer-global/process */
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   experimental: {
@@ -36,10 +37,11 @@ export default defineNuxtConfig({
   },
   tailwindcss: {
     config: {
-      plugins: [require('daisyui')],
+      plugins: [await import('daisyui')],
     },
     exposeConfig: true,
     injectPosition: 'last',
+    // @ts-expect-error this is needed for themes
     darkMode: 'class',
     daisyui: {
       theme: [],

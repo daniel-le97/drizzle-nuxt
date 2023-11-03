@@ -1,3 +1,4 @@
+/* eslint-disable node/prefer-global/process */
 import type { Config } from 'drizzle-kit'
 import { config } from 'dotenv'
 
