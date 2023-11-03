@@ -7,14 +7,10 @@
   >
     <div class="hero-overlay"></div>
     <div class="hero-content text-center">
-      <div class="max-w-md">
-        <h1 class="mb-5 text-7xl font-bold">Hello there</h1>
-        <p class="mb-5">
-          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-          excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a
-          id nisi.
-        </p>
-        <button class="btn btn-primary">Get Started</button>
+      <div class="">
+        <h1 class="mb-5 text-8xl font-bold">Hello there</h1>
+       
+      
       </div>
     </div>
 
