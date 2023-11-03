@@ -1,7 +1,7 @@
 <template>
   <div
-    class="navbar bg-white text-black fixed top-0 w-full p-4 transition-transform duration-500 ease-in-out"
     ref="nav"
+    class="navbar bg-white text-black fixed top-0 w-full p-4 transition-transform duration-500 ease-in-out"
     :style="{ transform: navTransform }"
   >
     <div class="navbar-start">
@@ -49,8 +49,8 @@
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/about" exact-active-class="active-link">
-            About
+          <NuxtLink to="/signin" exact-active-class="active-link">
+            signin
           </NuxtLink>
         </li>
       </ul>
@@ -59,7 +59,7 @@
       <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
           <div class="w-10 rounded-full">
-            <img src="https://i.pravatar.cc" />
+            <img src="https://i.pravatar.cc">
           </div>
         </label>
         <ul
@@ -82,37 +82,37 @@
 </template>
 
 <script setup lang="ts">
-import ThemeButton from "./ThemeButton.vue";
-import { ref } from "vue";
+import { ref } from 'vue'
+import ThemeButton from './ThemeButton.vue'
 
-const nav = ref(null);
+const nav = ref(null)
 
-const navTransform = ref("translateY(0)");
-let lastScrollPosition = 0;
+const navTransform = ref('translateY(0)')
+let lastScrollPosition = 0
 
 const handleScroll = () => {
-  const scrollY = window.scrollY;
+  const scrollY = window.scrollY
 
   if (scrollY > lastScrollPosition) {
     // Scrolling down, hide the navigation
-    navTransform.value = "translateY(-100%)";
+    navTransform.value = 'translateY(-100%)'
   } else {
     // Scrolling up, show the navigation
-    navTransform.value = "translateY(0)";
+    navTransform.value = 'translateY(0)'
   }
 
-  lastScrollPosition = scrollY;
-};
+  lastScrollPosition = scrollY
+}
 
 // Add scroll event listener when the component is mounted
 onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
-});
+  window.addEventListener('scroll', handleScroll)
+})
 
 // Remove scroll event listener when the component is unmounted
 onBeforeUnmount(() => {
-  window.removeEventListener("scroll", handleScroll);
-});
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <style scoped>

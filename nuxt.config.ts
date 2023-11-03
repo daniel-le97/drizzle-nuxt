@@ -6,26 +6,26 @@ export default defineNuxtConfig({
   alias: {
     // if not using pnpm
     // cookie: resolve(__dirname, "node_modules/cookie")
-    cookie: "cookie",
+    cookie: 'cookie'
   },
   devtools: { enabled: true },
   modules: [
-    "@nuxtjs/tailwindcss",
-    "nuxt-icon",
-    "@hebilicious/authjs-nuxt",
-    "@vueuse/nuxt",
-    "@nuxtjs/color-mode",
+    '@nuxtjs/tailwindcss',
+    'nuxt-icon',
+    '@hebilicious/authjs-nuxt',
+    '@vueuse/nuxt',
+    '@nuxtjs/color-mode'
   ],
 
   colorMode: {
-    preference: "system", // default value of $colorMode.preference
-    fallback: "light", // fallback value if not system preference found
-    hid: "nuxt-color-mode-script",
-    globalName: "__NUXT_COLOR_MODE__",
-    componentName: "ColorScheme",
-    classPrefix: "",
-    classSuffix: "-mode",
-    storageKey: "nuxt-color-mode",
+    preference: 'system', // default value of $colorMode.preference
+    fallback: 'light', // fallback value if not system preference found
+    hid: 'nuxt-color-mode-script',
+    globalName: '__NUXT_COLOR_MODE__',
+    componentName: 'ColorScheme',
+    classPrefix: '',
+    classSuffix: '-mode',
+    storageKey: 'nuxt-color-mode'
   },
   authJs: {
     // default configuration
@@ -36,21 +36,21 @@ export default defineNuxtConfig({
   },
   tailwindcss: {
     config: {
-      plugins: [require("daisyui")],
+      plugins: [require('daisyui')]
     },
     exposeConfig: true,
-    injectPosition: "last",
-    darkMode: "class",
+    injectPosition: 'last',
+    darkMode: 'class'
   },
   build: {
-    transpile: ["trpc-nuxt"],
+    transpile: ['trpc-nuxt']
   },
   runtimeConfig: {
     public: {
       authJs: {
         baseUrl: process.env.NUXT_NEXTAUTH_URL, // The URL of your deployed app (used for origin Check in production)
-        verifyClientOnEveryRequest: true, // whether to hit the /auth/session endpoint on every client request
-      },
+        verifyClientOnEveryRequest: true // whether to hit the /auth/session endpoint on every client request
+      }
     },
     authJs: {
       secret: process.env.NUXT_NEXTAUTH_SECRET
@@ -61,7 +61,7 @@ export default defineNuxtConfig({
     },
     db: {
       url: process.env.PG_DB_URL!,
-      dir: "./server/db",
-    },
-  },
-});
+      dir: './server/db'
+    }
+  }
+})
