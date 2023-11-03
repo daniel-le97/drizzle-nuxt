@@ -11,7 +11,7 @@
           >
             Nuxt Drizzle Made Beautiful with Tailwind
           </h1>
-          <p class="text-lg font-bold text-white mt-4">Simplify Development</p>
+          <p class="text-lg font-bold  mt-4">Simplify Development</p>
         </div>
       </div>
     </Transition>

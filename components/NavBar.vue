@@ -59,11 +59,15 @@
      <SearchBar/>
       <ThemeButton />
       <div class="dropdown dropdown-end">
-        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-          <div class="w-10 rounded-full">
+        <label tabindex="0" class="btn btn-ghost btn-circle avatar mask mask-hexagon">
 
-            <img :src="session?.user?.image ?? 'https://i.pravatar.cc'" />
-          </div>
+   <div class="avatar">
+        <div class="w-10 mask mask-hexagon">
+          <img :src="session?.user?.image ?? 'https://i.pravatar.cc'" />
+        </div>
+      </div>
+
+
         </label>
         <ul
           tabindex="0"

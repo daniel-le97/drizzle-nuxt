@@ -25,11 +25,9 @@
 </template>
 
 <script setup lang="ts">
-const colorMode = useColorMode()
-function changeTheme(theme:string){
-  colorMode.value = theme
+function changeTheme(){
+  
 }
-
 
 </script>
 
