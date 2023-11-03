@@ -1,11 +1,12 @@
 <template>
-
-  <div class="absolute z-50 -bottom-44 w-4/5 flex justify-center">
-      <div class="card h-96 ">
-        <div
-          class="card-body flex-row space-x-4 items-center justify-center p-4"
-        >
-          <div class="card w-1/3 h-full glass text-black shadow-xl">
+  <div class="absolute z-50 -bottom-44 w-4/5 flex justify-center" ref="target">
+    <div class="card h-96">
+      <div class="card-body flex-row space-x-4 items-center justify-center p-4">
+        <Transition >
+          <div
+            class="card w-1/3 h-full glass text-black shadow-xl"
+            v-if="targetIsVisible"
+          >
             <div class="card-body">
               <img
                 src="https://imgs.search.brave.com/H-lJ3BpWOxay8dqqBF5qIjMeRk2AKZCwa09lkFZymPw/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9kZXZl/bG9wMzY1LmdpdGxh/Yi5pby9udXh0anMt/Mi44LlgtZG9jL2Vu/L2xvZ29zL251eHQu/c3Zn.svg"
@@ -20,8 +21,12 @@
               </p>
             </div>
           </div>
-
-          <div class="card w-1/3 h-full glass text-black shadow-xl">
+        </Transition>
+        <Transition>
+          <div
+            class="card w-1/3 h-full glass text-black shadow-xl"
+            v-if="targetIsVisible"
+          >
             <div class="card-body">
               <img
                 src="https://pbs.twimg.com/profile_images/1710017636166193152/7aUeiYMx_400x400.jpg"
@@ -36,9 +41,13 @@
                 there when you need it.
               </p>
             </div>
-          </div>
-
-          <div class="card w-1/3 h-full glass text-black shadow-xl">
+          </div></Transition
+        >
+        <Transition>
+          <div
+            class="card w-1/3 h-full glass text-black shadow-xl"
+            v-if="targetIsVisible"
+          >
             <div class="card-body">
               <img
                 src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg"
@@ -54,15 +63,25 @@
               </p>
             </div>
           </div>
-        </div>
+        </Transition>
       </div>
     </div>
+  </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
+import { useIntersectionObserver } from "@vueuse/core";
+const target = ref(null);
+const targetIsVisible = ref(false);
 
+const { stop } = useIntersectionObserver(
+  target,
+  ([{ isIntersecting }], observerElement) => {
+    targetIsVisible.value = isIntersecting;
+  }
+);
 </script>
-
 
 <style>
 
