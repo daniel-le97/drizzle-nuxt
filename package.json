@@ -13,13 +13,13 @@
     "push": "drizzle-kit push:pg",
     "sync": "pnpm run generate:server && pnpm run push",
     "upgrade": "pnpm dlx taze major -w && pnpm i",
-    "lint": "eslint --max-warnings 0 --fix ."
+    "lint": "eslint . --fix"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^1.1.0",
     "@auth/core": "^0.18.0",
     "@nuxt/devtools": "latest",
     "@nuxtjs/color-mode": "^3.3.0",
-    "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/tailwindcss": "^6.9.3",
     "concurrently": "^8.2.2",
     "daisyui": "^3.9.4",
