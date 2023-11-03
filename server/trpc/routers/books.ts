@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { eq } from 'drizzle-orm'
 import { publicProcedure } from '../trpc'
-import { insertBookSchema, books } from '../../db/books'
+import { books, insertBookSchema } from '../../db/books'
 
 export const getBooks = publicProcedure
   .query(async () => {
@@ -20,7 +20,7 @@ export const insertBook = publicProcedure
 
 export const deleteBook = publicProcedure
   .input(z.object({
-    id: z.string()
+    id: z.string(),
   }))
   .mutation(async ({ input }) => {
     const db = useDb()

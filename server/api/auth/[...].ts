@@ -1,8 +1,8 @@
 import GithubProvider from '@auth/core/providers/github'
 import type { AuthConfig } from '@auth/core/types'
-// eslint-disable-next-line import/named
-import { NuxtAuthHandler } from '#auth'
+
 import { DrizzleAdapter } from '@auth/drizzle-adapter'
+import { NuxtAuthHandler } from '#auth'
 
 // The #auth virtual import comes from this module. You can use it on the client
 // and server side, however not every export is universal. For example do not
@@ -16,9 +16,9 @@ export const authOptions: AuthConfig = {
   providers: [
     GithubProvider({
       clientId: runtimeConfig.github.clientId,
-      clientSecret: runtimeConfig.github.clientSecret
-    })
-  ]
+      clientSecret: runtimeConfig.github.clientSecret,
+    }),
+  ],
 }
 
 export default NuxtAuthHandler(authOptions, runtimeConfig)

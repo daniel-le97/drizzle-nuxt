@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { eq } from 'drizzle-orm'
 import { publicProcedure } from '../trpc'
-import { insertAuthorSchema, authors, selectAuthorSchema } from '../../db/authors'
+import { authors, insertAuthorSchema, selectAuthorSchema } from '../../db/authors'
 
 export const getAuthors = publicProcedure
   .input(selectAuthorSchema)
@@ -19,7 +19,7 @@ export const insertAuthor = publicProcedure
 
 export const deleteAuthor = publicProcedure
   .input(z.object({
-    id: z.string().nonempty()
+    id: z.string().nonempty(),
   }))
   .mutation(async ({ input }) => {
     const db = useDb()

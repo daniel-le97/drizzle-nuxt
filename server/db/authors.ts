@@ -9,9 +9,9 @@ export const authors = pgTable('authors', {
   id,
   firstName: text('firstName'),
   lastName: text('lastName'),
-  ...timestamps
+  ...timestamps,
 }, t => ({
-  name: unique().on(t.firstName, t.lastName)
+  name: unique().on(t.firstName, t.lastName),
 }))
 
 // Expose authorId for other tables to prevent errors in repetition

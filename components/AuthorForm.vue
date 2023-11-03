@@ -4,13 +4,12 @@ const { $client } = useNuxtApp()
 const initialState = {
   id: '',
   firstName: '',
-  lastName: ''
+  lastName: '',
 }
 
 const input = reactive({ ...initialState })
 
-
-const handleSubmit = async (e: Event) => {
+async function handleSubmit(e: Event) {
   e.preventDefault()
 
   await $client.insertAuthor.mutate(input)
@@ -19,18 +18,19 @@ const handleSubmit = async (e: Event) => {
   Object.assign(input, initialState)
 
   refreshNuxtData('authors')
-
 }
 </script>
 
 <template>
-  <form @submit="handleSubmit" class="grid grid-cols-12 gap-x-4">
-    <TextInput label="Firstname" v-model="input.firstName" class="col-span-6"/>
+  <form class="grid grid-cols-12 gap-x-4" @submit="handleSubmit">
+    <TextInput v-model="input.firstName" label="Firstname" class="col-span-6" />
 
-    <TextInput label="Lastname" v-model="input.lastName" class="col-span-6"/>
+    <TextInput v-model="input.lastName" label="Lastname" class="col-span-6" />
 
     <div class="mt-4 col-span-12 flex">
-      <button type="submit" class="px-3 py-1 rounded-lg bg-slate-600">Save</button>
+      <button type="submit" class="px-3 py-1 rounded-lg bg-slate-600">
+        Save
+      </button>
     </div>
   </form>
 </template>

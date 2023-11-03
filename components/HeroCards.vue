@@ -1,3 +1,18 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+import { useIntersectionObserver } from '@vueuse/core'
+
+const target = ref(null)
+const targetIsVisible = ref(false)
+
+const { stop } = useIntersectionObserver(
+  target,
+  ([{ isIntersecting }], observerElement) => {
+    targetIsVisible.value = isIntersecting
+  },
+)
+</script>
+
 <template>
   <div ref="target" class="absolute z-50 -bottom-44 w-4/5 flex justify-center">
     <div class="card h-96">
@@ -74,20 +89,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { ref } from 'vue'
-import { useIntersectionObserver } from '@vueuse/core'
-const target = ref(null)
-const targetIsVisible = ref(false)
-
-const { stop } = useIntersectionObserver(
-  target,
-  ([{ isIntersecting }], observerElement) => {
-    targetIsVisible.value = isIntersecting
-  }
-)
-</script>
 
 <style>
 

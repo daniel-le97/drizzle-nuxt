@@ -12,5 +12,5 @@ export const id = pg.char('id').primaryKey()
 // Timestamps is inspired by the Mongoose "timestamps" option to provide automated timestamps for create and update actions
 export const timestamps = {
   createdAt,
-  updatedAt
+  updatedAt,
 }

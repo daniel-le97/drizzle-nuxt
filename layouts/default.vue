@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import NavBar from '~/components/NavBar.vue'
+import Footer from '~/components/Footer.vue'
+</script>
+
 <template>
   <div class="  min-h-screen">
     <!-- <header class="flex items-center justify-center border-b-2">
@@ -17,7 +22,3 @@
     <Footer />
   </div>
 </template>
-<script setup lang="ts">
-import NavBar from '~/components/NavBar.vue'
-import Footer from '~/components/Footer.vue'
-</script>

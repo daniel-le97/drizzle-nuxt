@@ -6,14 +6,14 @@ export default defineNuxtConfig({
   alias: {
     // if not using pnpm
     // cookie: resolve(__dirname, "node_modules/cookie")
-    cookie: "cookie",
+    cookie: 'cookie',
   },
   devtools: { enabled: true },
   modules: [
-    "@nuxtjs/tailwindcss",
-    "nuxt-icon",
-    "@hebilicious/authjs-nuxt",
-    "@vueuse/nuxt",
+    '@nuxtjs/tailwindcss',
+    'nuxt-icon',
+    '@hebilicious/authjs-nuxt',
+    '@vueuse/nuxt',
     // "@nuxtjs/color-mode",
   ],
 
@@ -30,23 +30,23 @@ export default defineNuxtConfig({
   authJs: {
     // default configuration
     // verifyClientOnEveryRequest: true,
-    guestRedirectTo: "/", // where to redirect if the user is not authenticated
+    guestRedirectTo: '/', // where to redirect if the user is not authenticated
     // authenticatedRedirectTo: '/', // where to redirect if the user is authenticated
     // baseUrl: 'http://localhost:3000' // should be something like https://www.my-app.com
   },
   tailwindcss: {
     config: {
-      plugins: [require("daisyui")],
+      plugins: [require('daisyui')],
     },
     exposeConfig: true,
-    injectPosition: "last",
-    darkMode: "class",
+    injectPosition: 'last',
+    darkMode: 'class',
     daisyui: {
-     theme:[]
+      theme: [],
     },
   },
   build: {
-    transpile: ["trpc-nuxt"],
+    transpile: ['trpc-nuxt'],
   },
   runtimeConfig: {
     public: {
@@ -64,7 +64,7 @@ export default defineNuxtConfig({
     },
     db: {
       url: process.env.PG_DB_URL!,
-      dir: "./server/db",
+      dir: './server/db',
     },
   },
-});
+})

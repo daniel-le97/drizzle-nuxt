@@ -1,8 +1,15 @@
+<script setup lang="ts">
+const isvisible = ref(false)
+onMounted(() => {
+  isvisible.value = !isvisible.value
+})
+</script>
+
 <template>
   <div class="hero min-h-screen relative">
     <!-- <div class="hero-overlay"></div> -->
     <Transition name="slide-fade">
-      <div class="hero-content text-center" v-if="isvisible">
+      <div v-if="isvisible" class="hero-content text-center">
         <div
           class="mx-auto text-center flex flex-col items-center justify-center w-2/3"
         >
@@ -11,7 +18,9 @@
           >
             Nuxt Drizzle Made Beautiful with Tailwind
           </h1>
-          <p class="text-lg font-bold  mt-4">Simplify Development</p>
+          <p class="text-lg font-bold  mt-4">
+            Simplify Development
+          </p>
         </div>
       </div>
     </Transition>
@@ -19,13 +28,6 @@
     <HeroCards />
   </div>
 </template>
-
-<script setup lang="ts">
-const isvisible = ref(false);
-onMounted(() => {
-  isvisible.value = !isvisible.value;
-});
-</script>
 
 <style>
 .slide-fade-enter-active {

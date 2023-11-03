@@ -1,11 +1,47 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+import ThemeButton from './ThemeButton.vue'
+
+const { session } = useAuth()
+const nav = ref(null)
+
+const navTransform = ref('translateY(0)')
+let lastScrollPosition = 0
+
+function handleScroll() {
+  const scrollY = window.scrollY
+
+  if (scrollY > lastScrollPosition) {
+    // Scrolling down, hide the navigation
+    navTransform.value = 'translateY(-100%)'
+  }
+  else {
+    // Scrolling up, show the navigation
+    navTransform.value = 'translateY(0)'
+  }
+
+  lastScrollPosition = scrollY
+}
+
+// Add scroll event listener when the component is mounted
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+// Remove scroll event listener when the component is unmounted
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+</script>
+
 <template>
   <div
-    class="navbar glass flex-row fixed top-0 w-full p-4 transition-transform duration-500 ease-in-out "
     ref="nav"
+    class="navbar glass flex-row fixed top-0 w-full p-4 transition-transform duration-500 ease-in-out "
     :style="{ transform: navTransform }"
   >
     <div class="navbar-start">
-      <!--//NOTE -  MOBILE MENU -->
+      <!-- //NOTE -  MOBILE MENU -->
       <div class="dropdown">
         <label tabindex="0" class="btn btn-ghost lg:hidden">
           <svg
@@ -38,7 +74,7 @@
           <li><a>Item 3</a></li>
         </ul>
       </div>
-      <!--//NOTE -  MOBILE MENU -->
+      <!-- //NOTE -  MOBILE MENU -->
       <a class="btn text-xl bg-black text-white">Drizzle Nuxt</a>
     </div>
     <div class="navbar-center hidden lg:flex">
@@ -54,20 +90,18 @@
           </NuxtLink>
         </li>
       </ul>
-      
     </div>
     <div class="navbar-end space-x-4">
-     <SearchBar/>
+      <SearchBar />
       <ThemeButton />
       <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-circle avatar mask mask-hexagon">
 
-   <div class="avatar">
-        <div class="w-10 mask mask-hexagon">
-          <img :src="session?.user?.image ?? 'https://i.pravatar.cc'" />
-        </div>
-      </div>
-
+          <div class="avatar">
+            <div class="w-10 mask mask-hexagon">
+              <img :src="session?.user?.image ?? 'https://i.pravatar.cc'">
+            </div>
+          </div>
 
         </label>
         <ul
@@ -88,40 +122,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import ThemeButton from "./ThemeButton.vue";
-import { ref } from "vue";
-const {session} = useAuth()
-const nav = ref(null);
-
-const navTransform = ref('translateY(0)')
-let lastScrollPosition = 0
-
-const handleScroll = () => {
-  const scrollY = window.scrollY
-
-  if (scrollY > lastScrollPosition) {
-    // Scrolling down, hide the navigation
-    navTransform.value = 'translateY(-100%)'
-  } else {
-    // Scrolling up, show the navigation
-    navTransform.value = 'translateY(0)'
-  }
-
-  lastScrollPosition = scrollY
-}
-
-// Add scroll event listener when the component is mounted
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
-
-// Remove scroll event listener when the component is unmounted
-onBeforeUnmount(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
-</script>
 
 <style scoped>
 .navbar {

@@ -7,16 +7,16 @@ export const appRouter = router({
   hello: publicProcedure
     .input(
       z.object({
-        text: z.string().nullish()
-      })
+        text: z.string().nullish(),
+      }),
     )
     .query(({ input }) => {
       return {
-        greeting: `hello ${input?.text ?? 'world'}`
+        greeting: `hello ${input?.text ?? 'world'}`,
       }
     }),
   getAuthors,
-  getBooks
+  getBooks,
 })
 
 // export type definition of API

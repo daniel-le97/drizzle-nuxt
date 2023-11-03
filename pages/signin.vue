@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { signIn, signOut, session, status, cookies } = useAuth();
+const { signIn, signOut, session, status, cookies } = useAuth()
 </script>
 
 <template>
@@ -12,20 +12,24 @@ const { signIn, signOut, session, status, cookies } = useAuth();
           <a href="/api/auth/signin" class="btn">Native Link Sign in</a>
         </li>
         <li v-if="!session" class="mx-auto">
-          <button class=" p-0 m-0 rounded-full w-fit" @click="signIn()"> <Icon name="uil:github" class="text-5xl" /> </button>
+          <button class=" p-0 m-0 rounded-full w-fit" @click="signIn()">
+            <Icon name="uil:github" class="text-5xl" />
+          </button>
         </li>
         <li v-if="session" class="mx-auto">
-          <button class="p-0 m-0 rounded-full w-fit" @click="signOut()"><Icon name="uil:signout" class="text-5xl" /></button>
+          <button class="p-0 m-0 rounded-full w-fit" @click="signOut()">
+            <Icon name="uil:signout" class="text-5xl" />
+          </button>
         </li>
       </ul>
     </div>
     <div
-      class=" mt-10 p-10 card glass flex flex-wrap items-center justify-center"
       v-if="session"
+      class=" mt-10 p-10 card glass flex flex-wrap items-center justify-center"
     >
       <div class="avatar">
         <div class="w-24 mask mask-hexagon">
-          <img :src="session?.user?.image" />
+          <img :src="session?.user?.image">
         </div>
       </div>
 
@@ -38,11 +42,13 @@ const { signIn, signOut, session, status, cookies } = useAuth();
         </li>
       </ul>
 
-      <div class="btn mb-4 text-xl">{{ status }}</div>
+      <div class="btn mb-4 text-xl">
+        {{ status }}
+      </div>
     </div>
     <div
-      class="p-10 card glass flex flex-wrap items-center justify-center"
       v-else
+      class="p-10 card glass flex flex-wrap items-center justify-center"
     >
       <div>Status: {{ status }}</div>
 
@@ -50,7 +56,7 @@ const { signIn, signOut, session, status, cookies } = useAuth();
         <div class="w-24 mask mask-hexagon">
           <img
             src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?w=1380&t=st=1699040982~exp=1699041582~hmac=b530ae55be4c26bd548d06486921e5975545322afb3117750615d803386aea59"
-          />
+          >
         </div>
       </div>
       <div>
@@ -65,9 +71,9 @@ const { signIn, signOut, session, status, cookies } = useAuth();
       </div>
     </div>
 
-     <div data-theme="light">
-    This div will always use light theme
-    <span data-theme="retro">This span will always use retro theme!</span>
-  </div>
+    <div data-theme="light">
+      This div will always use light theme
+      <span data-theme="retro">This span will always use retro theme!</span>
+    </div>
   </main>
 </template>
