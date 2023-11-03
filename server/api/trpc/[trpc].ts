@@ -1,9 +1,9 @@
 import { createNuxtApiHandler } from 'trpc-nuxt'
-import { appRouter } from '../../trpc/routers'
-import { createContext } from '../../trpc/context'
+import { appRouter } from '~/server/trpc/routers'
+import { createContext } from '~/server/trpc/context'
 
 /**
- * One tRPC handler to handle all the routs. You could apply additional cache headers here
+ * One tRPC handler to handle all the routes. You could apply additional cache headers here
  */
 export default createNuxtApiHandler({
   router: appRouter,

@@ -1,7 +1,6 @@
 import { z } from 'zod'
 import { publicProcedure, router } from '../trpc'
-import { getAuthors } from './authors'
-import { getBooks } from './books'
+import { todosRouter } from '~/server/trpc/routers/todos'
 
 export const appRouter = router({
   hello: publicProcedure
@@ -15,8 +14,7 @@ export const appRouter = router({
         greeting: `hello ${input?.text ?? 'world'}`,
       }
     }),
-  getAuthors,
-  getBooks,
+  todos: todosRouter,
 })
 
 // export type definition of API

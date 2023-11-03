@@ -7,6 +7,7 @@ import postgres from 'postgres'
 
 // neonConfig.fetchConnectionCache = true;
 
+// eslint-disable-next-line ts/ban-types
 let sql: postgres.Sql<{}> | null
 let db: PostgresJsDatabase<Record<string, never>> | null
 
