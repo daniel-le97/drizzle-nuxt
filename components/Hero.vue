@@ -1,32 +1,68 @@
 <template>
   <div
     class="hero min-h-screen relative"
-    style="
-      background-image: url(https://images.unsplash.com/photo-1696789738783-0f972304597e?auto=format&fit=crop&q=80&w=1287&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    "
+ 
+    
   >
-    <div class="hero-overlay"></div>
+    <!-- <div class="hero-overlay"></div> -->
     <div class="hero-content text-center">
-      <div class="">
-        <h1 class="mb-5 text-8xl font-bold">Hello there</h1>
-       
-      
+      <div
+        class="mx-auto text-center flex flex-col items-center justify-center w-2/3"
+      >
+        <h1
+          class="gradient-text text-center font-extrabold tracking-tight text-6xl"
+        >
+          Nuxt Drizzle Made Beautiful with Tailwind
+        </h1>
+        <p class="text-lg font-bold text-white mt-4">Simplify Development</p>
       </div>
     </div>
 
-     <!-- GLASS CARD -->
-    <div class="absolute -bottom-44 w-2/3 flex justify-center">
-      <div class="card w-full h-96 glass ">
-        <div class="card-body text-center">
-          <h2 class="text-5xl font-bold text-black"><span class="text-green-400">Nuxt</span> + <span class=" text-lime-300">Drizzle</span></h2>
-          <div class="text-5xl font-bold text-center"> <span class=" text-teal-400">Tailwind</span></div>
-        </div>
-      </div>
-    </div>
+<HeroCards/>
+  
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
+<style>
+.gradient-text {
+  @apply bg-clip-text text-transparent;
+  @apply bg-gradient-to-br from-indigo-500 via-orange-500 to-pink-500;
 
-</script>
+  /* Add a white outline to the text */
+  -webkit-text-stroke: 1px white; /* For Webkit-based browsers (Safari and Chrome) */
+  text-stroke: 1px white; /* Standard property, not supported in all browsers */
+
+  /* Add a slight text shadow as a fallback */
+  text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.hero{
+ 
+  /* always scale the image to the appropriate size of your screen */
+  background-size: cover;
+  background-image: url(https://images.unsplash.com/photo-1632516643720-e7f5d7d6ecc9?auto=format&fit=crop&q=80&w=1311&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  
+  background-position: top;
+  /* keeps the image fixed while scrolling , neat effect. */
+  background-attachment: fixed; 
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  bottom:0;
+  z-index: 10;
+  left: 0;
+  width: 100%;
+
+  height: 300px; /* adjust height as per your need */
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    #fff
+  ); /* adjust the color as per your need */
+}
+
+</style>

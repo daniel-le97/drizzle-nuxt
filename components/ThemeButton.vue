@@ -1,15 +1,14 @@
 <template>
-  <button ref="themeBtn" @click="changeTheme()">
-    <!-- <Icon icon="mdi:star" />
-    -->
-    THEME
-  </button>
+  <button type="button">THEME</button>
 </template>
 <script setup lang="ts">
-const themeBtn = ref(null);
-
-function changeTheme(){
-  console.log("sdf");
-
-};
+// const themeBtn = ref(null);
+import { onMounted } from "vue";
+onMounted(() => {
+  console.log( "243523451");
+}),
+  function changeTheme(string) {
+    console.log(string);
+    return;
+  };
 </script>
