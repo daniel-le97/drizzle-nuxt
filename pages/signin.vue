@@ -64,5 +64,10 @@ const { signIn, signOut, session, status, cookies } = useAuth();
         </ul>
       </div>
     </div>
+
+     <div data-theme="light">
+    This div will always use light theme
+    <span data-theme="retro">This span will always use retro theme!</span>
+  </div>
   </main>
 </template>

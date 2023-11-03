@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@hebilicious/authjs-nuxt",
     "@vueuse/nuxt",
-    "@nuxtjs/color-mode",
+    // "@nuxtjs/color-mode",
   ],
 
   // colorMode: {
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
     injectPosition: "last",
     darkMode: "class",
     daisyui: {
-      themes: ["light", "dark", "cupcake"],
+     theme:[]
     },
   },
   build: {

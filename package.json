@@ -39,6 +39,7 @@
     "@vueuse/nuxt": "^10.5.0",
     "drizzle-orm": "^0.28.6",
     "postgres": "^3.4.3",
+    "theme-change": "^2.5.0",
     "trpc-nuxt": "^0.10.12"
   }
 }

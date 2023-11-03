@@ -54,6 +54,7 @@
           </NuxtLink>
         </li>
       </ul>
+      
     </div>
     <div class="navbar-end space-x-4">
      <SearchBar/>
