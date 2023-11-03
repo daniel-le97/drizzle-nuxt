@@ -37,7 +37,7 @@ export default defineNuxtConfig({
   },
   tailwindcss: {
     config: {
-      plugins: [await import('daisyui')],
+      plugins: [import('daisyui')],
     },
     exposeConfig: true,
     injectPosition: 'last',

@@ -1,3 +1,4 @@
+/* eslint-disable node/prefer-global/process */
 import { migrate } from 'drizzle-orm/postgres-js/migrator'
 import { join } from 'pathe'
 import { useLogger } from '@nuxt/kit'
