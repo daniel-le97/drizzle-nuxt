@@ -8,7 +8,7 @@ import {H3Event} from 'h3'
 
 export const createContext = (event: H3Event) => {
     return {
-
+        me: 'daniel'
     }
 }
 

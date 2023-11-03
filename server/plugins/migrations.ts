@@ -1,9 +1,9 @@
 import { migrate } from 'drizzle-orm/postgres-js/migrator'
 import { join } from 'pathe'
-import { useDb } from '../server/utils/db'
+import { useDb } from '~/server/utils/db'
 
 
-export default defineNuxtPlugin(async(nuxtApp) => {
+export default defineNitroPlugin(async(nitroApp) => {
     if (process.dev) {
         const { db } = useRuntimeConfig()
 
