@@ -3,8 +3,8 @@
     <div class="flex-1">
       <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
 
-      <nuxt-link to="/" class="p-2"> Authors </nuxt-link>
-      <nuxt-link to="/books" class="p-2"> Books </nuxt-link>
+      <nuxt-link to="/" class="p-2"> Home </nuxt-link>
+  
     </div>
 
     <ThemeButton />
