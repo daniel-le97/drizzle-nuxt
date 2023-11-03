@@ -67,7 +67,7 @@ export default defineNuxtConfig({
       clientSecret: process.env.NUXT_GITHUB_CLIENT_SECRET,
     },
     db: {
-      url: process.env.PG_DB_URL!,
+      url: process.env.PG_DB_URL,
       dir: './server/db',
     },
   },
