@@ -1,5 +1,7 @@
-import type {Config} from 'drizzle-kit'
-require('dotenv').config()
+import type { Config } from 'drizzle-kit'
+import { config } from 'dotenv'
+
+config()
 // console.log(process.env.PG_DB_URL);
 
 export default {
@@ -7,6 +9,6 @@ export default {
   out: './server/db/migrations',
   driver: 'pg',
   dbCredentials: {
-    connectionString: process.env.PG_DB_URL!,
+    connectionString: process.env.PG_DB_URL!
   }
-} satisfies Config;
+} satisfies Config

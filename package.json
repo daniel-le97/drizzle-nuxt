@@ -10,13 +10,17 @@
     "postinstall": "nuxt prepare",
     "migrations": "drizzle-kit generate:pg",
     "studio": "drizzle-kit studio",
-    "sync": "drizzle-kit push:pg"
+    "sync": "drizzle-kit push:pg",
+    "upgrade": "pnpm dlx taze major -w && pnpm i",
+    "lint": "eslint --max-warnings 0 --fix ."
   },
   "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "eslint": "^8.52.0",
     "@auth/core": "^0.18.0",
     "@nuxt/devtools": "latest",
     "@nuxtjs/color-mode": "^3.3.0",
-    "@nuxtjs/tailwindcss": "^6.9.1",
+    "@nuxtjs/tailwindcss": "^6.9.3",
     "daisyui": "^3.9.4",
     "dotenv": "^16.3.1",
     "drizzle-kit": "^0.19.13",

@@ -1,5 +1,4 @@
 import * as pg from 'drizzle-orm/pg-core'
-import { sql } from 'drizzle-orm'
 
 /**
  * A centralized list of standardized Drizzle ORM schema field definitions to prevent duplication errors
@@ -12,6 +11,6 @@ export const id = pg.char('id').primaryKey()
 
 // Timestamps is inspired by the Mongoose "timestamps" option to provide automated timestamps for create and update actions
 export const timestamps = {
-    createdAt,
-    updatedAt
+  createdAt,
+  updatedAt
 }

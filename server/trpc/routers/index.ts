@@ -1,22 +1,22 @@
 import { z } from 'zod'
 import { publicProcedure, router } from '../trpc'
-import { getAuthors} from "./authors"
-import { getBooks} from "./books"
+import { getAuthors } from './authors'
+import { getBooks } from './books'
 
 export const appRouter = router({
   hello: publicProcedure
     .input(
       z.object({
-        text: z.string().nullish(),
-      }),
+        text: z.string().nullish()
+      })
     )
     .query(({ input }) => {
       return {
-        greeting: `hello ${input?.text ?? 'world'}`,
+        greeting: `hello ${input?.text ?? 'world'}`
       }
     }),
-    getAuthors,
-    getBooks
+  getAuthors,
+  getBooks
 })
 
 // export type definition of API

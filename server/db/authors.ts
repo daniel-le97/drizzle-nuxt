@@ -6,12 +6,12 @@ import { id, timestamps } from '../utils/dbFields'
  * Provides a Drizzle schema for "authors" and also exposes Zod schemas for usage in tRPC routes
  */
 export const authors = pgTable('authors', {
-    id,
-    firstName: text('firstName'),
-    lastName: text('lastName'),
-    ...timestamps
-}, (t) => ({
-    name: unique().on(t.firstName, t.lastName)
+  id,
+  firstName: text('firstName'),
+  lastName: text('lastName'),
+  ...timestamps
+}, t => ({
+  name: unique().on(t.firstName, t.lastName)
 }))
 
 // Expose authorId for other tables to prevent errors in repetition

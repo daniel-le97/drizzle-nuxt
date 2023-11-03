@@ -12,13 +12,12 @@
     </header> -->
     <NavBar />
     <div class="min-h-screen">
-      <slot  />
-
+      <slot />
     </div>
     <Footer />
   </div>
 </template>
 <script setup lang="ts">
-import NavBar from "~/components/NavBar.vue";
-import Footer from "~/components/Footer.vue";
+import NavBar from '~/components/NavBar.vue'
+import Footer from '~/components/Footer.vue'
 </script>
