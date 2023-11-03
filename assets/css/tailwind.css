@@ -4,6 +4,22 @@
 
 
 
+.gradient-text {
+  background-image: linear-gradient(to bottom right, var(--primary), var(--secondary), var(--accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.1);
+    /* Add a white outline to the text */
+  -webkit-text-stroke: 1px white; /* For Webkit-based browsers (Safari and Chrome) */
+  text-stroke: 1px white; /* Standard property, not supported in all browsers */
+}
+
+
+
+
+
+
 .v-enter-active,
 .v-leave-active {
   transition: opacity 1.5s ease;

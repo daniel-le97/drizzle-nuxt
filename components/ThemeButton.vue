@@ -2,7 +2,9 @@
 import { onMounted } from 'vue'
 import { themeChange } from 'theme-change'
 
-function changeTheme(theme: string) {}
+function changeTheme(theme: string) {
+
+}
 
 onMounted(() => {
   themeChange(false)
@@ -10,7 +12,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="m-5">
+  <div class="">
     <select
       data-choose-theme
       class="focus:outline-none h-10 rounded-full px-3 border"
@@ -21,47 +23,55 @@ onMounted(() => {
       <option value="dark">
         Dark
       </option>
-      <option value="black">
-        Black
-      </option>
-      <option value="🌸">
-        🌸 Pink
-      </option>
-      <option value="🐬">
-        🐬 Blue
-      </option>
-      <option value="🐤">
-        🐤 Yellow
-      </option>
     </select>
   </div>
 </template>
 
 <style>
 :root {
-  --color-default: #fff;
+  --primary: #111010;
+  --secondary: #4481fc;
+  --accent: #e89bad;
+  --neutral: #2d2438;
+  --base-100: #ede8ed;
+  --info: #64b0ce;
+  --success: #0f766d;
+  --warning: #fab505;
+  --error: #ef5f57;
+  --bg-color: #fff;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-default: #ffffff;
-  }
+input {
+  background-color: var(--base-100);
+  color: var(--primary);
 }
-[data-theme="dark"] {
-  --color-default: #252b30;
-}
-[data-theme="black"] {
-  --color-default: #000000;
-}
-[data-theme="🌸"] {
-  --color-default: #ffabc8;
-}
-[data-theme="🐬"] {
-  --color-default: #7ec6ff;
-}
-[data-theme="🐤"] {
-  --color-default: #ffd65a;
-}
+
 body {
-  background-color: var(--color-default);
+  background-color: var(--base-100);
+  color: var(--primary);
+}
+
+p {
+  color: var(--secondary);
+}
+h1 {
+  color: var(--primary);
+}
+
+[data-theme="dark"] {
+  --primary: #f27371;
+  --secondary: #eaab7e;
+  --accent: #ba492a;
+  --neutral: #1a1a2e;
+  --base-100: #3e3545;
+  --info: #5a72ed;
+  --success: #176e3c;
+  --warning: #ce8b0d;
+  --error: #f23141;
+  --bg-color: #fff;
+}
+
+[data-theme="dark"] input {
+  background-color: var(--base-100);
+  color: var(--primary);
 }
 </style>

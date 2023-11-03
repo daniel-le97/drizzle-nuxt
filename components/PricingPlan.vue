@@ -1,6 +1,6 @@
 <template>
   <div class="text-center flex-col justify-center flex items-center  mb-8">
-    <div class="text-4xl font-bold text-center  mb-4">
+    <div class="text-4xl font-bold text-center  mb-4 gradient-text text-6xl">
       The Pricing Plan
     </div>
     <div class=" text-center  w-1/2">

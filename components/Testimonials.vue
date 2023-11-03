@@ -40,7 +40,7 @@ onUnmounted(() => {
 
 <template>
   <section class="my-44">
-    <div class="text-4xl font-bold text-center my-2">
+    <div class="text-4xl font-bold text-center my-2 gradient-text text-6xl">
       Testimonials
     </div>
     <div class="carousel carousel-center rounded-box   h-[500px]">

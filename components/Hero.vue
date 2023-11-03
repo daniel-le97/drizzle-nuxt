@@ -44,18 +44,6 @@ onMounted(() => {
   opacity: 0;
 }
 
-.gradient-text {
-  @apply bg-clip-text text-transparent;
-  @apply bg-gradient-to-br from-indigo-500 via-orange-500 to-pink-500;
-
-  /* Add a white outline to the text */
-  -webkit-text-stroke: 1px white; /* For Webkit-based browsers (Safari and Chrome) */
-  text-stroke: 1px white; /* Standard property, not supported in all browsers */
-
-  /* Add a slight text shadow as a fallback */
-  text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.1);
-}
-
 .hero {
   /* always scale the image to the appropriate size of your screen */
   background-size: cover;

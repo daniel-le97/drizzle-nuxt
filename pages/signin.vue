@@ -9,23 +9,25 @@ const { signIn, signOut, session, status, cookies } = useAuth()
     <div class="flex flex-col items-center">
       <ul class="menu w-56 rounded-box space-y-4">
         <li>
-          <a href="/api/auth/signin" class="btn">Native Link Sign in</a>
+          <a href="/api/auth/signin" class="btn btn-ghost">Native Link Sign in</a>
         </li>
         <li v-if="!session" class="mx-auto">
-          <button class=" p-0 m-0 rounded-full w-fit" @click="signIn()">
+          <button class="p-0 m-0 rounded-full w-fit" @click="signIn()">
             <Icon name="uil:github" class="text-5xl" />
           </button>
         </li>
         <li v-if="session" class="mx-auto">
-          <button class="p-0 m-0 rounded-full w-fit" @click="signOut()">
-            <Icon name="uil:signout" class="text-5xl" />
-          </button>
+          <div class="tooltip" data-tip="Logout">
+            <button class="p-0 m-0 rounded-full w-fit" @click="signOut()">
+              <Icon name="uil:signout" class="text-5xl" />
+            </button>
+          </div>
         </li>
       </ul>
     </div>
     <div
       v-if="session"
-      class=" mt-10 p-10 card glass flex flex-wrap items-center justify-center"
+      class="mt-10 p-10 card glass flex flex-wrap items-center justify-center"
     >
       <div class="avatar">
         <div class="w-24 mask mask-hexagon">
@@ -42,7 +44,7 @@ const { signIn, signOut, session, status, cookies } = useAuth()
         </li>
       </ul>
 
-      <div class="btn mb-4 text-xl">
+      <div class="btn btn-ghost mb-4 text-xl">
         {{ status }}
       </div>
     </div>
@@ -69,11 +71,6 @@ const { signIn, signOut, session, status, cookies } = useAuth()
           </li>
         </ul>
       </div>
-    </div>
-
-    <div data-theme="light">
-      This div will always use light theme
-      <span data-theme="retro">This span will always use retro theme!</span>
     </div>
   </main>
 </template>

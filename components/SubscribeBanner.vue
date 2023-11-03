@@ -16,14 +16,9 @@ export default {
 </script>
 
 <template>
-  <div class="flex flex-col items-center md:flex-row md:justify-center md:items-start space-y-4 md:space-y-0">
-    <!-- Image on the right (visible on larger screens) -->
-    <div class="hidden md:block">
-      <img src="https://images.unsplash.com/photo-1632516643720-e7f5d7d6ecc9?auto=format&fit=crop&q=80&w=1311&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Subscription Image" class="object-cover w-48 h-48 rounded-md shadow-lg mask mask-parallelogram-3">
-    </div>
-
+  <div class="flex flex-col ">
     <!-- Form on the left -->
-    <div class="max-w-md  bg-white shadow-lg rounded-md">
+    <div class="  p-2">
       <h2 class="text-2xl font-semibold mb-4">
         Subscribe to our Newsletter
       </h2>
@@ -35,18 +30,15 @@ export default {
             id="email"
             v-model="email"
             type="email"
-            class="w-full p-2 border rounded-md"
+            class="w-full p-2 border rounded-md input input-ghost"
             required
           >
         </div>
 
-        <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-700">
+        <button type="submit" class="btn btn-ghost">
           Subscribe
         </button>
       </form>
-    </div>
-    <div class="hidden md:block">
-      <img src="https://images.unsplash.com/photo-1632516643720-e7f5d7d6ecc9?auto=format&fit=crop&q=80&w=1311&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Subscription Image" class="object-cover w-48 h-48 rounded-md shadow-lg mask mask-parallelogram-4">
     </div>
   </div>
 </template>

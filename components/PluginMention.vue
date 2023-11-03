@@ -31,7 +31,7 @@ const plugins = [
       class="card glass w-full p-4 shadow-md text-center flex items-center justify-center"
     >
       <div
-        class="card-title absolute top-0 justify-center flex items-center text-4xl"
+        class="card-title  gradient-text  justify-center flex items-center text-6xl"
       >
         Plugins & Modules
       </div>

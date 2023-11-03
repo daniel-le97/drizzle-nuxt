@@ -35,18 +35,20 @@ export default defineNuxtConfig({
     // authenticatedRedirectTo: '/', // where to redirect if the user is authenticated
     // baseUrl: 'http://localhost:3000' // should be something like https://www.my-app.com
   },
-  tailwindcss: {
-    config: {
-      plugins: [import('daisyui')],
-    },
-    exposeConfig: true,
-    injectPosition: 'last',
-    // @ts-expect-error this is needed for themes
-    darkMode: 'class',
-    daisyui: {
-      theme: [],
+
+  postcss: {
+    plugins: {
+      tailwindcss: {
+        config: {
+          plugins: [require('daisyui')],
+        },
+        exposeConfig: true,
+        injectPosition: 'last',
+      },
+      autoprefixer: {},
     },
   },
+
   build: {
     transpile: ['trpc-nuxt'],
   },

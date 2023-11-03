@@ -37,7 +37,7 @@ onBeforeUnmount(() => {
 <template>
   <div
     ref="nav"
-    class="navbar glass flex-row fixed top-0 w-full p-4 transition-transform duration-500 ease-in-out "
+    class="navbar glass flex-row fixed top-0 w-full p-4 transition-transform duration-500 ease-in-out"
     :style="{ transform: navTransform }"
   >
     <div class="navbar-start">
@@ -74,8 +74,9 @@ onBeforeUnmount(() => {
           <li><a>Item 3</a></li>
         </ul>
       </div>
+
       <!-- //NOTE -  MOBILE MENU -->
-      <a class="btn text-xl bg-black text-white">Drizzle Nuxt</a>
+      <a class="btn text-xl btn-ghost">Drizzle Nuxt</a>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="flex space-x-4 items-center justify-center">
@@ -95,14 +96,15 @@ onBeforeUnmount(() => {
       <SearchBar />
       <ThemeButton />
       <div class="dropdown dropdown-end">
-        <label tabindex="0" class="btn btn-ghost btn-circle avatar mask mask-hexagon">
-
+        <label
+          tabindex="0"
+          class="btn btn-neutral-200 shadow-md btn-circle avatar mask mask-hexagon"
+        >
           <div class="avatar">
             <div class="w-10 mask mask-hexagon">
               <img :src="session?.user?.image ?? 'https://i.pravatar.cc'">
             </div>
           </div>
-
         </label>
         <ul
           tabindex="0"
@@ -128,22 +130,22 @@ onBeforeUnmount(() => {
   z-index: 99999;
 }
 .active-link {
-  color: #34d399 !important; /* Change the text color to red-500 */
+  color: var(--success);
   font-weight: bold;
   position: relative;
 }
 
 .link-item {
   position: relative;
-  color: black;
+  color: var(--primary);
 }
 
-.link-item::before {
+.active-link::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 2px; /* Adjust the underline height as needed */
-  background-color: #34d399; /* Change the color to emerald-400 */
+  background-color: var(--success);
   bottom: -1px;
   left: 0;
 
