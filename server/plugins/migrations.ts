@@ -13,7 +13,7 @@ export default defineNitroPlugin(async () => {
         throw new Error('Missing db.url in runtime config')
       }
 
-      await migrate(useDb(), { migrationsFolder: join(db.dir, './migrations') }).catch(() => console.error('db'))
+      await migrate(useDb(), { migrationsFolder: join(db.dir, './migrations') }).catch(() => logger.error('db'))
 
       logger.success('schema and db migrated')
     }

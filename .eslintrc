@@ -10,7 +10,7 @@
     "overrides": [
       {
         "files": [
-          "./server/**/*.ts"
+          "."
         ],
         "rules": {
         "no-unused-vars":"off",
