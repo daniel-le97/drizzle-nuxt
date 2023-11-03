@@ -1,6 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   alias: {
+    // if not using pnpm
+    // cookie: resolve(__dirname, "node_modules/cookie")
     cookie: 'cookie'
   },
   devtools: { enabled: true },
