@@ -1,6 +1,38 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import { themeChange } from 'theme-change'
+const  themes = [
+      "light",
+      "dark",
+      "cupcake",
+      "bumblebee",
+      "emerald",
+      "corporate",
+      "synthwave",
+      "retro",
+      "cyberpunk",
+      "valentine",
+      "halloween",
+      "garden",
+      "forest",
+      "aqua",
+      "lofi",
+      "pastel",
+      "fantasy",
+      "wireframe",
+      "black",
+      "luxury",
+      "dracula",
+      "cmyk",
+      "autumn",
+      "business",
+      "acid",
+      "lemonade",
+      "night",
+      "coffee",
+      "winter",
+    ]
+
 
 onMounted(() => {
   themeChange(false)
@@ -19,6 +51,20 @@ onMounted(() => {
       <option value="pink">
         Pink
       </option>
+      <option value="cyberpunk">
+      cyberpunk
+      </option>
+      <option value="coffee">
+      coffee
+      </option>
+    </select>
+
+
+        <select data-choose-theme>
+      <option v-for="theme in themes" :value="theme">
+        Default
+      </option>
+
     </select>
   </div>
 </template>

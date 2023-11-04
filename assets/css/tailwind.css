@@ -7,6 +7,15 @@ a{
  text-decoration: none !important;
 }
 
+
+/* TO ACCOUNT FOR NAVBAR HEIGHT */
+main{
+  @apply pt-44 min-h-screen
+}
+
+
+
+
 img{
   @apply hover:brightness-75 transition-all duration-300 ease-linear
 }

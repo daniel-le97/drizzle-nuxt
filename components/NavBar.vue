@@ -76,7 +76,7 @@ onBeforeUnmount(() => {
       </div>
       <!-- //NOTE -  MOBILE MENU -->
       <a class="btn text-xl btn-ghost">Drizzle Nuxt</a>
-      
+
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="flex space-x-4 items-center justify-center">
@@ -96,10 +96,16 @@ onBeforeUnmount(() => {
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/signin" class="link" exact-active-class="active-link">
+          <NuxtLink v-if="!session?.user" to="/signin" class="link" exact-active-class="active-link">
             Login
           </NuxtLink>
+
+    <NuxtLink v-else to="/account" class="link" exact-active-class="active-link">
+          Account
+          </NuxtLink>
+
         </li>
+
       </ul>
     </div>
     <div class="navbar-end space-x-4">

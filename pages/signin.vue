@@ -4,7 +4,7 @@ const { signIn, signOut, session, status, cookies } = useAuth()
 
 <template>
   <main
-    class="p-10 w-full flex flex-col items-center justify-center min-h-screen"
+    class="p-10 w-full flex flex-col items-center justify-center "
   >
     <div class="flex flex-col items-center card glass w-2/3 ">
       <div class="text-6xl font-bold p-2">Login</div>
