@@ -82,26 +82,26 @@ onBeforeUnmount(() => {
     <div class="navbar-center hidden lg:flex">
       <ul class="flex space-x-4 items-center justify-center">
         <li>
-          <NuxtLink to="/" class="link" exact-active-class="active-link">
+          <NuxtLink to="/" class="link" active-class="active-link">
             Home
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/about" class="link" exact-active-class="active-link">
+          <NuxtLink to="/about" class="link" active-class="active-link">
             About
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/contact" class="link" exact-active-class="active-link">
+          <NuxtLink to="/contact" class="link" active-class="active-link">
             Contact
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink v-if="!session?.user" to="/signin" class="link" exact-active-class="active-link">
+          <NuxtLink v-if="!session?.user" to="/login" class="link" active-class="active-link">
             Login
           </NuxtLink>
 
-          <NuxtLink v-else to="/account" class="link" exact-active-class="active-link">
+          <NuxtLink v-else to="/account" class="link" active-class="active-link">
             Account
           </NuxtLink>
         </li>

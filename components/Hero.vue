@@ -31,19 +31,7 @@ onMounted(() => {
 </template>
 
 <style>
-.slide-fade-enter-active {
-  transition: all 1s ease-out;
-}
 
-.slide-fade-leave-active {
-  transition: all 1.25s cubic-bezier(1, 0.5, 0.8, 1);
-}
-
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateY(20px);
-  opacity: 0;
-}
 
 .hero {
   /* always scale the image to the appropriate size of your screen */
