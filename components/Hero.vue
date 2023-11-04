@@ -21,6 +21,7 @@ onMounted(() => {
           <p class="text-lg font-bold  mt-4">
             Simplify Development
           </p>
+          <span class="[&amp;::selection]:text-base-content relative col-start-1 row-start-1 bg-[linear-gradient(90deg,hsl(var(--s))_0%,hsl(var(--sf))_9%,hsl(var(--pf))_42%,hsl(var(--p))_47%,hsl(var(--a))_100%)] bg-clip-text [-webkit-text-fill-color:transparent] [&amp;::selection]:bg-blue-700/20 [@supports(color:oklch(0_0_0))]:bg-[linear-gradient(90deg,hsl(var(--s))_4%,color-mix(in_oklch,hsl(var(--sf)),hsl(var(--pf)))_22%,hsl(var(--p))_45%,color-mix(in_oklch,hsl(var(--p)),hsl(var(--a)))_67%,hsl(var(--a))_100.2%)]">component library</span>
         </div>
       </div>
     </Transition>
@@ -54,25 +55,7 @@ onMounted(() => {
   background-attachment: fixed;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  z-index: 10;
-  left: 0;
-  width: 100%;
-  height: 300px;
-  background-image: linear-gradient(
-    to bottom,
-    var(--gradient-start, rgba(255, 255, 255, 0)),
-    var(--gradient-end, #fff)
-  );
-  /* Adjust the default and dark mode gradient colors using CSS variables */
-}
 
-/* Define CSS variables for the gradient colors */
-html.dark-mode {
-  --gradient-start: rgba(0, 0, 0, 0); /* Dark mode start color */
-  --gradient-end: #091a28; /* Dark mode end color */
-}
+
+
 </style>

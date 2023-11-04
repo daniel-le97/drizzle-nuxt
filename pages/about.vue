@@ -1,16 +1,16 @@
 <script setup lang="ts"></script>
 
 <template>
-  <main >
+  <main>
     <section class="lg:p-10 md:p-8 sm:p-2 lg:flex-row flex flex-col  items-center  justify-center w-full ">
       <div class="lg:w-1/2 w-2/3 flex flex-col space-y-6 lg:p-8 mb-8 lg:mb-0">
-        <div class="text-4xl font-bold prose">
+        <div class="text-5xl font-bold  text-primary">
           About Us
         </div>
-        <div class="">
+        <div class="text-secondary">
           At [Your Company Name], we are passionate about technology and dedicated to delivering innovative solutions. As a team of software developers and IT specialists, we strive to push the boundaries of what's possible in the digital world. Our commitment to excellence and our love for all things tech drive us to provide cutting-edge services and products to our clients.
         </div>
-        <div class="">
+        <div class="text-secondary">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, ipsam!
         </div>
       </div>
@@ -34,10 +34,10 @@
         </div>
 
         <div class="w-1/2 flex flex-col space-y-6 p-10">
-          <div class="text-4xl font-bold">
+          <div class="text-5xl font-bold text-primary">
             The Mission
           </div>
-          <p class="">
+          <p class="text-secondary">
             Our Mission
 
             Our mission is to harness the power of technology to solve complex problems and make the world a better place. We are driven by the belief that the right software can transform businesses and improve lives. We aim to create solutions that are not only efficient but also user-friendly, ensuring a seamless experience for our clients and their customers.
@@ -49,10 +49,10 @@
     <section class="p-8 flex flex-col space-y-4">
       <div class="flex">
         <div class="w-1/2 flex flex-col space-y-6 p-10">
-          <div class="text-4xl font-bold">
+          <div class="text-5xl font-bold text-primary">
             What Sets us apart
           </div>
-          <ul class="space-y-4">
+          <ul class="space-y-4 text-secondary">
             <li><strong>Technical Expertise:</strong> Our team comprises highly skilled software developers and IT specialists who excel in their respective fields. We keep up with the latest trends and technologies to provide the best solutions.</li>
             <li><strong>Innovation:</strong> We love staying on the cutting edge of technology. We're not afraid to think outside the box and find creative solutions to your challenges.</li>
             <li><strong>Customer-Centric Approach:</strong> We believe that our success is closely tied to the success of our clients. We work closely with you to understand your unique needs and tailor our services accordingly.</li>
@@ -72,10 +72,10 @@
         </div>
 
         <div class="w-1/2 flex flex-col space-y-6 p-10">
-          <div class="text-4xl font-bold">
+          <div class="text-5xl font-bold text-primary">
             Our Services
           </div>
-          <ul class="space-y-4">
+          <ul class="space-y-4 text-secondary">
             <li><strong>Software Development:</strong> We design and build custom software solutions that meet your business's specific needs.</li>
             <li><strong>IT Consultation:</strong> Our IT specialists provide expert guidance to help you make the right technology decisions for your business.</li>
             <li><strong>Podcasts:</strong> We also enjoy sharing our knowledge and insights through our tech-focused podcasts, where we discuss the latest trends and developments in the industry.</li>
@@ -85,11 +85,11 @@
     </section>
 
     <section class="p-8 py-16  mt-24 flex flex-col items-center justify-center space-y-4 bg-base-100  ">
-      <div class="text-center text-4xl font-bold">
+      <div class="text-center text-5xl font-bold text-primary">
         Join Us On Our Journey
       </div>
 
-      <div class="w-2/3">
+      <div class="w-2/3 text-secondary">
         We invite you to join us on this exciting journey of technological exploration and innovation. Whether you're a client seeking solutions or someone who shares our passion for technology, we're thrilled to have you with us.
         Feel free to reach out to us
       </div>

@@ -76,22 +76,21 @@ onBeforeUnmount(() => {
       </div>
       <!-- //NOTE -  MOBILE MENU -->
       <a class="btn text-xl btn-ghost">Drizzle Nuxt</a>
-
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="flex space-x-4 items-center justify-center">
-        <li >
-          <NuxtLink to="/" class="link" exact-active-class="active-link" >
+        <li>
+          <NuxtLink to="/" class="link" exact-active-class="active-link">
             Home
           </NuxtLink>
         </li>
-        <li >
-          <NuxtLink to="/about" class="link"  exact-active-class="active-link" >
+        <li>
+          <NuxtLink to="/about" class="link" exact-active-class="active-link">
             About
           </NuxtLink>
         </li>
-        <li >
-          <NuxtLink to="/contact" class="link" exact-active-class="active-link" >
+        <li>
+          <NuxtLink to="/contact" class="link" exact-active-class="active-link">
             Contact
           </NuxtLink>
         </li>
@@ -100,12 +99,10 @@ onBeforeUnmount(() => {
             Login
           </NuxtLink>
 
-    <NuxtLink v-else to="/account" class="link" exact-active-class="active-link">
-          Account
+          <NuxtLink v-else to="/account" class="link" exact-active-class="active-link">
+            Account
           </NuxtLink>
-
         </li>
-
       </ul>
     </div>
     <div class="navbar-end space-x-4">
@@ -151,10 +148,7 @@ onBeforeUnmount(() => {
 
 }
 
-
-
 .link{
   @apply text-lg hover:text-[var(--info)]
 }
-
 </style>

@@ -7,7 +7,9 @@ const { signIn, signOut, session, status, cookies } = useAuth()
     class="p-10 w-full flex flex-col items-center justify-center "
   >
     <div class="flex flex-col items-center card glass w-2/3 ">
-      <div class="text-6xl font-bold p-2">Login</div>
+      <div class="text-6xl font-bold p-2">
+        Login
+      </div>
       <ul class="menu w-56 rounded-box ">
         <li class="my-6">
           <a href="/api/auth/signin" class="mx-auto ">Native Link Sign in</a>
@@ -34,7 +36,7 @@ const { signIn, signOut, session, status, cookies } = useAuth()
     >
       <div class="avatar">
         <div class="w-24 mask mask-hexagon">
-          <img :src="session?.user?.image ?? ''" :alt="session?.user?.name?? ''">
+          <img :src="session?.user?.image ?? ''" :alt="session?.user?.name ?? ''">
         </div>
       </div>
 
@@ -51,12 +53,12 @@ const { signIn, signOut, session, status, cookies } = useAuth()
         {{ status }}
       </div>
     </div>
-      <!-- //ANCHOR -  AUTHENTICATED USER  -->
+    <!-- //ANCHOR -  AUTHENTICATED USER  -->
     <div
       v-else
       class="p-10 mt-20 card glass flex flex-wrap items-center justify-center"
     >
-     <div class="btn btn-ghost mb-4 text-xl">
+      <div class="btn btn-ghost mb-4 text-xl">
         {{ status }}
       </div>
 
@@ -67,9 +69,7 @@ const { signIn, signOut, session, status, cookies } = useAuth()
           >
         </div>
       </div>
-      <div>
-
-      </div>
+      <div />
     </div>
   </main>
 </template>

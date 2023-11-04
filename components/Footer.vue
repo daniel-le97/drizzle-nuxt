@@ -3,7 +3,7 @@
     <div class="w-full pt-10 flex items-center justify-center bg-zinc-900">
       <div class="md:w-2/3 w-full px-4 text-white flex flex-col">
         <div class="md:flex">
-          <h1 class="text-6xl font-bold w-full md:w-1/2">
+          <h1 class="text-6xl font-bold w-full md:w-1/2 text-primary">
             Thank you for checking out our app. Get in touch with us.
           </h1>
 
@@ -74,7 +74,7 @@
         <div
           class="flex mt-8 flex-col md:flex-row md:justify-center md:text-center"
         >
-          <p class="w-full md:w-2/3 ">
+          <p class="w-full md:w-2/3  text-secondary">
             If you want to contact us the best way is to connect with us on
             LinkedIn and message us!
           </p>
@@ -106,8 +106,8 @@
           </div>
           <hr class="border-gray-600">
 
-          <h1 class="text-center  my-10">
-            ©2022 DevOpportunitiesLLC All rights reserved.
+          <h1 class="text-center  my-10 text-secondary">
+            © Lorem ipsum dolor sit.
           </h1>
         </div>
       </div>

@@ -10,9 +10,8 @@ a{
 
 /* TO ACCOUNT FOR NAVBAR HEIGHT */
 main{
-  @apply pt-44 min-h-screen
+  @apply pt-44 min-h-screen ;
 }
-
 
 
 
@@ -21,18 +20,35 @@ img{
 }
 
 .gradient-text {
-  background-image: linear-gradient(to bottom right, var(--primary), var(--secondary), var(--accent));
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(var(--s)) 0%,
+    hsl(var(--sf)) 9%,
+    hsl(var(--pf)) 42%,
+    hsl(var(--p)) 47%,
+    hsl(var(--a)) 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.1);
-    /* Add a white outline to the text */
-  -webkit-text-stroke: 1px white; /* For Webkit-based browsers (Safari and Chrome) */
-  text-stroke: 1px white; /* Standard property, not supported in all browsers */
+  -webkit-text-stroke: 1px white;
+  text-stroke: 1px white;
 }
 
+/* Add the selection styles as well */
+.gradient-text::selection {
+  background: hsl(var(--s)) 0%, hsl(var(--sf)) 9%, hsl(var(--pf)) 42%, hsl(var(--p)) 47%, hsl(var(--a)) 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
-
+@supports (color: oklch(0 0 0)) {
+  .gradient-text::selection {
+    background: hsl(var(--s)) 4%, color-mix(in_oklch, hsl(var(--sf)), hsl(var(--pf))) 22%, hsl(var(--p)) 45%, color-mix(in_oklch, hsl(var(--p)), hsl(var(--a))) 67%, hsl(var(--a)) 100.2%;
+  }
+}
 
 
 
