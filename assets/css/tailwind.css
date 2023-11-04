@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+img{
+  @apply hover:brightness-75 transition-all duration-300 ease-linear
+}
 
 .gradient-text {
   background-image: linear-gradient(to bottom right, var(--primary), var(--secondary), var(--accent));

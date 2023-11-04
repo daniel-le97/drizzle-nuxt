@@ -16,31 +16,35 @@ export default {
 </script>
 
 <template>
-  <div class="flex flex-col ">
+  <section class="flex flex-col items-center w-full">
+
+
     <!-- Form on the left -->
-    <div class="  p-2">
-      <h2 class="text-2xl font-semibold mb-4">
+    <div class="  bg-white  rounded-md">
+      <div class="text-4xl font-semibold mb-4">
         Subscribe to our Newsletter
-      </h2>
+      </div>
 
       <form @submit.prevent="subscribe">
         <div class="mb-4">
-          <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+          <label for="email" class="label">Email Address</label>
           <input
             id="email"
             v-model="email"
             type="email"
-            class="w-full p-2 border rounded-md input input-ghost"
+            class="input input-ghost"
+
             required
           >
         </div>
 
-        <button type="submit" class="btn btn-ghost">
+        <button type="submit" class="btn btn-accent">
           Subscribe
         </button>
       </form>
     </div>
-  </div>
+
+  </section>
 </template>
 
 <style>
