@@ -74,29 +74,29 @@ onBeforeUnmount(() => {
           <li><a>Item 3</a></li>
         </ul>
       </div>
-
       <!-- //NOTE -  MOBILE MENU -->
       <a class="btn text-xl btn-ghost">Drizzle Nuxt</a>
+      
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="flex space-x-4 items-center justify-center">
-        <li class="  ">
-          <NuxtLink to="/" exact-active-class="active-link" class="link-item">
+        <li >
+          <NuxtLink to="/" class="link" exact-active-class="active-link" >
             Home
           </NuxtLink>
         </li>
-        <li class="  ">
-          <NuxtLink to="/about" exact-active-class="active-link" class="link-item">
+        <li >
+          <NuxtLink to="/about" class="link"  exact-active-class="active-link" >
             About
           </NuxtLink>
         </li>
-        <li class="  ">
-          <NuxtLink to="/contact" exact-active-class="active-link" class="link-item">
+        <li >
+          <NuxtLink to="/contact" class="link" exact-active-class="active-link" >
             Contact
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/signin" exact-active-class="active-link">
+          <NuxtLink to="/signin" class="link" exact-active-class="active-link">
             Login
           </NuxtLink>
         </li>
@@ -140,30 +140,15 @@ onBeforeUnmount(() => {
   z-index: 99999;
 }
 .active-link {
-  color: var(--success);
-  font-weight: bold;
-  position: relative;
+  @apply font-bold relative transition-all duration-300 ease-linear underline-offset-2 underline;
+  color: var(--info);
+
 }
 
-.link-item {
-  position: relative;
-  color: var(--primary);
+
+
+.link{
+  @apply text-lg hover:text-[var(--info)]
 }
 
-.active-link::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px; /* Adjust the underline height as needed */
-  background-color: var(--success);
-  bottom: -1px;
-  left: 0;
-
-  transform-origin: left;
-  transition: transform 0.3s; /* Adjust the duration as needed */
-}
-
-.link-item:hover::before {
-  transform: scaleX(1); /* Expand to full width on hover */
-}
 </style>

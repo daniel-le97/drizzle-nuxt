@@ -74,7 +74,7 @@
         <div
           class="flex mt-8 flex-col md:flex-row md:justify-center md:text-center"
         >
-          <p class="w-full md:w-2/3 text-gray-400">
+          <p class="w-full md:w-2/3 ">
             If you want to contact us the best way is to connect with us on
             LinkedIn and message us!
           </p>
@@ -90,23 +90,23 @@
               >
             </div>
 
-            <NuxtLink to="/products" class="link" active-class="active-link">
-              Products
+            <NuxtLink to="/" class="link" active-class="active-link">
+              Home
             </NuxtLink>
             <NuxtLink to="/about" class="link" active-class="active-link">
               About
             </NuxtLink>
 
-            <nuxt-link to="/Account" class="link" active-class="active-link">
+            <nuxt-link to="/account" class="link" active-class="active-link">
               Account
             </nuxt-link>
-            <nuxt-link to="/cart" class="link" active-class="active-link">
-              Cart
+            <nuxt-link to="/contact" class="link" active-class="active-link">
+              Contact
             </nuxt-link>
           </div>
           <hr class="border-gray-600">
 
-          <h1 class="text-center text-gray-300 my-10">
+          <h1 class="text-center  my-10">
             ©2022 DevOpportunitiesLLC All rights reserved.
           </h1>
         </div>

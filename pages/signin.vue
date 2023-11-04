@@ -6,14 +6,15 @@ const { signIn, signOut, session, status, cookies } = useAuth()
   <main
     class="p-10 w-full flex flex-col items-center justify-center min-h-screen"
   >
-    <div class="flex flex-col items-center">
-      <ul class="menu w-56 rounded-box space-y-4">
-        <li>
-          <a href="/api/auth/signin" class="btn btn-ghost">Native Link Sign in</a>
+    <div class="flex flex-col items-center card glass w-2/3 ">
+      <div class="text-6xl font-bold p-2">Login</div>
+      <ul class="menu w-56 rounded-box ">
+        <li class="my-6">
+          <a href="/api/auth/signin" class="mx-auto ">Native Link Sign in</a>
         </li>
         <li v-if="!session" class="mx-auto">
           <button class="p-0 m-0 rounded-full w-fit" @click="signIn()">
-            <Icon name="uil:github" class="text-5xl" />
+            <Icon name="uil:github" class="text-8xl" />
           </button>
         </li>
         <li v-if="session" class="mx-auto">
@@ -25,13 +26,15 @@ const { signIn, signOut, session, status, cookies } = useAuth()
         </li>
       </ul>
     </div>
+
+    <!-- //ANCHOR -  AUTHENTICATED USER  -->
     <div
       v-if="session"
       class="mt-10 p-10 card glass flex flex-wrap items-center justify-center"
     >
       <div class="avatar">
         <div class="w-24 mask mask-hexagon">
-          <img :src="session?.user?.image">
+          <img :src="session?.user?.image ?? ''" :alt="session?.user?.name?? ''">
         </div>
       </div>
 
@@ -48,11 +51,14 @@ const { signIn, signOut, session, status, cookies } = useAuth()
         {{ status }}
       </div>
     </div>
+      <!-- //ANCHOR -  AUTHENTICATED USER  -->
     <div
       v-else
-      class="p-10 card glass flex flex-wrap items-center justify-center"
+      class="p-10 mt-20 card glass flex flex-wrap items-center justify-center"
     >
-      <div>Status: {{ status }}</div>
+     <div class="btn btn-ghost mb-4 text-xl">
+        {{ status }}
+      </div>
 
       <div class="avatar">
         <div class="w-24 mask mask-hexagon">
@@ -62,14 +68,7 @@ const { signIn, signOut, session, status, cookies } = useAuth()
         </div>
       </div>
       <div>
-        <ul class="menu w-56 rounded-box">
-          <li class="btn btn-ghost">
-            {{ session?.user?.email }}
-          </li>
-          <li class="btn btn-ghost">
-            {{ session?.user?.name }}
-          </li>
-        </ul>
+
       </div>
     </div>
   </main>
