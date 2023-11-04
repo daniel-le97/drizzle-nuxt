@@ -36,13 +36,14 @@ export default defineNuxtConfig({
     // baseUrl: 'http://localhost:3000' // should be something like https://www.my-app.com
   },
 
-  tailwindcss: {
-    config: {
-      plugins: [require('daisyui')],
-    },
-    exposeConfig: true,
-    injectPosition: 'last',
-  },
+      tailwindcss: {
+        config: {
+          plugins: [import('daisyui')],
+        },
+        exposeConfig: true,
+        injectPosition: 'last',
+      },
+ 
 
   build: {
     transpile: ['trpc-nuxt'],

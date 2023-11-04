@@ -1,6 +1,8 @@
 // import { getServerSession } from '@hebilicious/authjs-nuxt/dist/runtime/lib/server.js'
 import type { inferAsyncReturnType } from '@trpc/server'
 import type { H3Event } from 'h3'
+import { authOptions } from "~/server/api/auth/[...]"
+import { getServerSession, getServerToken } from "#auth"
 
 /**
  * Creates context for an incoming request
@@ -8,8 +10,8 @@ import type { H3Event } from 'h3'
  */
 
 export async function createContext(_event: H3Event) {
-  // const session = await getServerSession(_event, authOptions)
-
+  const session = await getServerSession(_event, authOptions)
+  const jwt = await getServerToken(_event, authOptions)
   /**
    * Add any trpc-request context here. E.g., you could add `db` like this:
    * ```ts
@@ -18,6 +20,8 @@ export async function createContext(_event: H3Event) {
    */
   return {
     db: useDb(),
+    session,
+    jwt
     // user: session?.user,
   }
 }
