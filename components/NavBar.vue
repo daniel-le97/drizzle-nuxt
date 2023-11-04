@@ -2,6 +2,8 @@
 import { ref } from 'vue'
 import ThemeButton from './ThemeButton.vue'
 
+const { signOut } = useAuth()
+
 const { session } = useAuth()
 const nav = ref(null)
 
@@ -131,7 +133,11 @@ onBeforeUnmount(() => {
           </li>
           <li><a>Settings</a></li>
 
-          <li><a>Logout</a></li>
+          <li>
+            <button type="button" @click="() => signOut()">
+              Logout
+            </button>
+          </li>
         </ul>
       </div>
     </div>
