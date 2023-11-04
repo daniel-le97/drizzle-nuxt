@@ -15,19 +15,20 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@hebilicious/authjs-nuxt',
     '@vueuse/nuxt',
-    // "@nuxtjs/color-mode",
+    "@nuxtjs/color-mode",
   ],
 
-  // colorMode: {
-  //   preference: 'system', // default value of $colorMode.preference
-  //   fallback: 'light', // fallback value if not system preference found
-  //   hid: 'nuxt-color-mode-script',
-  //   globalName: '__NUXT_COLOR_MODE__',
-  //   componentName: 'ColorScheme',
-  //   classPrefix: '',
-  //   classSuffix: '-mode',
-  //   storageKey: 'nuxt-color-mode'
-  // },
+  colorMode: {
+    classSuffix: ''
+    // preference: 'system', // default value of $colorMode.preference
+    // fallback: 'light', // fallback value if not system preference found
+    // hid: 'nuxt-color-mode-script',
+    // globalName: '__NUXT_COLOR_MODE__',
+    // componentName: 'ColorScheme',
+    // classPrefix: '',
+    // classSuffix: '-mode',
+    // storageKey: 'nuxt-color-mode'
+  },
   authJs: {
     // default configuration
     // verifyClientOnEveryRequest: true,
@@ -39,6 +40,10 @@ export default defineNuxtConfig({
       tailwindcss: {
         config: {
           plugins: [import('daisyui')],
+          darkMode: 'class',
+          daisyui: {
+            themes: true,
+          },
         },
         exposeConfig: true,
         injectPosition: 'last',

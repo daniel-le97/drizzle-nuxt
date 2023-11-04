@@ -2,10 +2,6 @@
 import { onMounted } from 'vue'
 import { themeChange } from 'theme-change'
 
-function changeTheme(theme: string) {
-
-}
-
 onMounted(() => {
   themeChange(false)
 })
@@ -13,15 +9,15 @@ onMounted(() => {
 
 <template>
   <div class="">
-    <select
-      data-choose-theme
-      class="focus:outline-none h-10 rounded-full px-3 border"
-    >
+    <select data-choose-theme>
       <option value="">
         Default
       </option>
       <option value="dark">
         Dark
+      </option>
+      <option value="pink">
+        Pink
       </option>
     </select>
   </div>
