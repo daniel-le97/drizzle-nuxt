@@ -19,6 +19,7 @@ export default defineNitroPlugin(async () => {
     }
   }
   catch (error) {
-    // logger.error('issue migrating db')
+    // @ts-expect-error message is there
+    logger.error(error.message)
   }
 })

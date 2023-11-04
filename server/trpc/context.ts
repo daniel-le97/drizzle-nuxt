@@ -1,7 +1,6 @@
 // import { getServerSession } from '@hebilicious/authjs-nuxt/dist/runtime/lib/server.js'
 import type { inferAsyncReturnType } from '@trpc/server'
 import type { H3Event } from 'h3'
-import { authOptions } from '~/server/api/auth/[...].js'
 
 /**
  * Creates context for an incoming request

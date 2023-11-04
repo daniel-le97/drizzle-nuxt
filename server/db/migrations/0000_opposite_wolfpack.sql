@@ -34,6 +34,15 @@ CREATE TABLE IF NOT EXISTS "verificationToken" (
 	CONSTRAINT verificationToken_identifier_token PRIMARY KEY("identifier","token")
 );
 --> statement-breakpoint
+CREATE TABLE IF NOT EXISTS "todos" (
+	"id" "char" PRIMARY KEY NOT NULL,
+	"task" text,
+	"completed" boolean DEFAULT false,
+	"createdAt" timestamp with time zone DEFAULT now(),
+	"updatedAt" timestamp with time zone DEFAULT now(),
+	"userId" text NOT NULL
+);
+--> statement-breakpoint
 DO $$ BEGIN
  ALTER TABLE "account" ADD CONSTRAINT "account_userId_user_id_fk" FOREIGN KEY ("userId") REFERENCES "user"("id") ON DELETE cascade ON UPDATE no action;
 EXCEPTION
@@ -42,6 +51,12 @@ END $$;
 --> statement-breakpoint
 DO $$ BEGIN
  ALTER TABLE "session" ADD CONSTRAINT "session_userId_user_id_fk" FOREIGN KEY ("userId") REFERENCES "user"("id") ON DELETE cascade ON UPDATE no action;
+EXCEPTION
+ WHEN duplicate_object THEN null;
+END $$;
+--> statement-breakpoint
+DO $$ BEGIN
+ ALTER TABLE "todos" ADD CONSTRAINT "todos_userId_user_id_fk" FOREIGN KEY ("userId") REFERENCES "user"("id") ON DELETE cascade ON UPDATE no action;
 EXCEPTION
  WHEN duplicate_object THEN null;
 END $$;

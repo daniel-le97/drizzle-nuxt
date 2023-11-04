@@ -1,10 +1,10 @@
 import { createInsertSchema, createSelectSchema } from 'drizzle-zod'
 import { boolean, pgTable, text } from 'drizzle-orm/pg-core'
 import { id, timestamps } from '../utils/dbFields'
-import { users } from './auth';
+import { users } from './auth'
 
 /**
- * Provides a Drizzle schema for "authors" and also exposes Zod schemas for usage in tRPC routes
+ * Provides a Drizzle schema for "todos" and also exposes Zod schemas for usage in tRPC routes
  */
 export const todos = pgTable('todos', {
   id,
@@ -15,8 +15,6 @@ export const todos = pgTable('todos', {
     .notNull()
     .references(() => users.id, { onDelete: 'cascade' }),
 })
-
-
 
 export const insertTodoSchema = createInsertSchema(todos)
 export const selectTodoSchema = createSelectSchema(todos)
