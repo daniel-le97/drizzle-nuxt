@@ -1,9 +1,9 @@
 <template>
-  <footer class="bg-zinc-900 text-white">
-    <div class="w-full pt-10 flex items-center justify-center bg-zinc-900">
-      <div class="md:w-2/3 w-full px-4 text-white flex flex-col">
+  <footer class="bg-neutral ">
+    <div class="w-full pt-10 flex items-center justify-center bg-neutral">
+      <div class="md:w-2/3 w-full px-4 flex flex-col">
         <div class="md:flex">
-          <h1 class="text-6xl font-bold w-full md:w-1/2 text-primary">
+          <h1 class="text-6xl font-bold w-full md:w-1/2 text-neutral-content">
             Thank you for checking out our app. Get in touch with us.
           </h1>
 
@@ -74,7 +74,7 @@
         <div
           class="flex mt-8 flex-col md:flex-row md:justify-center md:text-center"
         >
-          <p class="w-full md:w-2/3  text-secondary">
+          <p class="w-full md:w-2/3  text-neutral-content">
             If you want to contact us the best way is to connect with us on
             LinkedIn and message us!
           </p>
@@ -90,23 +90,23 @@
               >
             </div>
 
-            <NuxtLink to="/" class="link" active-class="active-link">
+            <NuxtLink to="/" class="link text-neutral-content" active-class="active-link">
               Home
             </NuxtLink>
-            <NuxtLink to="/about" class="link" active-class="active-link">
+            <NuxtLink to="/about" class="link text-neutral-content" active-class="active-link">
               About
             </NuxtLink>
 
-            <nuxt-link to="/account" class="link" active-class="active-link">
+            <nuxt-link to="/account" class="link text-neutral-content" active-class="active-link">
               Account
             </nuxt-link>
-            <nuxt-link to="/contact" class="link" active-class="active-link">
+            <nuxt-link to="/contact" class="link text-neutral-content" active-class="active-link">
               Contact
             </nuxt-link>
           </div>
           <hr class="border-gray-600">
 
-          <h1 class="text-center  my-10 text-secondary">
+          <h1 class="text-center  my-10 text-neutral-content">
             © Lorem ipsum dolor sit.
           </h1>
         </div>

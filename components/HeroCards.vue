@@ -14,13 +14,13 @@ const { stop } = useIntersectionObserver(
 </script>
 
 <template>
-  <div ref="target" class="absolute z-50 -bottom-44 w-4/5 flex justify-center">
+  <div ref="target" class=" w-4/5 flex justify-center">
     <div class="card h-96">
       <div class="card-body flex-row space-x-4 items-center justify-center p-4">
         <Transition>
           <div
             v-if="targetIsVisible"
-            class="card w-1/3 h-full glass text-black shadow-xl"
+            class="card w-1/3 h-full bg-neutral text-base-content shadow-xl"
           >
             <div class="card-body">
               <img
@@ -28,7 +28,7 @@ const { stop } = useIntersectionObserver(
                 alt=""
                 class="w-16 h-16"
               >
-              <h2 class="card-title">
+              <h2 class="card-title ">
                 The Intuitive Vue Framework
               </h2>
               <p>
@@ -42,7 +42,7 @@ const { stop } = useIntersectionObserver(
         <Transition>
           <div
             v-if="targetIsVisible"
-            class="card w-1/3 h-full glass text-black shadow-xl"
+            class="card w-1/3 h-full bg-neutral text-base-content shadow-xl"
           >
             <div class="card-body">
               <img
@@ -65,7 +65,7 @@ const { stop } = useIntersectionObserver(
         <Transition>
           <div
             v-if="targetIsVisible"
-            class="card w-1/3 h-full glass text-black shadow-xl"
+            class="card w-1/3 h-full bg-neutral text-base-content shadow-xl"
           >
             <div class="card-body">
               <img

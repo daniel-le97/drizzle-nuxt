@@ -1,5 +1,42 @@
 <script setup lang="ts">
+
+import { ref } from 'vue'
+import { useIntersectionObserver } from '@vueuse/core'
+
+const target = ref(null)
+const targetIsVisible = ref(false)
+  const itemRefs = ref([]);
+
+const { stop } = useIntersectionObserver(
+  target,
+  ([{ isIntersecting }], observerElement) => {
+    targetIsVisible.value = isIntersecting
+    // console.log(isIntersecting);
+
+  },
+)
 const plugins = [
+  {
+    name: 'Nuxt',
+image:'https://imgs.search.brave.com/H-lJ3BpWOxay8dqqBF5qIjMeRk2AKZCwa09lkFZymPw/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9kZXZl/bG9wMzY1LmdpdGxh/Yi5pby9udXh0anMt/Mi44LlgtZG9jL2Vu/L2xvZ29zL251eHQu/c3Zn.svg'
+,
+    description:'The Intuitive Vue Framework',
+    link:'https://nuxt.com/'
+  },
+  {
+    name: 'Drizzle',
+image:'https://pbs.twimg.com/profile_images/1710017636166193152/7aUeiYMx_400x400.jpg'
+,
+    description:'ORM with both relational and SQL-like query APIs, providing you best of both worlds when it comes to accessing your relational data.',
+    link:'https://orm.drizzle.team/'
+  },
+  {
+    name: 'Drizzle Studio',
+image:'https://orm.drizzle.team/_next/static/media/drizzle-studio.ad906532.jpg'
+,
+    description:'Drizzle studio grabs your drizzle config file, connects to your database and lets you browse, add, delete and update everything based on your existing drizzle sql schema.',
+    link:'https://orm.drizzle.team/drizzle-studio/overview'
+  },
   {
     name: 'ESLINT',
 image:'https://cdn.iconscout.com/icon/free/png-512/free-eslint-3521412-2944856.png?f=webp&w=256'
@@ -58,27 +95,43 @@ image:'https://cdn.iconscout.com/icon/free/png-512/free-eslint-3521412-2944856.p
 </script>
 
 <template>
-  <section class="my-44">
+  <section class=" px-20">
     <div
       class="font-bold mb-20  gradient-text  justify-center flex items-center text-6xl"
     >
      Features
     </div>
-    <div class=" gap-4 grid grid-cols-2  ">
-      <a :href="p.link" v-for="p in plugins" :key="p.name" target="_blank">
+
+    <Transition >
+    <div class=" gap-4 grid grid-cols-3  " v-if="targetIsVisible" ref="target" >
+
+      <a :href="p.link" v-for="p in plugins" :key="p.name"   ref="itemRefs" target="_blank">
         <div  class="p-4 card bg-neutral shadow-xl  h-full hover:bg-[hsl(var(--nf))] duration-300 ease-linear  " >
 <div class="flex justify-start mb-4">
-      <img :src="p.image" :alt="p.name" class="w-16 h-16 rounded-md">
+      <img :src="p.image" :alt="p.name" class="w-16 h-16 rounded-md "  >
     </div>
     <div class="flex flex-col space-y-2 text-start">
-      <p  class="text-base-100 font-bold">{{p.name}}</p>
-      <p class="text-info">{{p.description}}</p>
+      <p  class="text-neutral-content font-bold">{{p.name}}</p>
+      <p class="text-neutral-content">{{p.description}}</p>
     </div>
 
   </div>
 </a>
-      </div>
+
+</div>
+</Transition>
   </section>
 </template>
 
-<style></style>
+<style>
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+</style>

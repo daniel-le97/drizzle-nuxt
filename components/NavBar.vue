@@ -39,7 +39,7 @@ onBeforeUnmount(() => {
 <template>
   <div
     ref="nav"
-    class="navbar glass flex-row fixed top-0 w-full p-4 transition-transform duration-500 ease-in-out"
+    class="navbar  bg-base-100 flex-row fixed top-0 w-full p-4 transition-transform duration-500 ease-in-out"
     :style="{ transform: navTransform }"
   >
     <div class="navbar-start">
@@ -155,6 +155,6 @@ onBeforeUnmount(() => {
 }
 
 .link{
-  @apply text-lg hover:text-[var(--info)]
+  @apply text-lg hover:text-[var(--info)] text-[hsl(var(--bc))]
 }
 </style>
