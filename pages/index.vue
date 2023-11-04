@@ -9,7 +9,7 @@
       <PluginMention />
       <PricingPlan />
       <Testimonials />
-      <SubscribeBanner />
+ 
     </main>
   </div>
 </template>

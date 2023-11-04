@@ -18,13 +18,13 @@ image:'https://cdn.iconscout.com/icon/free/png-512/free-eslint-3521412-2944856.p
   {
     name: 'TypeScript',
     image:'https://imgs.search.brave.com/sXYprDxK8_0Up5vaW62rpLfRGZ5J1rxgZsxrNEMqUes/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy80/LzRjL1R5cGVzY3Jp/cHRfbG9nb18yMDIw/LnN2Zw.svg',
-    description:'',
-    link:''
+    description:' TypeScript speeds up your development experience by catching errors and providing fixes before you even run your code.',
+    link:'https://www.typescriptlang.org/'
   },
   {
     name: 'VueUse',
     image:'https://raw.githubusercontent.com/nuxt/modules/main/icons/vueuse.svg',
-    description:'',
+    description:'Collection of Vue Composition Utilities based on Composition API.',
     link:''
   },
   {
@@ -62,16 +62,16 @@ image:'https://cdn.iconscout.com/icon/free/png-512/free-eslint-3521412-2944856.p
     <div
       class="font-bold mb-20  gradient-text  justify-center flex items-center text-6xl"
     >
-      Plugins & Modules
+     Features
     </div>
     <div class=" gap-4 grid grid-cols-2  ">
       <a :href="p.link" v-for="p in plugins" :key="p.name" target="_blank">
-        <div  class="p-4 card bg-neutral  " >
-<div class="flex justify-start">
+        <div  class="p-4 card bg-neutral shadow-xl  h-full hover:bg-[hsl(var(--nf))] duration-300 ease-linear  " >
+<div class="flex justify-start mb-4">
       <img :src="p.image" :alt="p.name" class="w-16 h-16 rounded-md">
     </div>
     <div class="flex flex-col space-y-2 text-start">
-      <p  class="text-base-100">{{p.name}}</p>
+      <p  class="text-base-100 font-bold">{{p.name}}</p>
       <p class="text-info">{{p.description}}</p>
     </div>
 
