@@ -39,7 +39,8 @@ export default defineNuxtConfig({
 
       tailwindcss: {
         config: {
-          plugins: [import('daisyui')],
+          // eslint-disable-next-line ts/no-require-imports
+          plugins: [require('daisyui')],
           darkMode: 'class',
           daisyui: {
             themes: true,
