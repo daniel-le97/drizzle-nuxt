@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <main >
+  <main>
     <section class="lg:p-10 md:p-8 sm:p-2 lg:flex-row flex flex-col  items-center  justify-center w-full ">
       <div class="lg:w-1/2 w-2/3 flex flex-col space-y-6 lg:p-8 mb-8 lg:mb-0">
         <div class="text-4xl font-bold prose">

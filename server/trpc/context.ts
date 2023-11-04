@@ -1,8 +1,8 @@
 // import { getServerSession } from '@hebilicious/authjs-nuxt/dist/runtime/lib/server.js'
 import type { inferAsyncReturnType } from '@trpc/server'
 import type { H3Event } from 'h3'
-import { authOptions } from "~/server/api/auth/[...]"
-import { getServerSession, getServerToken } from "#auth"
+import { authOptions } from '~/server/api/auth/[...]'
+import { getServerSession, getServerToken } from '#auth'
 
 /**
  * Creates context for an incoming request
@@ -21,7 +21,7 @@ export async function createContext(_event: H3Event) {
   return {
     db: useDb(),
     session,
-    jwt
+    jwt,
     // user: session?.user,
   }
 }

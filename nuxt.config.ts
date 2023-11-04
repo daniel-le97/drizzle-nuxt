@@ -15,11 +15,11 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@hebilicious/authjs-nuxt',
     '@vueuse/nuxt',
-    "@nuxtjs/color-mode",
+    '@nuxtjs/color-mode',
   ],
 
   colorMode: {
-    classSuffix: ''
+    classSuffix: '',
     // preference: 'system', // default value of $colorMode.preference
     // fallback: 'light', // fallback value if not system preference found
     // hid: 'nuxt-color-mode-script',
@@ -37,19 +37,18 @@ export default defineNuxtConfig({
     // baseUrl: 'http://localhost:3000' // should be something like https://www.my-app.com
   },
 
-      tailwindcss: {
-        config: {
-          // eslint-disable-next-line ts/no-require-imports
-          plugins: [require('daisyui')],
-          darkMode: 'class',
-          daisyui: {
-            themes: true,
-          },
-        },
-        exposeConfig: true,
-        injectPosition: 'last',
+  tailwindcss: {
+    config: {
+      // eslint-disable-next-line ts/no-require-imports
+      plugins: [require('daisyui')],
+      darkMode: 'class',
+      daisyui: {
+        themes: true,
       },
- 
+    },
+    exposeConfig: true,
+    injectPosition: 'last',
+  },
 
   build: {
     transpile: ['trpc-nuxt'],
