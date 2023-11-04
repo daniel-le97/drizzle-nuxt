@@ -17,8 +17,6 @@ export default {
 
 <template>
   <section class="flex flex-col items-center w-full">
-
-
     <!-- Form on the left -->
     <div class="  bg-white  rounded-md">
       <div class="text-4xl font-semibold mb-4">
@@ -43,7 +41,6 @@ export default {
         </button>
       </form>
     </div>
-
   </section>
 </template>
 

@@ -85,6 +85,16 @@ onBeforeUnmount(() => {
             Home
           </NuxtLink>
         </li>
+        <li class="  ">
+          <NuxtLink to="/about" exact-active-class="active-link" class="link-item">
+            About
+          </NuxtLink>
+        </li>
+        <li class="  ">
+          <NuxtLink to="/contact" exact-active-class="active-link" class="link-item">
+            Contact
+          </NuxtLink>
+        </li>
         <li>
           <NuxtLink to="/signin" exact-active-class="active-link">
             Login
