@@ -18,12 +18,15 @@
   "dependencies": {
     "@auth/drizzle-adapter": "^0.3.5",
     "@hebilicious/authjs-nuxt": "^0.3.5",
+    "@nuxt/image": "^1.0.0",
     "@vueuse/motion": "^2.0.0",
     "@vueuse/nuxt": "^10.5.0",
+    "bun-types": "^1.0.8",
     "drizzle-orm": "^0.28.6",
     "postgres": "^3.4.3",
     "theme-change": "^2.5.0",
-    "trpc-nuxt": "^0.10.12"
+    "trpc-nuxt": "^0.10.12",
+    "typescript": "^5.2.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^1.1.0",
