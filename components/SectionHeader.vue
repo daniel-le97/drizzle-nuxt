@@ -8,7 +8,7 @@ const { title,subtitle } = toRefs(props)
 </script>
 
 <template>
-<div class=" mb-8 lg:mb-20">
+<div class=" my-8 lg:my-20">
     <div class="font-bold mb-6  justify-center flex items-center lg:text-6xl md:text-5xl text-4xl ">
       {{ title }}
     </div>

@@ -2,6 +2,7 @@
 const { $client } = useNuxtApp()
 const { data: todos } = await $client.todos.getAll.useQuery()
 
+
 const todo = ref({
   task: '',
   completed: false,
@@ -45,12 +46,32 @@ const handleDelete = async (id: string) => {
 </script>
 
 <template>
-  <div class=" card bg-neutral text-neutral-content p-5   w-1/2 ">
+  <div
+
+
+  class=" card bg-neutral text-neutral-content p-5   w-1/2 ">
     <div class="flex justify-between">
       <div class="font-bold text-xl">
         Todos
       </div>
-      <Icon name="uil:sun" size="30" />
+      <Icon name="uil:sun" size="30"      v-motion
+      :initial="{
+
+        rotate:0
+      }"
+      :enter="{
+
+        rotate:100,
+
+        transition: {
+          repeat: Infinity,
+          repeatType: 'mirror',
+          stiffness: 150,
+          damping: 40,
+          mass: 0.5,
+        },
+
+      }"  />
     </div>
     <!-- <div>{{ todos ?? [] }}</div> -->
     <form @submit.prevent="handleSubmit" class="flex mx-auto mt-5">

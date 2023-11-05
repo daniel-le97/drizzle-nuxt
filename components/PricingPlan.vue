@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center flex-col justify-center flex items-center  mb-8">
+  <div class="text-center flex-col justify-center flex items-center  ">
     <SectionHeader title="Pricing Plans" subtitle=" The most powerful analytics to understand how people use your app or website. Choose from any of our pricing plans
       that work to fit you as you grow." />
 
@@ -38,7 +38,7 @@
       </div>
     </div>
     <!-- GRADIENT BACKGROUND CARD -->
-    <div class="card shadow-xl background-gradient">
+    <div class="card shadow-xl background-gradient scale-110">
       <div class="card-body items-center text-center">
         <h2 class="mb-4 text-neutral-content font-bold">
           Premium
