@@ -87,7 +87,7 @@ const plugins = [
 
 <template>
   <section class="px-20">
-<SectionHeader title="Features" />
+    <SectionHeader title="Features" />
     <div class="gap-4 grid grid-cols-3">
       <a
         v-for="p in plugins"

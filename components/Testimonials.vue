@@ -38,8 +38,6 @@ onUnmounted(() => {
 })
 </script>
 
-
-
 <template>
   <section class="my-44">
     <SectionHeader title="Testimonials" />

@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div v-motion-pop-visible class="relative">
     <input
       type="text"
       placeholder="Search..."

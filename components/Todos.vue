@@ -1,11 +1,12 @@
 <script setup lang="ts">
 const { $client } = useNuxtApp()
+
+
+const { data: hello } = await $client.todos.getAll.useQuery()
 </script>
 
 <template>
-  <div class="p-5" />
+  <div>
+    <p>{{ hello }}</p>
+  </div>
 </template>
-
-<style>
-
-</style>
