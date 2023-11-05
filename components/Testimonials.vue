@@ -2,11 +2,14 @@
 import { onMounted, onUnmounted, ref } from 'vue'
 
 const images = [
-  'https://i.pravatar.cc',
-  'https://i.pravatar.cc',
-  'https://i.pravatar.cc',
-  'https://i.pravatar.cc',
-  'https://i.pravatar.cc',
+  'https://i.pravatar.cc/150?img=4',
+  'https://i.pravatar.cc/150?img=6',
+  'https://i.pravatar.cc/150?img=23',
+  'https://i.pravatar.cc/150?img=12',
+  'https://i.pravatar.cc/150?img=10',
+  'https://i.pravatar.cc/150?img=34',
+  'https://i.pravatar.cc/150?img=1',
+
 ]
 const altText = 'Pizza'
 

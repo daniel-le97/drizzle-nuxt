@@ -1,12 +1,10 @@
 <template>
   <div class="text-center flex-col justify-center flex items-center  mb-8">
-    <SectionHeader title="Pricing Plans" />
-    <div class=" text-center  w-1/2 text-base-content">
-      The most powerful analytics to understand how people use your app or website. Choose from any of our pricing plans
-      that work to fit you as you grow.
-    </div>
+    <SectionHeader title="Pricing Plans" subtitle=" The most powerful analytics to understand how people use your app or website. Choose from any of our pricing plans
+      that work to fit you as you grow." />
+
   </div>
-  <div class="flex mx-auto space-x-10">
+  <div class="flex lg:flex-row flex-col space-y-4 lg:space-y-0 mx-auto lg:space-x-10">
     <div class="rounded-2xl background-gradient flex items-center justify-center p-1">
       <div class="card shadow-xl bg-base-100">
         <div class="card-body items-center text-center  text-base-content ">
@@ -75,13 +73,13 @@
       <div class="card shadow-xl bg-base-100">
         <div class="card-body items-center text-center  text-base-content ">
           <h2 class="mb-4  font-bold">
-            Starter
+           Enterprise
           </h2>
-          <div class="radial-progress text-primary" style="--value: 20; --size: 10rem; --thickness: 15px" />
+          <div class="radial-progress text-primary" style="--value: 100; --size: 10rem; --thickness: 15px" />
           <div class="stat text-base-content">
             <div class="flex items-end mx-auto">
               <div class="stat-value text-primary">
-                $5
+                $30
               </div>
               <div class="text-sm">
                 /mo
@@ -89,12 +87,12 @@
             </div>
             <div class="mt-5">
               Unlimited projects <br>
-              Limited core reports
+              Unlimited core reports
               <br>
-              60 day data history
-              <br>7 3 members / projects
+              180 day data history
+              <br>14 members / projects
               <br>
-              A/B Testing
+              Intergration
             </div>
           </div>
           <button class=" btn btn-accent">

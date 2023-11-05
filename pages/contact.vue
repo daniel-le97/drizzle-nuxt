@@ -2,7 +2,7 @@
 
 <template>
   <main class=" ">
-    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md flex flex-col items-center justify-center">
       <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center">
         Contact Us
       </h2>
@@ -23,7 +23,7 @@
           </div>
 
           <div class="flex items-center justify-center">
-            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&q=80&w=1170&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="w-2/3">
+            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&q=80&w=1170&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="lg:w-2/3  lg:block hidden">
           </div>
         </div>
 

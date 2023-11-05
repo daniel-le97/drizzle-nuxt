@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <div class="w-1/2 flex">
+      <div class="lg:w-1/2 p-10 lg:p-0 flex">
         <div class="flex">
           <img src="https://images.unsplash.com/photo-1698915583082-ae18c41f50c0?auto=format&fit=crop&q=80&w=1364&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="">
         </div>

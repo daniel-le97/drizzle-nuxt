@@ -4,22 +4,9 @@ const user = session?.value?.user
 </script>
 
 <template>
-  <main class="  items-center justify-center flex">
-    <section class="relative block ">
-      <div
-        class="absolute top-0 w-full h-full bg-center bg-cover" style="
-            background-image: url('https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?auto=format&fit=crop&q=80&w=1474&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-          "
-      >
-        <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black" />
-      </div>
-      <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px" style="transform: translateZ(0px)">
-        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
-          <polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100" />
-        </svg>
-      </div>
-    </section>
-    <section class="relative py-16 ">
+  <main class="   items-center justify-center flex">
+
+    <section class="relative   mt-52  ">
       <div class="container mx-auto px-4">
         <div class="relative flex flex-col min-w-0 break-words bg-neutral w-full mb-6 shadow-xl rounded-lg -mt-64">
           <div class="px-6">

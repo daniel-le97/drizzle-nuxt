@@ -87,25 +87,14 @@ const plugins = [
 
 <template>
   <section class="px-20">
-    <SectionHeader title="Features" />
-    <div class="gap-4 grid grid-cols-3">
-      <a
-        v-for="p in plugins"
-        :key="p.name"
-        ref="itemRefs"
-        v-motion-fade-visible
-        :delay="100"
-        :href="p.link"
-        target="_blank"
-        class="feature-link"
-      >
+    <SectionHeader title="Features" subtitle="Empowering Your Web Experience with Amazing  Development Technologies" />
+    <div class="gap-4 grid  space-y-4 lg:space-y-0  grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <a v-for="p in plugins" :key="p.name" ref="itemRefs" v-motion-fade-visible :delay="100" :href="p.link"
+        target="_blank" class="feature-link">
         <div class="p-4 card bg-neutral shadow-xl h-full hover:bg-[hsl(var(--nf))] duration-300 ease-linear group">
           <div v-motion-pop-visible :delay="100" class="flex justify-start mb-4">
-            <img
-              :src="p.image"
-              :alt="p.name"
-              class="w-16 h-16 rounded-md group-hover:scale-150 group-hover:-translate-x-4 group-hover:-translate-y-4"
-            >
+            <img :src="p.image" :alt="p.name"
+              class="w-16 h-16 rounded-md group-hover:scale-150 group-hover:-translate-x-4 group-hover:-translate-y-4">
           </div>
           <div class="flex flex-col space-y-2 text-start">
             <p v-motion-pop-visible :delay="100" class="text-neutral-content font-bold">{{ p.name }}</p>
@@ -122,6 +111,7 @@ const plugins = [
 .list-leave-active {
   transition: all 0.5s ease;
 }
+
 .list-enter-from,
 .list-leave-to {
   opacity: 0;

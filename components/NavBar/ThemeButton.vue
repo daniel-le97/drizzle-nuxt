@@ -42,7 +42,7 @@ onMounted(() => {
 <template>
   <div>
     <div class="dropdown dropdown-end">
-      <label tabindex="0" class="btn btn-circle swap swap-rotate ">
+      <label v-motion-pop-visible tabindex="0" class="btn btn-circle btn-ghost swap swap-rotate ">
         <!-- this hidden checkbox controls the state -->
         <input type="checkbox">
         <!-- sun icon -->
