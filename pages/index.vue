@@ -10,8 +10,8 @@
       <Features />
 
       <PricingPlan />
-      <Testimonials />
-      <TestimonialsV2/>
+   
+      <Testimonials/>
     </main>
   </div>
 </template>
