@@ -12,11 +12,16 @@
       <div class="divider mt-24 m-0 text-4xl font-bold text-base-content">
         Pre-made Components
       </div>
-      <div class="divider w-2/3 m-0 mx-auto" />
       <Todos />
+      <div class="divider " />
       <PricingPlan />
-
+      <div class="divider " />
+      <Blog/>
+      <div class="divider " />
       <Testimonials />
+      <div class="divider " />
+      <TemplateBanner/>
+   
     </main>
   </div>
 </template>
