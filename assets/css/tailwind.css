@@ -52,6 +52,18 @@ img{
 
 
 
+.background-gradient {
+  background: linear-gradient(
+    to bottom right,
+    hsl(var(--s)) 0%,
+    hsl(var(--sf)) 9%,
+    hsl(var(--pf)) 42%,
+    hsl(var(--p)) 47%,
+    hsl(var(--a)) 100%
+  );
+}
+
+
 .v-enter-active,
 .v-leave-active {
   transition: opacity 1.5s ease;

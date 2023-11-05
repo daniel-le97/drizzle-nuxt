@@ -38,11 +38,11 @@ onUnmounted(() => {
 })
 </script>
 
+
+
 <template>
   <section class="my-44">
-    <div class="text-4xl font-bold text-center my-2 gradient-text text-6xl">
-      Testimonials
-    </div>
+    <SectionHeader title="Testimonials" />
     <div class="carousel carousel-center rounded-box   h-[500px]">
       <div v-for="i in 10" class="carousel-item flex-col items-center space-y-4  py-1  w-1/3  ">
         <div class="avatar ">

@@ -1,29 +1,22 @@
 <template>
   <div class="text-center flex-col justify-center flex items-center  mb-8">
-    <div class=" font-bold text-center  mb-4 gradient-text text-6xl">
-      The Pricing Plan
-    </div>
-    <div class=" text-center  w-1/2">
-      The most powerful analytics to understand how people use your app or website. Choose from any of our pricing plans that work to fit you as you grow.
+    <SectionHeader title="Pricing Plans" />
+    <div class=" text-center  w-1/2 text-base-content">
+      The most powerful analytics to understand how people use your app or website. Choose from any of our pricing plans
+      that work to fit you as you grow.
     </div>
   </div>
-
-  <div class="flex mx-auto space-x-4">
-    <div
-      class="rounded-2xl bg-gradient-to-b from-indigo-500 via-orange-500 to-pink-500 flex items-center justify-center p-1"
-    >
-      <div class="card shadow-xl bg-white">
-        <div class="card-body items-center text-center text-indigo-950 ">
-          <h2 class="mb-4">
+  <div class="flex mx-auto space-x-10">
+    <div class="rounded-2xl background-gradient flex items-center justify-center p-1">
+      <div class="card shadow-xl bg-base-100">
+        <div class="card-body items-center text-center  text-base-content ">
+          <h2 class="mb-4  font-bold">
             Starter
           </h2>
-          <div
-            class="radial-progress text-indigo-500"
-            style="--value: 20; --size: 10rem; --thickness: 15px"
-          />
-          <div class="stat">
+          <div class="radial-progress text-primary" style="--value: 20; --size: 10rem; --thickness: 15px" />
+          <div class="stat text-base-content">
             <div class="flex items-end mx-auto">
-              <div class="stat-value text-indigo-500">
+              <div class="stat-value text-primary">
                 $5
               </div>
               <div class="text-sm">
@@ -40,37 +33,29 @@
               A/B Testing
             </div>
           </div>
-
-          <button
-            class="py-2 px-4 border-gray-200 border-2 outline-white text-pink-500 hover:bg-gradient-to-b from-indigo-500 via-orange-500 to-pink-500 hover:text-white transition-all duration-500 font-bold hover:border-gray-500 text-sm"
-          >
+          <button class=" btn btn-accent">
             CHOOSE PLAN
           </button>
         </div>
       </div>
     </div>
-
-    <div
-      class="card shadow-xl bg-gradient-to-b from-indigo-500 via-orange-500 to-pink-500"
-    >
+    <!-- GRADIENT BACKGROUND CARD -->
+    <div class="card shadow-xl background-gradient">
       <div class="card-body items-center text-center">
-        <h2 class="mb-4 text-white">
+        <h2 class="mb-4 text-neutral-content font-bold">
           Premium
         </h2>
-        <div
-          class="radial-progress text-white"
-          style="--value: 50; --size: 10rem; --thickness: 15px"
-        />
+        <div class="radial-progress text-neutral-content" style="--value: 50; --size: 10rem; --thickness: 15px" />
         <div class="stat">
           <div class="flex items-end mx-auto">
-            <div class="stat-value text-white">
+            <div class="stat-value text-neutral-content">
               $15
             </div>
-            <div class="text-sm text-white">
+            <div class="text-sm text-neutral-content">
               /mo
             </div>
           </div>
-          <div class="mt-5 text-white">
+          <div class="mt-5 text-neutral-content">
             Unlimited projects <br>
             Limited core reports
             <br>
@@ -80,30 +65,23 @@
             A/B Testing
           </div>
         </div>
-        <button
-          class="py-2 shadow-md shadow-indigo-700 px-4 text-pink-500 bg-white border-white font-bold outline-white hover:text-indigo-950"
-        >
+        <button class=" btn btn-accent">
           CHOOSE PLAN
         </button>
       </div>
     </div>
-
-    <div
-      class="rounded-2xl bg-gradient-to-b from-indigo-500 via-orange-500 to-pink-500 flex items-center justify-center p-1"
-    >
-      <div class="card shadow-xl bg-white">
-        <div class="card-body items-center text-center text-indigo-950">
-          <h2 class="mb-4">
-            Enterprise
+    <!-- GRADIENT BACKGROUND CARD -->
+    <div class="rounded-2xl background-gradient flex items-center justify-center p-1">
+      <div class="card shadow-xl bg-base-100">
+        <div class="card-body items-center text-center  text-base-content ">
+          <h2 class="mb-4  font-bold">
+            Starter
           </h2>
-          <div
-            class="radial-progress text-indigo-500"
-            style="--value: 100; --size: 10rem; --thickness: 15px"
-          />
-          <div class="stat">
+          <div class="radial-progress text-primary" style="--value: 20; --size: 10rem; --thickness: 15px" />
+          <div class="stat text-base-content">
             <div class="flex items-end mx-auto">
-              <div class="stat-value text-indigo-500">
-                $30
+              <div class="stat-value text-primary">
+                $5
               </div>
               <div class="text-sm">
                 /mo
@@ -119,10 +97,7 @@
               A/B Testing
             </div>
           </div>
-
-          <button
-            class="py-2 px-4 border-gray-200 border-2 outline-white text-pink-500 hover:bg-gradient-to-b from-indigo-800 via-purple-500 to-pink-500 hover:text-white transition-all duration-500 font-bold hover:border-gray-500 text-sm"
-          >
+          <button class=" btn btn-accent">
             CHOOSE PLAN
           </button>
         </div>

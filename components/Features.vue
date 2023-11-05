@@ -86,24 +86,31 @@ const plugins = [
 </script>
 
 <template>
-  <section class=" px-20">
-    <div
-      class="font-bold mb-20  gradient-text  justify-center flex items-center text-6xl"
-    >
-      Features
-    </div>
-
-    <div class=" gap-4 grid grid-cols-3  ">
-      <a v-for="p in plugins" :key="p.name" ref="itemRefs" :href="p.link" target="_blank">
-        <div class="p-4 card bg-neutral shadow-xl  h-full hover:bg-[hsl(var(--nf))] duration-300 ease-linear  ">
-          <div class="flex justify-start mb-4">
-            <img :src="p.image" :alt="p.name" class="w-16 h-16 rounded-md ">
+  <section class="px-20">
+<SectionHeader title="Features" />
+    <div class="gap-4 grid grid-cols-3">
+      <a
+        v-for="p in plugins"
+        :key="p.name"
+        ref="itemRefs"
+        v-motion-fade-visible
+        :delay="100"
+        :href="p.link"
+        target="_blank"
+        class="feature-link"
+      >
+        <div class="p-4 card bg-neutral shadow-xl h-full hover:bg-[hsl(var(--nf))] duration-300 ease-linear group">
+          <div v-motion-pop-visible :delay="100" class="flex justify-start mb-4">
+            <img
+              :src="p.image"
+              :alt="p.name"
+              class="w-16 h-16 rounded-md group-hover:scale-150 group-hover:-translate-x-4 group-hover:-translate-y-4"
+            >
           </div>
           <div class="flex flex-col space-y-2 text-start">
-            <p class="text-neutral-content font-bold">{{ p.name }}</p>
-            <p class="text-neutral-content">{{ p.description }}</p>
+            <p v-motion-pop-visible :delay="100" class="text-neutral-content font-bold">{{ p.name }}</p>
+            <p v-motion-pop-visible :delay="100" class="text-neutral-content">{{ p.description }}</p>
           </div>
-
         </div>
       </a>
     </div>
