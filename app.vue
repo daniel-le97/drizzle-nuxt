@@ -9,7 +9,6 @@ useSeoMeta({
 })
 </script>
 
-
 <template>
   <NuxtLayout>
     <NuxtPage />

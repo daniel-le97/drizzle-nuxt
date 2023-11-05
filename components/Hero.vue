@@ -21,7 +21,6 @@ onMounted(() => {
           <p class="text-lg font-bold  mt-4 text-base-100">
             Simplify Development
           </p>
-
         </div>
       </div>
     </Transition>
@@ -29,8 +28,6 @@ onMounted(() => {
 </template>
 
 <style>
-
-
 .hero {
   /* always scale the image to the appropriate size of your screen */
   background-size: cover;
@@ -40,8 +37,4 @@ onMounted(() => {
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed;
 }
-
-
-
-
 </style>
