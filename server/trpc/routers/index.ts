@@ -1,7 +1,5 @@
-import { z } from 'zod'
-import { publicProcedure, router } from '../trpc'
+import { router } from '../trpc'
 import { todosRouter } from './todos'
-import { todos } from '~/server/db/todos'
 
 export const appRouter = router({
   todos: todosRouter,

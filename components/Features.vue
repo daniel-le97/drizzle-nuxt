@@ -95,11 +95,13 @@ const plugins = [
   <section class="px-20">
     <SectionHeader title="Features" subtitle="Empowering Your Web Experience with Amazing  Development Technologies" />
     <div class="gap-4 grid  space-y-4 lg:space-y-0  grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      <a v-for="p in plugins" :key="p.name" ref="itemRefs" v-motion-fade-visible :delay="100" :href="p.link"
-        target="_blank" class="feature-link">
+      <a
+        v-for="p in plugins" :key="p.name" ref="itemRefs" v-motion-fade-visible :delay="100" :href="p.link"
+        target="_blank" class="feature-link"
+      >
         <div class="p-4 card bg-neutral shadow-xl h-full hover:bg-[hsl(var(--nf))] duration-300 ease-linear group">
           <div v-motion-pop-visible :delay="100" class="flex justify-start mb-4">
-                 <NuxtImg :src="p.image" :modifiers="{ grayscale: true, tint: '#00DC82' }" :alt="p.name" class="w-16 h-16 rounded-md group-hover:scale-125 group-hover:-translate-x-4 group-hover:-translate-y-4" />
+            <NuxtImg :src="p.image" :modifiers="{ grayscale: true, tint: '#00DC82' }" :alt="p.name" class="w-16 h-16 rounded-md group-hover:scale-125 group-hover:-translate-x-4 group-hover:-translate-y-4" />
 
           </div>
           <div class="flex flex-col space-y-2 text-start">

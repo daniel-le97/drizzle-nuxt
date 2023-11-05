@@ -1,6 +1,6 @@
 {
-  "extends": "../.nuxt/tsconfig.server.json",
-  // if u want to use bun 
+  "extends": "../.nuxt/tsconfig.server.json"
+  // if u want to use bun
   // "compilerOptions": {
   //   "types": ["bun-types"]
   // }

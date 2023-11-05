@@ -1,29 +1,27 @@
 <script setup lang="ts">
-const isvisible = ref(false)
-onMounted(() => {
-  isvisible.value = !isvisible.value
-})
+
 </script>
 
 <template>
   <div class="hero min-h-screen relative">
     <!-- <div class="hero-overlay"></div> -->
-    <Transition name="slide-fade">
-      <div v-if="isvisible" class="hero-content text-center">
-        <div
-          class="mx-auto text-center flex flex-col items-center justify-center w-2/3"
+
+    <div v-motion-pop-visible class="hero-content text-center">
+      <div
+        class="mx-auto text-center flex flex-col items-center justify-center w-2/3"
+      >
+        <h1
+          class="gradient-text text-center font-extrabold tracking-tight text-6xl"
         >
-          <h1
-            class="gradient-text text-center font-extrabold tracking-tight text-6xl"
-          >
-            Nuxt Drizzle Made Beautiful with Tailwind
-          </h1>
-          <p class="text-lg font-bold  mt-4 text-base-100">
-            Simplify Development
-          </p>
-        </div>
+          Nuxt Drizzle Made Beautiful with Tailwind
+        </h1>
+        <p class="text-lg font-bold  mt-4 text-base-100">
+          Simplify Development
+        </p>
       </div>
-    </Transition>
+    </div>
+
+    <Icon name="uil:github" size="50" class="text-black  absolute bottom-3 right-3 -rotate-45 p-0 m-0  btn btn-ghost mask mask-circle" />
   </div>
 </template>
 
@@ -36,5 +34,10 @@ onMounted(() => {
   background-position: top;
   /* keeps the image fixed while scrolling , neat effect. */
   background-attachment: fixed;
+}
+
+.github-icon{
+  @apply absolute bottom-5 right-5 ;
+  z-index: 99999 !important;
 }
 </style>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import ThemeButton from './ThemeButton.vue'
-import SearchBar from './SearchBar.vue';
+import SearchBar from './SearchBar.vue'
 import ProfileDropdown from './ProfileDropdown.vue'
 
 const { session } = useAuth()
@@ -43,13 +43,12 @@ onBeforeUnmount(() => {
       <!-- //NOTE -  MOBILE MENU -->
       <div class="dropdown">
         <label tabindex="0" class="btn btn-ghost btn-circle lg:hidden">
-        <Icon name="tdesign:hamburger" size="35"/>
+          <Icon name="tdesign:hamburger" size="35" />
         </label>
         <ul
           tabindex="0"
           class="menu menu-sm dropdown-content mt-3 z-50 bg-base-100 p-2 shadow rounded-box w-52"
         >
-
           <li v-motion-pop-visible>
             <NuxtLink to="/" class="link" active-class="active-link">
               Home
@@ -59,7 +58,7 @@ onBeforeUnmount(() => {
             <NuxtLink to="/about" class="link" active-class="active-link">
               About
             </NuxtLink>
-          </li >
+          </li>
           <li v-motion-pop-visible>
             <NuxtLink to="/contact" class="link" active-class="active-link">
               Contact
@@ -74,11 +73,10 @@ onBeforeUnmount(() => {
               Account
             </NuxtLink>
           </li>
-
         </ul>
       </div>
       <!-- //NOTE -  MOBILE MENU -->
-      <a v-motion-pop-visible class="btn text-xl btn-ghost hidden  lg:block">Drizzle Nuxt</a>
+      <a v-motion-pop-visible class="p-2 rounded-md text-lg font-bold bg-neutral text-neutral-content  hidden  lg:flex">Drizzle Nuxt</a>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="flex space-x-4 items-center justify-center">
@@ -91,7 +89,7 @@ onBeforeUnmount(() => {
           <NuxtLink to="/about" class="link" active-class="active-link">
             About
           </NuxtLink>
-        </li >
+        </li>
         <li v-motion-pop-visible>
           <NuxtLink to="/contact" class="link" active-class="active-link">
             Contact
@@ -111,7 +109,7 @@ onBeforeUnmount(() => {
     <div class="navbar-end space-x-4">
       <SearchBar />
       <ThemeButton />
-<ProfileDropdown/>
+      <ProfileDropdown />
     </div>
   </div>
 </template>
@@ -139,7 +137,4 @@ onBeforeUnmount(() => {
 .link{
   @apply text-lg hover:text-[var(--info)] text-[hsl(var(--bc))] ;
 }
-
-
-
 </style>

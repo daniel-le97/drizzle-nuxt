@@ -10,8 +10,8 @@ export default defineNuxtConfig({
     cookie: 'cookie',
   },
   devtools: { enabled: true },
-    app: {
-    pageTransition: { name: 'page', mode: 'out-in' }
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
   modules: [
     '@nuxtjs/tailwindcss',
@@ -19,8 +19,8 @@ export default defineNuxtConfig({
     '@hebilicious/authjs-nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/color-mode',
-   '@nuxt/image',
-   '@formkit/auto-animate/nuxt'
+    '@nuxt/image',
+    '@formkit/auto-animate/nuxt',
   ],
 
   colorMode: {

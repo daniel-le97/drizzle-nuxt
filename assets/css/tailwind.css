@@ -51,27 +51,25 @@ img{
   );
 }
 
-
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 1.5s ease;
+/* For WebKit-based browsers (Chrome, Safari) */
+/* Customize the scrollbar itself */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
 }
 
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
+/* Customize the scrollbar track (the area behind the thumb) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
 }
 
-.slide-fade-enter-active {
-  transition: all 1s ease-out;
+/* Customize the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the thumb */
+  border-radius: 6px; /* Rounded corners of the thumb */
 }
 
-.slide-fade-leave-active {
-  transition: all 1.25s cubic-bezier(1, 0.5, 0.8, 1);
-}
-
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateY(20px);
-  opacity: 0;
+/* On hover, make the thumb a bit darker */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  transition: all 0.5s ease;
 }

@@ -5,7 +5,6 @@ const user = session?.value?.user
 
 <template>
   <main class="   items-center justify-center flex">
-
     <section class="relative   mt-52  ">
       <div class="container mx-auto px-4">
         <div class="relative flex flex-col min-w-0 break-words bg-neutral w-full mb-6 shadow-xl rounded-lg -mt-64">

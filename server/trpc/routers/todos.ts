@@ -3,7 +3,6 @@ import { eq } from 'drizzle-orm'
 import { publicProcedure, router } from '~/server/trpc/trpc'
 import { insertTodoSchema, todos } from '~/server/db/todos'
 
-
 export const todosRouter = router({
   getAll: publicProcedure
     .query(async () => {
@@ -22,13 +21,12 @@ export const todosRouter = router({
     .input(insertTodoSchema)
     .mutation(async ({ input }) => {
       try {
-        
         const db = useDb()
-        
+
         return await db.insert(todos).values(input)
-      } catch (error) {
-        console.log(error.message);
-        
+      }
+      catch (error) {
+        console.log(error.message)
       }
     }),
   deleteTodo: publicProcedure

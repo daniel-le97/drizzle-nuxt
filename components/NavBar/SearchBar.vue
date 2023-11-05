@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <input
-    v-motion-pop-visible
+      v-motion-pop-visible
       type="text"
       placeholder="Search..."
       class="input   focus:bg-transparent w-full max-w-xs pr-14 relative"

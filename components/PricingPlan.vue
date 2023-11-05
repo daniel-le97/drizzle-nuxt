@@ -1,8 +1,9 @@
 <template>
   <div class="text-center flex-col justify-center flex items-center  ">
-    <SectionHeader title="Pricing Plans" subtitle=" The most powerful analytics to understand how people use your app or website. Choose from any of our pricing plans
-      that work to fit you as you grow." />
-
+    <SectionHeader
+      title="Pricing Plans" subtitle=" The most powerful analytics to understand how people use your app or website. Choose from any of our pricing plans
+      that work to fit you as you grow."
+    />
   </div>
   <div class="flex lg:flex-row flex-col space-y-4 lg:space-y-0 mx-auto lg:space-x-10">
     <div class="rounded-2xl background-gradient flex items-center justify-center p-1">
@@ -11,7 +12,7 @@
           <h2 class="mb-4  font-bold">
             Starter
           </h2>
-          <div  class="radial-progress text-primary" style="--value: 20; --size: 10rem; --thickness: 15px" />
+          <div class="radial-progress text-primary" style="--value: 20; --size: 10rem; --thickness: 15px" />
           <div class="stat text-base-content">
             <div class="flex items-end mx-auto">
               <div class="stat-value text-primary">
@@ -73,7 +74,7 @@
       <div class="card shadow-xl bg-base-100">
         <div class="card-body items-center text-center  text-base-content ">
           <h2 class="mb-4  font-bold">
-           Enterprise
+            Enterprise
           </h2>
           <div class="radial-progress text-primary" style="--value: 100; --size: 10rem; --thickness: 15px" />
           <div class="stat text-base-content">
