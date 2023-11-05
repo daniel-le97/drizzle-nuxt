@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     '@hebilicious/authjs-nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/color-mode',
-    // '@vueuse/motion/nuxt',
+   '@nuxt/image'
   ],
 
   colorMode: {

@@ -1,60 +1,83 @@
-<script setup>
-import { onMounted, onUnmounted, ref } from 'vue'
-
-const images = [
-  'https://i.pravatar.cc/150?img=4',
-  'https://i.pravatar.cc/150?img=6',
-  'https://i.pravatar.cc/150?img=23',
-  'https://i.pravatar.cc/150?img=12',
-  'https://i.pravatar.cc/150?img=10',
-  'https://i.pravatar.cc/150?img=34',
-  'https://i.pravatar.cc/150?img=1',
-
-]
-const altText = 'Pizza'
-
-const currentIndex = ref(0)
-const interval = ref(null)
-
-const currentImage = ref(images[currentIndex.value])
-
-const carouselStyles = computed(() => {
-  return {
-    transform: `translateX(-${currentIndex.value * 100}%)`,
-  }
-})
-
-// Function to rotate to the next image
-function rotateToNextImage() {
-  currentIndex.value = (currentIndex.value + 1) % images.length
-  currentImage.value = images[currentIndex.value]
-}
-
-// Start the auto-rotation when the component is mounted
-onMounted(() => {
-  interval.value = setInterval(rotateToNextImage, 3000) // Change every 3 seconds
-})
-
-// Stop the auto-rotation when the component is unmounted
-onUnmounted(() => {
-  clearInterval(interval.value)
-})
-</script>
-
 <template>
-  <section class="my-44">
-    <SectionHeader title="Testimonials" />
-    <div class="carousel carousel-center rounded-box   h-[500px]">
-      <div v-for="i in 10" class="carousel-item flex-col items-center space-y-4  py-1  w-1/3  ">
-        <div class="avatar ">
-          <div class="w-24 mask mask-hexagon">
-            <img src="https://i.pravatar.cc" alt="altText">
+  <div class="">
+    <SectionHeader subtitle="Joke This is all made up." title="What people are saying." />
+    <div class="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div class="card bg-base-100 p-0.5  glass  " v-for="t in testimonials">
+        <div class="p-4 card bg-neutral shadow-xl h-full hover:bg-[hsl(var(--nf))] duration-300 ease-linear group">
+          <div v-motion-pop-visible :delay="100" class="flex items-center space-x-4 justify-start mb-4">
+            <div class="avatar p-0.5 bg-accent shadow-md mask mask-hexagon scale-150 -translate-x-4 -translate-y-4 duration-300">
+              <div class="w-12 mask mask-hexagon">
+
+                <NuxtImg :src="t.image" :modifiers="{ grayscale: true, tint: '#00DC82' }" />
+              </div>
+            </div>
+
+             <p v-motion-pop-visible :delay="100" class="text-neutral-content font-bold">{{ t.username }}</p>
           </div>
-        </div>
-        <div class="   w-4/5 ">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate odit impedit ipsum totam in, tempora adipisci, quam maxime animi, vitae tempore tenetur vero rerum odio iste assumenda natus sunt at ea unde praesentium recusandae quaerat. Neque deleniti ratione voluptatum corporis labore amet quibusdam asperiores tenetur repudiandae. Quidem illum iste ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad delectus soluta nemo! Ipsum voluptatum repellendus pariatur labore ratione quis quae recusandae eligendi enim reiciendis! Dolore.
+          <div class="flex flex-col space-y-2 text-start">
+
+            <p v-motion-pop-visible :delay="100" class="text-neutral-content">{{ t.comment }}</p>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+
 </template>
+
+<script setup lang="ts">
+const testimonials = [
+  {
+    username: 'KENZIE EDWARDS',
+    image: 'https://i.pravatar.cc/150?img=1',
+    comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. , accusantium distinctio ea autem eligendi maiores natus dolorem. Similique.1',
+  },
+  {
+    username: 'SYTHER',
+    image: 'https://i.pravatar.cc/150?img=5',
+    comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil soluta quae velit modi quibusdam eos non5',
+  },
+  {
+    username: 'PIKACHU PIKA',
+    image: 'https://i.pravatar.cc/150?img=3',
+    comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil soluta quae velit modi quibusdam eos non, accusantium distinctio ea autem eligendi maiores natus dolorem.3',
+  },
+  {
+    username: 'CLOUD STRIFE',
+    image: 'https://i.pravatar.cc/150?img=4',
+    comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil soluta quae velit modi quibusdam eos non.4',
+  },
+    {
+    username: 'TINA LOCKHEART',
+    image: 'https://i.pravatar.cc/150?img=2',
+    comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil soluta quae velit modi quibusdam eos non, accusantium distinctio ea autem eligendi maiores natus dolorem. Similique.  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, tempora!2',
+  },
+
+  {
+    username: 'COLEN MERIAL',
+    image: 'https://i.pravatar.cc/150?img=6',
+    comment: 'Lorem ipsum dolor sit amet consectetur.6',
+  },
+  {
+    username: 'THEO VAN',
+    image: 'https://i.pravatar.cc/150?img=50',
+    comment: 'Lorem ipsum.7',
+  },
+    {
+    username: 'SPONGEBOB',
+    image: 'https://i.pravatar.cc/150?img=34',
+    comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil  accusantium distinctio ea autem eligendi maiores natus dolorem.8',
+  },
+    {
+    username: 'Sephiroth',
+    image: 'https://i.pravatar.cc/150?img=45',
+    comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil soluta quae velit modi quibusdam eos non.  sit amet consectetur 9',
+  },
+
+];
+
+</script>
+
+
+<style>
+</style>
