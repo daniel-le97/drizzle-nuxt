@@ -1,5 +1,6 @@
 import { createInsertSchema, createSelectSchema } from 'drizzle-zod'
-import { boolean, pgTable, text,serial } from 'drizzle-orm/pg-core'
+import { boolean, char, integer, pgTable, text, uuid, varchar } from 'drizzle-orm/pg-core'
+import { sql } from 'drizzle-orm'
 import { id, timestamps } from '../utils/dbFields'
 import { users } from './auth'
 
@@ -7,7 +8,7 @@ import { users } from './auth'
  * Provides a Drizzle schema for "todos" and also exposes Zod schemas for usage in tRPC routes
  */
 export const todos = pgTable('todos', {
-    id: serial('id').primaryKey(),
+  id,
   task: text('task'),
   completed: boolean('completed').default(false),
   ...timestamps,

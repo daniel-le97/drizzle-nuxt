@@ -15,6 +15,41 @@
       "when": 1699206216345,
       "tag": "0001_petite_lady_bullseye",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1699208725697,
+      "tag": "0002_rare_young_avengers",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1699209534214,
+      "tag": "0003_nosy_kree",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1699209805279,
+      "tag": "0004_gifted_cobalt_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1699209893821,
+      "tag": "0005_wandering_chameleon",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1699209951895,
+      "tag": "0006_breezy_groot",
+      "breakpoints": true
     }
   ]
 }
