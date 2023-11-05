@@ -11,7 +11,7 @@
           <h2 class="mb-4  font-bold">
             Starter
           </h2>
-          <div class="radial-progress text-primary" style="--value: 20; --size: 10rem; --thickness: 15px" />
+          <div  class="radial-progress text-primary" style="--value: 20; --size: 10rem; --thickness: 15px" />
           <div class="stat text-base-content">
             <div class="flex items-end mx-auto">
               <div class="stat-value text-primary">

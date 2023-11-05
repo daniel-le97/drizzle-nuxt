@@ -22,6 +22,7 @@ export const todosRouter = router({
     .input(insertTodoSchema)
     .mutation(async ({ input }) => {
       const db = useDb()
+    
       await db.insert(todos).values(input)
     }),
   deleteTodo: publicProcedure
