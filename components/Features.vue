@@ -82,6 +82,12 @@ const plugins = [
     description: 'Auth.js authentication Nuxt module. Edge compatible',
     link: 'https://nuxt.com/modules/authjs',
   },
+  {
+    name: 'Auto-Animate',
+    image: 'https://raw.githubusercontent.com/nuxt/modules/main/icons/auto-animate.svg',
+    description: 'Automatic animations for your Nuxt app with a single line of code. Triggered when Elements are Added, Removed or Changed to the DOM.',
+    link: 'https://nuxt.com/modules/authjs',
+  },
 ]
 </script>
 
@@ -93,8 +99,8 @@ const plugins = [
         target="_blank" class="feature-link">
         <div class="p-4 card bg-neutral shadow-xl h-full hover:bg-[hsl(var(--nf))] duration-300 ease-linear group">
           <div v-motion-pop-visible :delay="100" class="flex justify-start mb-4">
-                 <NuxtImg :src="p.image" :modifiers="{ grayscale: true, tint: '#00DC82' }" :alt="p.name" class="w-16 h-16 rounded-md group-hover:scale-150 group-hover:-translate-x-4 group-hover:-translate-y-4" />
-         
+                 <NuxtImg :src="p.image" :modifiers="{ grayscale: true, tint: '#00DC82' }" :alt="p.name" class="w-16 h-16 rounded-md group-hover:scale-125 group-hover:-translate-x-4 group-hover:-translate-y-4" />
+
           </div>
           <div class="flex flex-col space-y-2 text-start">
             <p v-motion-pop-visible :delay="100" class="text-neutral-content font-bold">{{ p.name }}</p>

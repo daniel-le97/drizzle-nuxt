@@ -19,7 +19,8 @@ export default defineNuxtConfig({
     '@hebilicious/authjs-nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/color-mode',
-   '@nuxt/image'
+   '@nuxt/image',
+   '@formkit/auto-animate/nuxt'
   ],
 
   colorMode: {

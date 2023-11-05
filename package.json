@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^0.3.5",
+    "@formkit/auto-animate": "^0.8.0",
     "@hebilicious/authjs-nuxt": "^0.3.5",
     "@nuxt/image": "^1.0.0",
     "@vueuse/motion": "^2.0.0",

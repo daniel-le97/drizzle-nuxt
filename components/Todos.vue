@@ -1,6 +1,9 @@
 <script setup lang="ts">
 const { $client } = useNuxtApp()
-const { data: todos } = await $client.todos.getAll.useQuery()
+const { data: todos } = await useAsyncData('todos', () => $client.todos.getAll.query())
+
+
+// await $client.todos.getAll.useQuery()
 
 
 const todo = ref({
@@ -11,11 +14,13 @@ const todo = ref({
 async function handleSubmit() {
   try {
     const logs = await $client.todos.insertTodo.mutate(todo.value)
-    console.log(logs)
+
+   refreshNuxtData('todos')
+    // console.log(logs)
   }
   catch (error) {
     console.log(error.message);
-    
+
   }
 }
 
@@ -36,7 +41,7 @@ async function handleDelete(id: string) {
     if (window.confirm('Are You Sure'))
       await $client.todos.deleteTodo.mutate({ id })
 
-    todos.value = todos.value?.filter(t => t.id !== id)
+      refreshNuxtData('todos')
   }
   catch (error) {
 
@@ -83,36 +88,28 @@ async function handleDelete(id: string) {
         </div>
       </div>
     </form>
-    <div class="pt-5">
+    <div class="pt-5" v-auto-animate>
       <div
         v-for="t in todos"
         :key="t.id"
-        v-motion
-        :initial="{
-          opacity: 0,
-          y: 100,
-        }" :enter="{
-          opacity: 1,
-          y: 0,
-        }" :leave="{
-          y: -100,
-          opacity: 0,
-        }" class="py-2"
+
+
+     class="py-2"
       >
-        <div class="p-2  bg-secondary rounded-md flex justify-between">
+        <div class="p-2  bg-primary rounded-md flex justify-between">
           <div class="flex items-center justify-center space-x-3">
             <div class="form-control">
               <input
                 type="checkbox" :checked="t.completed !== null ? t.completed : false"
-                class="checkbox bg-accent" @change="handleCompleted(t.completed !== null ? t.completed : false)"
+                class="checkbox " @change="handleCompleted(t.completed !== null ? t.completed : false)"
               >
             </div>
-            <div class="">
+            <div class="text-primary-content">
               {{ t.task }}
             </div>
           </div>
           <button class="btn btn-ghost btn-circle" @click="handleDelete(t.id)">
-            <Icon name="uil:x" size="30" class="text-error" />
+            <Icon name="uil:x" size="30" class="text-primary-content" />
           </button>
         </div>
       </div>
