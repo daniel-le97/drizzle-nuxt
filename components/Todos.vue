@@ -1,11 +1,12 @@
 <script setup lang="ts">
 const { $client } = useNuxtApp()
-const {data: hello} = await $client.hello.useQuery({text: 'client'})
+const {data: todos} = await $client.todos.getAll.useQuery()
 </script>
 
 <template>
   <div class="p-5 gradient-text" >
-    hello from trpc! {{ hello?.greeting }}
+    all todos
+    <div>{{ todos ?? [] }}</div>
   </div>
 </template>
 

@@ -64,7 +64,7 @@ onMounted(() => {
         tabindex="0"
         class="  rounded-sm dropdown-content  w-60 mt-5 z-50 shadow-md p-2 bg-white rounded-box space-y-2 bg-base-300 h-96 overflow-y-scroll "
       >
-        <li v-for="theme in themes" :value="theme">
+        <li v-for="theme in themes" :key="theme" :value="theme">
           <div
             v-motion-slide-visible-right :data-set-theme="theme" :data-theme="theme" data-act-class="active-theme"
             class="theme"

@@ -6,12 +6,9 @@ import { insertTodoSchema, todos } from '~/server/db/todos'
 
 export const todosRouter = router({
   getAll: publicProcedure
-    .query(async (context) => {
-      
-      return context
-
-      // const db = useDb()
-      // return await db.select().from(todos).where(eq(todos.userId, context.ctx.session.user.id))
+    .query(async () => {
+      const db = useDb()
+      return await db.select().from(todos)
     }),
   getById: publicProcedure
     .input(z.object({
