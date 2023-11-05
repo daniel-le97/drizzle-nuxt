@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     '@hebilicious/authjs-nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/color-mode',
-    '@vueuse/motion/nuxt',
+    // '@vueuse/motion/nuxt',
   ],
 
   colorMode: {
@@ -85,9 +85,9 @@ export default defineNuxtConfig({
       clientId: process.env.NUXT_GITHUB_CLIENT_ID,
       clientSecret: process.env.NUXT_GITHUB_CLIENT_SECRET,
     },
-    email:{
+    email: {
       server: process.env.EMAIL_SERVER,
-      from: process.env.EMAIL_FROM
+      from: process.env.EMAIL_FROM,
     },
     db: {
       url: process.env.PG_DB_URL,

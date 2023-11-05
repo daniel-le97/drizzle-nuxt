@@ -22,7 +22,8 @@ const { stop } = useIntersectionObserver(
             <div class="card-body">
               <img
                 src="https://imgs.search.brave.com/H-lJ3BpWOxay8dqqBF5qIjMeRk2AKZCwa09lkFZymPw/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9kZXZl/bG9wMzY1LmdpdGxh/Yi5pby9udXh0anMt/Mi44LlgtZG9jL2Vu/L2xvZ29zL251eHQu/c3Zn.svg"
-                alt="" class="w-16 h-16">
+                alt="" class="w-16 h-16"
+              >
               <h2 class="card-title ">
                 The Intuitive Vue Framework
               </h2>
@@ -37,8 +38,10 @@ const { stop } = useIntersectionObserver(
         <Transition>
           <div v-if="targetIsVisible" class="card w-1/3 h-full bg-neutral text-base-content shadow-xl">
             <div class="card-body">
-              <img src="https://pbs.twimg.com/profile_images/1710017636166193152/7aUeiYMx_400x400.jpg" alt=""
-                class="w-16 h-16 rounded-full">
+              <img
+                src="https://pbs.twimg.com/profile_images/1710017636166193152/7aUeiYMx_400x400.jpg" alt=""
+                class="w-16 h-16 rounded-full"
+              >
               <h2 class="card-title">
                 Headless TypeScript ORM with a head
               </h2>
@@ -55,7 +58,8 @@ const { stop } = useIntersectionObserver(
             <div class="card-body">
               <img
                 src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg"
-                alt="" class="w-16 h-16 rounded-full">
+                alt="" class="w-16 h-16 rounded-full"
+              >
               <h2 class="card-title">
                 A utility-first CSS framework
               </h2>
