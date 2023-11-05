@@ -1,10 +1,12 @@
 <template>
   <div class="">
     <SectionHeader subtitle="Joke This is all made up." title="What people are saying." />
-    <div class="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-      <div class="card bg-base-100 p-0.5  glass  " v-for="t in testimonials">
+
+ <div class=" flex my-5 items-center justify-center">   <button class="btn  m-4 " @click="randomize">Click Me!</button></div>
+    <div  v-auto-animate="{ duration: 1000 }" class="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div v-for="t in testimonials" :key="t.username" class="card bg-base-100 p-0.5 h-fit  glass  " >
         <div class="p-4 card bg-neutral shadow-xl h-full hover:bg-[hsl(var(--nf))] duration-300 ease-linear group">
-          <div v-motion-pop-visible :delay="100" class="flex items-center space-x-4 justify-start mb-4">
+          <div  class="flex items-center space-x-4 justify-start mb-4">
             <div class="avatar p-0.5 bg-accent shadow-md mask mask-hexagon scale-150 -translate-x-4 -translate-y-4 duration-300">
               <div class="w-12 mask mask-hexagon">
 
@@ -12,13 +14,17 @@
               </div>
             </div>
 
-             <p v-motion-pop-visible :delay="100" class="text-neutral-content font-bold">{{ t.username }}</p>
+             <p  class="text-neutral-content font-bold">{{ t.username }}</p>
           </div>
           <div class="flex flex-col space-y-2 text-start">
 
-            <p v-motion-pop-visible :delay="100" class="text-neutral-content">{{ t.comment }}</p>
+            <p  class="text-neutral-content">{{ t.comment }}</p>
           </div>
         </div>
+      </div>
+
+      <div v-auto-animate>
+
       </div>
     </div>
   </div>
@@ -26,7 +32,7 @@
 </template>
 
 <script setup lang="ts">
-const testimonials = [
+const testimonials = ref([
   {
     username: 'KENZIE EDWARDS',
     image: 'https://i.pravatar.cc/150?img=1',
@@ -47,7 +53,7 @@ const testimonials = [
     image: 'https://i.pravatar.cc/150?img=4',
     comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil soluta quae velit modi quibusdam eos non.4',
   },
-    {
+  {
     username: 'TINA LOCKHEART',
     image: 'https://i.pravatar.cc/150?img=2',
     comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil soluta quae velit modi quibusdam eos non, accusantium distinctio ea autem eligendi maiores natus dolorem. Similique.  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, tempora!2',
@@ -63,18 +69,25 @@ const testimonials = [
     image: 'https://i.pravatar.cc/150?img=50',
     comment: 'Lorem ipsum.7',
   },
-    {
+  {
     username: 'SPONGEBOB',
     image: 'https://i.pravatar.cc/150?img=34',
     comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil  accusantium distinctio ea autem eligendi maiores natus dolorem.8',
   },
-    {
+  {
     username: 'Sephiroth',
     image: 'https://i.pravatar.cc/150?img=45',
     comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil soluta quae velit modi quibusdam eos non.  sit amet consectetur 9',
   },
 
-];
+])
+
+
+const randomize = () => {
+
+
+  testimonials.value.sort(() => Math.random() - 0.5);
+}
 
 </script>
 
