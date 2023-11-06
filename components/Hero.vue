@@ -4,7 +4,6 @@
 
 <template>
   <div class="hero min-h-screen relative">
-    <!-- <div class="hero-overlay"></div> -->
 
     <div v-motion-pop-visible class="hero-content text-center">
       <div
@@ -42,7 +41,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .hero {
   /* always scale the image to the appropriate size of your screen */
   background-size: cover;
@@ -53,8 +52,4 @@
   background-attachment: fixed;
 }
 
-.github-icon{
-  @apply absolute bottom-5 right-5 ;
-  z-index: 99999 !important;
-}
 </style>

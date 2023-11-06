@@ -3,21 +3,22 @@
 @tailwind utilities;
 
 
+.flex-center{
+  @apply flex flex-col items-center justify-center
+}
+
 a{
  text-decoration: none !important;
 }
-
-
 /* TO ACCOUNT FOR NAVBAR HEIGHT */
 main{
   @apply  pt-28 min-h-screen ;
 }
 
-
-
 img{
   @apply hover:brightness-75 transition-all duration-300 ease-linear
 }
+
 
 .gradient-text {
   background-image: linear-gradient(
@@ -35,10 +36,6 @@ img{
   -webkit-text-stroke: 1px white;
   text-stroke: 1px white;
 }
-
-
-
-
 
 .background-gradient {
   background: linear-gradient(

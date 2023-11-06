@@ -5,11 +5,9 @@ import SectionHeader from './Global/SectionHeader.vue';
 
 
 <template>
-  <div class="text-center flex-col justify-center flex items-center  ">
     <SectionHeader
       title="Pricing Plans" subtitle="Our Budget Plan costs you absolutely nothing. That's right, it's zilch, zero, nada. Perfect for frugal individuals."
     />
-  </div>
   <div class="flex lg:flex-row flex-col space-y-4 lg:space-y-0 mx-auto lg:space-x-10">
     <div class="rounded-2xl background-gradient flex items-center justify-center p-1">
       <div class="card shadow-xl bg-base-100">

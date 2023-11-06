@@ -1,81 +1,81 @@
 <script setup lang="ts">
 import SectionHeader from './Global/SectionHeader.vue';
 
-const { $client } = useNuxtApp()
-const { data: todos } = await useAsyncData('todos', () => $client.todos.getAll.query())
-const isSortingCreatedAt = ref(true)
-const isSortingCompleted = ref(true)
 
 
+
+
+
+
+
+
+// Get the Nuxt app context
+const { $client } = useNuxtApp();
+
+// Fetch the todos data using useAsyncData
+const { data: todosData } = await useAsyncData('todos', () => $client.todos.getAll.query());
+
+// Create a ref for todos data
+const todos = ref(todosData);
+
+// Create a ref for a new todo item
 const todo = ref({
   completed: false,
   userId: '5f235168-e290-4f80-b046-5d38988cd43d',
   task: '',
-})
+});
 
 
-
-async function handleSubmit() {
+// Handle the submission of a new todo
+async function handleSubmit(): Promise<void> {
   try {
-    await $client.todos.insertTodo.mutate(todo.value)
-    refreshNuxtData('todos')
-    todo.value.task = ''
-  }
-  catch (error) {
-    console.log(error.message)
+    // Insert the new todo using the API client
+    await $client.todos.insertTodo.mutate(todo.value);
+
+    // Refresh the data to update the list of todos
+    refreshNuxtData('todos');
+
+    // Clear the task input
+    todo.value.task = '';
+  } catch (error) {
+
+    console.log(error);
   }
 }
 
-async function handleCompleted(_todoId: string) {
+// Mark a todo as completed
+async function handleCompleted(_id: string): Promise<void> {
   try {
-    const todo = todos.value?.find(todo => todo.id === _todoId)
+    // Update the todo as completed using the API client
+    await $client.todos.updateTodo.mutate({ id: _id });
 
-    if (todo && todo.createdAt && todo.updatedAt)
-    // console.log('HAPPEMING');
-
-    await $client.todos.updateTodo.mutate({id: _todoId})
-    refreshNuxtData('todos')
-  }
-  catch (error) {
-    console.log(error)
+    // Refresh the data to update the list of todos
+    refreshNuxtData('todos');
+  } catch (error) {
+    console.log(error);
   }
 }
 
-async function handleDelete(id: string) {
+// Delete a todo
+async function handleDelete(id: string): Promise<void> {
   try {
-    if (window.confirm('Are You Sure'))
-      await $client.todos.deleteTodo.mutate({ id })
+    // Confirm the deletion with a user prompt
+    if (window.confirm('Are You Sure')) {
+      // Delete the todo using the API client
+      await $client.todos.deleteTodo.mutate({ id });
+    }
 
-    refreshNuxtData('todos')
+    // Refresh the data to update the list of todos
+    refreshNuxtData('todos');
+  } catch (error) {
+    console.log(error);
   }
-  catch (error) {
-
-  }
 }
 
-function sortCreatedAt() {
-  if (isSortingCreatedAt.value)
-    todos.value?.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt))
-  else
-    todos.value?.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
 
-  isSortingCreatedAt.value = !isSortingCreatedAt.value
-}
 
-function showAlert() {
 
-}
-
-function completedSort() {
-  if (isSortingCompleted.value)
-    todos.value?.sort((a, b) => a.completed - b.completed)
-  else
-    todos.value?.sort((a, b) => b.completed - a.completed)
-
-  isSortingCompleted.value = !isSortingCompleted.value // Toggle the sorting order
-}
-
-const randomize = () => todos.value.sort(() => Math.random() - 0.5)
+const randomize = () => todos?.value?.sort(() => Math.random() - 0.5)
 </script>
 
 <template>
@@ -104,28 +104,7 @@ const randomize = () => todos.value.sort(() => Math.random() - 0.5)
       <button class="btn btn-sm bg-accent outline border-none" @click="randomize">
         RANDOMIZE
       </button>
-      <button class="btn btn-sm bg-accent outline border-none" @click="sortCreatedAt">
-        <label class="swap ">
-          <input type="checkbox">
-          <div class="swap-on text-sm">CreatedAt
-            <Icon name="uil:arrow-down" size="20" />
-          </div>
-          <div class="swap-off text-sm">CreatedAt
-            <Icon name="uil:arrow-up" size="20" />
-          </div>
-        </label>
-      </button>
-      <button class="btn btn-sm bg-accent outline border-none" @click="completedSort">
-        <label class="swap ">
-          <input type="checkbox">
-          <div class="swap-on text-sm">Completed
-            <Icon name="uil:arrow-down" size="20" />
-          </div>
-          <div class="swap-off text-sm">Completed
-            <Icon name="uil:arrow-up" size="20" />
-          </div>
-        </label>
-      </button>
+
     </div>
     <div v-if="todos?.length > 0" v-auto-animate class="pt-5 h-96 overflow-y-scroll">
       <div v-for="t in todos" :key="t.id" class="py-2">
@@ -162,4 +141,5 @@ const randomize = () => todos.value.sort(() => Math.random() - 0.5)
   </div>
 </template>
 
-<style></style>
+<style scoped>
+</style>

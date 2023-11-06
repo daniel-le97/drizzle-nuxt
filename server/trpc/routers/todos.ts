@@ -5,6 +5,9 @@ import { publicProcedure, router } from '~/server/trpc/trpc'
 import { insertTodoSchema, todos } from '~/server/db/schema/todos'
 
 export const todosRouter = router({
+
+
+
   getAll: publicProcedure
     .query(async () => {
       const db = useDb()
@@ -43,15 +46,11 @@ export const todosRouter = router({
     .mutation(async ({ input }) => {
       try {
         const db = useDb()
-        const id = input.id!
-
         const caller = appRouter.createCaller({})
-        const todoToUpdate = await caller.todos.getById({ id })
+        const todoToUpdate = await caller.todos.getById({ id:input.id })
         if (todoToUpdate)
           todoToUpdate.completed = !todoToUpdate.completed ?? false
-
-        const updated = await db.update(todos).set({ completed: todoToUpdate.completed }).where(eq(todos.id, id))
-        console.log(updated)
+     await db.update(todos).set({ completed: todoToUpdate.completed }).where(eq(todos.id, input.id))
       }
       catch (error) {
         console.log(error.message)
