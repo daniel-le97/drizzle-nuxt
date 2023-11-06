@@ -133,6 +133,21 @@ import SectionHeader from './Global/SectionHeader.vue';
                   </div>
                 </div>
               </li>
+                  <li>
+                  <div class="flex  space-x-4">
+                   <div >
+                        <Icon name="uil:check-circle" size="35" class="text-secondary " />
+                    </div>
+                    <div>
+                      <div class=" text-xl font-semibold">
+                       Page Layout and Transitions
+                      </div>
+                      <div class="opacity-80">
+                     Enhanced Page Layout and Transitions: Our default Nuxt layout features a dynamic NavBar and active Nuxt router links for seamless and engaging web navigation
+                      </div>
+                    </div>
+                  </div>
+                </li>
             </ul>
 
 

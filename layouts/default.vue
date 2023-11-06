@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Footer from '~/components/Global/Footer.vue'
+import NavBar from '~/components/NavBar/NavBar.vue';
 </script>
 
 <template>
@@ -8,5 +9,4 @@ import Footer from '~/components/Global/Footer.vue'
     <slot />
   </div>
   <Footer />
-<!-- <AlertComponent type="alert-success" content="LOREM IPSUM MY FACE"/> -->
 </template>

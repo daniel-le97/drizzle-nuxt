@@ -11,11 +11,11 @@
         class="mx-auto text-center flex flex-col items-center justify-center w-2/3"
       >
         <h1
-          class="gradient-text text-center font-extrabold tracking-tight text-6xl"
+          class="gradient-text text-center font-extrabold tracking-tight text-4xl md:text-6xl sm:text-5xl lg:text-8xl"
         >
           Nuxt Drizzle Made Beautiful with Tailwind
         </h1>
-        <p class="text-lg font-bold  mt-4 text-base-100">
+        <p class="lg:text-5xl text-2xl md:text-3xl font-bold  mt-4 text-base-100">
           Simplify Development
         </p>
       </div>
