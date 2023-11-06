@@ -94,10 +94,10 @@ import SectionHeader from './Global/SectionHeader.vue';
                 </div>
                   <div>
                     <div class=" text-xl font-semibold">
-                      Built on top of Nuxt
+                    Extensive Customization
                     </div>
                     <div class="opacity-80">
-                      Benefiting from the performance and developer-friendly features of this modern static site generator.
+                    Unlock a wealth of customization options to effortlessly tailor the template to your brand's identity and unique requirements, ensuring a distinct and efficient website.
                     </div>
                   </div>
                 </div>
@@ -110,10 +110,10 @@ import SectionHeader from './Global/SectionHeader.vue';
                   </div>
                   <div>
                     <div class=" text-xl font-semibold">
-                      Intergrated Drizzle ORM
+                      Daisy UI Component Library
                     </div>
                     <div class="opacity-80">
-                      Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users
+                  Elevate your web design with the Daisu UI Component Library. Experience stunning, customizable components that effortlessly match your brand's identity. Say goodbye to complex HTML class names and enjoy a selection of beautifully crafted tailwind components.
                     </div>
                   </div>
                 </div>
@@ -125,10 +125,10 @@ import SectionHeader from './Global/SectionHeader.vue';
                   </div>
                   <div>
                     <div class=" text-xl font-semibold">
-                      Styled using Tailwind CSS
+                      Tired of just dark mode?
                     </div>
                     <div class="opacity-80">
-                      Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.
+                    29 amazing color themes for a distinct, aesthetically pleasing website. Explore design possibilities and transform your online presence with Daisy UI. Check it out on the NavBar component.
                     </div>
                   </div>
                 </div>
@@ -169,7 +169,7 @@ import SectionHeader from './Global/SectionHeader.vue';
                 </div>
                   <div>
                     <div class=" text-xl font-semibold">
-                      Built on top of Nuxt
+                      High level of customization
                     </div>
                     <div class="opacity-80">
                       Benefiting from the performance and developer-friendly features of this modern static site generator.

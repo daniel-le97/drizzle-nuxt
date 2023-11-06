@@ -31,7 +31,7 @@ async function handleCompleted(_todoId: string) {
     const todo = todos.value?.find(todo => todo.id === _todoId)
 
     if (todo && todo.createdAt && todo.updatedAt)
-    console.log('HAPPEMING');
+    // console.log('HAPPEMING');
 
     await $client.todos.updateTodo.mutate({id: _todoId})
     refreshNuxtData('todos')
@@ -89,7 +89,7 @@ const randomize = () => todos.value.sort(() => Math.random() - 0.5)
     <div class="flex justify-between">
       <Icon name="uil:sun" size="30" />
     </div>
-    <!-- <div>{{ todos ?? [] }}</div> -->
+
     <form class="flex mx-auto  w-2/3" @submit.prevent="handleSubmit">
       <div class="form-control w-full">
         <div class="input-group">

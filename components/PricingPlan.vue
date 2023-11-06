@@ -1,10 +1,13 @@
 
+<script setup lang="ts">
 import SectionHeader from './Global/SectionHeader.vue';
+</script>
+
+
 <template>
   <div class="text-center flex-col justify-center flex items-center  ">
     <SectionHeader
-      title="Pricing Plans" subtitle=" The most powerful analytics to understand how people use your app or website. Choose from any of our pricing plans
-      that work to fit you as you grow."
+      title="Pricing Plans" subtitle="Our Budget Plan costs you absolutely nothing. That's right, it's zilch, zero, nada. Perfect for frugal individuals."
     />
   </div>
   <div class="flex lg:flex-row flex-col space-y-4 lg:space-y-0 mx-auto lg:space-x-10">

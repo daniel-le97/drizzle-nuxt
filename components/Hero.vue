@@ -38,7 +38,7 @@
         mass: 1,
       },
     }"
-     name="uil:github" size="80" class="text-black  absolute bottom-3 right-4 -rotate-45 p-0 m-0  " />
+     name="uil:github" size="80" class="text-black cursor-pointer  absolute bottom-3 right-6 -rotate-45 p-0 m-0  " />
   </div>
 </template>
 

@@ -58,7 +58,7 @@ const randomize = () => testimonials.value.sort(() => Math.random() - 0.5)
   <div class="">
     <SectionHeader subtitle="Joke This is all made up." title="What people are saying." />
     <div class=" flex my-5 items-center justify-center">
-      <button class="btn  m-4 " @click="randomize">
+      <button class="btn  bg-accent text-accent-content  m-4 " @click="randomize">
         Click Me!
       </button>
     </div>
