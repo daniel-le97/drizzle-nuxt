@@ -16,7 +16,7 @@ export const todosRouter = router({
     }))
     .query(async (context) => {
       const db = useDb()
-      return await db.select().from(todos).where(eq(todos.id, context.input.id))
+      return (await db.select().from(todos).where(eq(todos.id, context.input.id)))[0]
     }),
   insertTodo: publicProcedure
     .input(insertTodoSchema)
@@ -39,17 +39,19 @@ export const todosRouter = router({
       await db.delete(todos).where(eq(todos.id, input.id))
     }),
   updateTodo: publicProcedure
-    .input(insertTodoSchema)
+    .input(z.object({ id: z.string() }))
     .mutation(async ({ input }) => {
       try {
-        console.log('updating todos');
-        
         const db = useDb()
         const id = input.id!
+
         const caller = appRouter.createCaller({})
         const todoToUpdate = await caller.todos.getById({ id })
         if (todoToUpdate)
-          await db.update(todos).set(input).where(eq(todos.id, id))
+          todoToUpdate.completed = !todoToUpdate.completed ?? false
+
+        const updated = await db.update(todos).set({ completed: todoToUpdate.completed }).where(eq(todos.id, id))
+        console.log(updated)
       }
       catch (error) {
         console.log(error.message)
