@@ -4,11 +4,14 @@ const { data: todos } = await useAsyncData('todos', () => $client.todos.getAll.q
 const isSortingCreatedAt = ref(true)
 const isSortingCompleted = ref(true)
 
+
 const todo = ref({
   completed: false,
   userId: '5f235168-e290-4f80-b046-5d38988cd43d',
   task: '',
 })
+
+
 
 async function handleSubmit() {
   try {
@@ -21,15 +24,18 @@ async function handleSubmit() {
   }
 }
 
-async function handleCompleted(completed: boolean) {
+async function handleCompleted(_todoId: string) {
   try {
-    if (window.confirm('Are You Sure')) {
-      completed = !completed
-      console.log(completed)
-    }
+    const todo = todos.value?.find(todo => todo.id === _todoId)
+
+    if (todo && todo.createdAt && todo.updatedAt)
+    console.log('HAPPEMING');
+    
+    await $client.todos.updateTodo.mutate({id: _todoId})
+    refreshNuxtData('todos')
   }
   catch (error) {
-
+    console.log(error)
   }
 }
 
@@ -126,7 +132,7 @@ const randomize = () => todos.value.sort(() => Math.random() - 0.5)
             <div class="form-control">
               <input
                 type="checkbox" :checked="t.completed !== null ? t.completed : false" class="checkbox bg-accent "
-                @change="handleCompleted(t.completed !== null ? t.completed : false)"
+                @change="handleCompleted(t.id)"
               >
             </div>
             <div class="text-primary-content">
@@ -135,7 +141,7 @@ const randomize = () => todos.value.sort(() => Math.random() - 0.5)
           </div>
           <div class="flex space-x-4 items-center justify-center">
             <div class="">
-              {{ new Date(t.createdAt).toLocaleTimeString() }}
+              {{ new Date(t.createdAt!).toLocaleTimeString() }}
             </div>
             <button class="btn btn-ghost btn-circle" @click="handleDelete(t.id)">
               <Icon name="uil:x" size="30" class="text-primary-content" />
