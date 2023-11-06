@@ -1,8 +1,8 @@
 import { z } from 'zod'
 import { eq } from 'drizzle-orm'
+import { appRouter } from '.'
 import { publicProcedure, router } from '~/server/trpc/trpc'
 import { insertTodoSchema, todos } from '~/server/db/schema/todos'
-import { appRouter } from '.'
 
 export const todosRouter = router({
   getAll: publicProcedure
@@ -42,14 +42,14 @@ export const todosRouter = router({
     .input(insertTodoSchema)
     .mutation(async ({ input }) => {
       try {
+        console.log('updating todos');
+        
         const db = useDb()
         const id = input.id!
-const caller = appRouter.createCaller({})
-const todoToUpdate = await caller.todos.getById({id})
-if (todoToUpdate) {
-   await db.update(todos).set(input).where(eq(todos.id, id) )
-}
-
+        const caller = appRouter.createCaller({})
+        const todoToUpdate = await caller.todos.getById({ id })
+        if (todoToUpdate)
+          await db.update(todos).set(input).where(eq(todos.id, id))
       }
       catch (error) {
         console.log(error.message)
