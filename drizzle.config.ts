@@ -6,7 +6,7 @@ config()
 // console.log(process.env.PG_DB_URL);
 
 export default {
-  schema: './server/db',
+  schema: './server/db/schema',
   out: './server/db/migrations',
   driver: 'pg',
   dbCredentials: {
