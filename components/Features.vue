@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useIntersectionObserver } from '@vueuse/core'
+import SectionHeader from './Global/SectionHeader.vue';
 
 const target = ref(null)
 const targetIsVisible = ref(false)

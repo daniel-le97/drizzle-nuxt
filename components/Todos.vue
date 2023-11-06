@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import SectionHeader from './Global/SectionHeader.vue';
+
 const { $client } = useNuxtApp()
 const { data: todos } = await useAsyncData('todos', () => $client.todos.getAll.query())
 const isSortingCreatedAt = ref(true)
@@ -30,7 +32,7 @@ async function handleCompleted(_todoId: string) {
 
     if (todo && todo.createdAt && todo.updatedAt)
     console.log('HAPPEMING');
-    
+
     await $client.todos.updateTodo.mutate({id: _todoId})
     refreshNuxtData('todos')
   }

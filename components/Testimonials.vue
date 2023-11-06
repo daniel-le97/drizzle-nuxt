@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import SectionHeader from './Global/SectionHeader.vue';
+
 const testimonials = ref([
   {
     username: 'KENZIE EDWARDS',

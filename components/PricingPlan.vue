@@ -1,3 +1,5 @@
+
+import SectionHeader from './Global/SectionHeader.vue';
 <template>
   <div class="text-center flex-col justify-center flex items-center  ">
     <SectionHeader

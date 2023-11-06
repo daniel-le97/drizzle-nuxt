@@ -109,7 +109,7 @@ onBeforeUnmount(() => {
     <div class="navbar-end space-x-4">
       <SearchBar />
       <ThemeButton />
-      <ProfileDropdown />
+      <ProfileDropdown v-if="session?.user" />
     </div>
   </div>
 </template>

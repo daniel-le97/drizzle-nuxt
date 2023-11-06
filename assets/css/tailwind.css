@@ -10,7 +10,7 @@ a{
 
 /* TO ACCOUNT FOR NAVBAR HEIGHT */
 main{
-  @apply pt-44 min-h-screen ;
+  @apply  pt-28 min-h-screen ;
 }
 
 

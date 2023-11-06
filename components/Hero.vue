@@ -21,7 +21,24 @@
       </div>
     </div>
 
-    <Icon name="uil:github" size="50" class="text-black  absolute bottom-3 right-3 -rotate-45 p-0 m-0  btn btn-ghost mask mask-circle" />
+    <Icon
+    v-motion
+    :initial="{
+      scale: 1,
+      rotate:-25
+    }"
+    :enter="{
+      rotate: 25,
+      transition: {
+        repeat: Infinity,
+        repeatType: 'mirror',
+        type: 'spring',
+        stiffness: 150,
+        damping: 45,
+        mass: 1,
+      },
+    }"
+     name="uil:github" size="80" class="text-black  absolute bottom-3 right-4 -rotate-45 p-0 m-0  " />
   </div>
 </template>
 

@@ -11,7 +11,7 @@ const { session, signOut } = useAuth()
     >
       <div class="avatar">
         <div class="w-14 mask mask-hexagon">
-          <img :src="session?.user?.image ?? 'https://i.pravatar.cc'">
+          <NuxtImg :src="session?.user?.image ?? ''"/>
         </div>
       </div>
     </label>
