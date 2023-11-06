@@ -1,7 +1,7 @@
 import { createInsertSchema, createSelectSchema } from 'drizzle-zod'
 import { boolean, char, integer, pgTable, text, uuid, varchar } from 'drizzle-orm/pg-core'
 import { sql } from 'drizzle-orm'
-import { id, timestamps } from '../../utils/dbFields'
+import { id, timestamps } from '~/server/utils/dbFields'
 import { users } from './auth'
 
 /**

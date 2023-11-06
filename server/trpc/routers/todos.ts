@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { eq } from 'drizzle-orm'
 import { publicProcedure, router } from '~/server/trpc/trpc'
-import { insertTodoSchema, todos } from '~/server/db/todos'
+import { insertTodoSchema, todos } from '~/server/db/schema/todos'
 import { appRouter } from '.'
 
 export const todosRouter = router({
