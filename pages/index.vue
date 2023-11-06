@@ -15,13 +15,13 @@
       <Todos />
       <div class="divider " />
       <PricingPlan />
-      <div class="divider " />
-      <Blog/>
+  
+
       <div class="divider " />
       <Testimonials />
       <div class="divider " />
       <TemplateBanner/>
-   
+
     </main>
   </div>
 </template>
