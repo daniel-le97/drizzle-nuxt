@@ -1,23 +1,29 @@
 <script setup lang="ts">
 const props = defineProps<{
   title: string
-  subtitle: string | ''
+  subtitle: string
 }>()
 
-const { title, subtitle } = toRefs(props)
+const { title, subtitle } = props
 </script>
 
 <template>
-  <div class=" my-8 lg:my-20     bg-red-500  text-center">
-    <div class="font-bold mb-6  justify-center flex items-center lg:text-6xl md:text-5xl text-4xl ">
+  <div class="  my-8 lg:my-20   flex-center   text-center">
+    <div class="primary-font  title  ">
       {{ title }}
     </div>
-    <div class=" w-2/3  text-base-content opacity-80 text-2xl ">
+    <div class="   secondary-font   text-base-content  ">
       {{ subtitle }}
     </div>
   </div>
 </template>
 
-<style>
+<style scoped>
+.title{
+@apply drop-shadow-md  lg:text-6xl md:text-5xl text-4xl font-bold mb-6
+}
+.subtitle{
+  @apply opacity-80 text-2xl font-semibold px-44
+}
 
 </style>

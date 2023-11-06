@@ -6,6 +6,7 @@
   <div>
     <Hero />
     <main class="p-8 flex flex-col items-center justify-start gap-8 ">
+     
       <Features />
       <InsideTemplate />
 
@@ -15,7 +16,7 @@
       <Todos />
       <div class="divider " />
       <PricingPlan />
-  
+
 
       <div class="divider " />
       <Testimonials />

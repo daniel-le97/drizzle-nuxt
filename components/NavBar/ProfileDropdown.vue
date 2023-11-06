@@ -17,15 +17,8 @@ const { session, signOut } = useAuth()
     </label>
     <ul
       tabindex="0"
-      class="menu menu-sm rounded-sm dropdown-content mt-5 z-[1] shadow-md p-2 bg-white rounded-box w-52"
+      class="menu menu-sm rounded-sm dropdown-content mt-[0.7rem] z-[1] shadow-md p-2 bg-base-100 text-base-content rounded-box w-52"
     >
-      <li>
-        <a class="justify-between">
-          Profile
-          <span class="badge">New</span>
-        </a>
-      </li>
-      <li><a>Settings</a></li>
 
       <li>
         <button type="button" @click="() => signOut()">

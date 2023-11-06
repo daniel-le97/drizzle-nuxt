@@ -19,11 +19,11 @@ const socials = [
 </script>
 
 <template>
-  <footer class="bg-neutral ">
-    <div class="w-full pt-10 flex items-center justify-center bg-neutral">
-      <div class="md:w-2/3 w-full px-4 flex flex-col">
+  <footer >
+    <div class="w-full px-16 pt-10  bg-neutral">
+
         <div class="md:flex">
-          <h1 class="text-6xl font-bold w-full md:w-1/2 text-neutral-content">
+          <h1 class=" footer-title text-neutral-content ">
             Thank you for checking out our app. Get in touch with us.
           </h1>
           <div class="w-full md:w-1/2 footer-section flex justify-center flex-col items-center">
@@ -75,22 +75,13 @@ const socials = [
             © Lorem ipsum dolor sit.
           </h1>
         </div>
-      </div>
+
     </div>
   </footer>
 </template>
 
-<style>
-.footer {
+<style scoped>
 
-  /* always scale the image to the appropriate size of your screen */
-  background-size: cover;
-  background-image: url(https://images.unsplash.com/photo-1632516643720-e7f5d7d6ecc9?auto=format&fit=crop&q=80&w=1311&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-
-  background-position: top;
-  /* keeps the image fixed while scrolling , neat effect. */
-  background-attachment: fixed;
-}
 
 .footer-section {
   flex: 1;
@@ -104,4 +95,10 @@ const socials = [
     font-size: 16px !important;
   }
 }
+
+.footer-title{
+  @apply text-5xl font-bold w-full md:w-1/2 drop-shadow-md
+}
+
+
 </style>

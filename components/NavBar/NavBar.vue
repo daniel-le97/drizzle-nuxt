@@ -47,7 +47,7 @@ onBeforeUnmount(() => {
         </label>
         <ul
           tabindex="0"
-          class="menu menu-sm dropdown-content mt-3 z-50 bg-base-100 p-2 shadow rounded-box w-52"
+          class="menu menu-sm dropdown-content mt-3 z-50 bg-base-100 text-base-content p-2 shadow rounded-box w-52"
         >
           <li v-motion-pop-visible>
             <NuxtLink to="/" class="link" active-class="active-link">
@@ -117,7 +117,7 @@ onBeforeUnmount(() => {
 <style scoped>
 .navbar {
   @apply flex-row fixed top-0 w-full p-3 transition-transform shadow-md duration-500 ease-in-out;
-  z-index: 99999;
+  z-index: 100;
 }
 .active-link {
   @apply font-bold  transition-all duration-300 ease-linear relative;

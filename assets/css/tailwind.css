@@ -3,13 +3,17 @@
 @tailwind utilities;
 
 
-.flex-center{
+.flex-col-center{
   @apply flex flex-col items-center justify-center
+}
+.flex-row-center{
+  @apply flex items-center justify-center
 }
 
 a{
  text-decoration: none !important;
 }
+
 /* TO ACCOUNT FOR NAVBAR HEIGHT */
 main{
   @apply  pt-28 min-h-screen ;
@@ -33,8 +37,8 @@ img{
   -webkit-background-clip: text;
   color: transparent;
   text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.1);
-  -webkit-text-stroke: 1px white;
-  text-stroke: 1px white;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.712);
+  text-stroke: 1px rgba(0, 0, 0, 0.459);
 }
 
 .background-gradient {
@@ -46,6 +50,10 @@ img{
     hsl(var(--p)) 47%,
     hsl(var(--a)) 100%
   );
+}
+
+ .text-shadow{
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* For WebKit-based browsers (Chrome, Safari) */

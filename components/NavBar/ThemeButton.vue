@@ -62,7 +62,7 @@ onMounted(() => {
       <!-- THEME LIST -->
       <ul
         tabindex="0"
-        class="  rounded-sm dropdown-content  w-60 mt-5 z-50 shadow-md p-2 bg-white rounded-box space-y-2 bg-base-300 h-96 overflow-y-scroll "
+        class="  rounded-sm dropdown-content  w-60 mt-[0.7rem] z-50 shadow-md p-2  rounded-box space-y-2 bg-neutral h-96 overflow-y-scroll "
       >
         <li v-for="theme in themes" :key="theme" :value="theme">
           <div
@@ -89,7 +89,7 @@ onMounted(() => {
   </div>
 </template>
 
-<style>
+<style scoped>
 .theme {
   @apply cursor-pointer flex w-full justify-between px-2 py-4 rounded-md;
 }

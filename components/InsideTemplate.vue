@@ -6,7 +6,7 @@ import SectionHeader from './Global/SectionHeader.vue';
 
 <template>
   <div>
-    <SectionHeader title="Inside Template" subtitle="Nuxt Customizable Modules Meets Drizzle" />
+    <SectionHeader title="Inside Template" subtitle="What this templates offers with the Power of Nuxt, Drizzle and Tailwind." />
     <div class="flex flex-col items-center justify-center space-y-24">
       <div class="flex items-center justify-center space-x-4">
         <div class="w-1/2  flex items-center justify-center ">

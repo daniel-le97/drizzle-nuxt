@@ -1,15 +1,7 @@
 <script setup lang="ts">
+import { getAllJSDocTagsOfKind } from 'typescript';
 import SectionHeader from './Global/SectionHeader.vue';
 
-
-
-
-
-
-
-
-
-// Get the Nuxt app context
 const { $client } = useNuxtApp();
 
 // Fetch the todos data using useAsyncData
@@ -29,14 +21,16 @@ const todo = ref({
 // Handle the submission of a new todo
 async function handleSubmit(): Promise<void> {
   try {
-    // Insert the new todo using the API client
-    await $client.todos.insertTodo.mutate(todo.value);
+ if (todo.value.task.length >= 3) {
+      // Insert the new todo using the API client
+      await $client.todos.insertTodo.mutate(todo.value);
 
-    // Refresh the data to update the list of todos
-    refreshNuxtData('todos');
+      // Refresh the data to update the list of todos
+      refreshNuxtData('todos');
 
-    // Clear the task input
-    todo.value.task = '';
+      // Clear the task input
+      todo.value.task = '';
+ }
   } catch (error) {
 
     console.log(error);
@@ -94,13 +88,14 @@ const randomize = () => todos?.value?.sort(() => Math.random() - 0.5)
       <div class="form-control w-full">
         <div class="input-group">
           <input v-model="todo.task" type="text" placeholder="New Task" class="input text-base-content w-full ">
-          <button class="btn btn-square">
+          <button class="btn btn-square" :disabled="todo.task.length <= 3">
             Add
           </button>
         </div>
+        <span v-if="todo.task.length <= 3" class=" p-2  text-center text-error text-xs">* Must be at least 3 characters long.</span>
       </div>
     </form>
-    <div class="flex space-x-4 my-5 items-center justify-center">
+    <div  v-if="todos?.length > 1" class="flex space-x-4 my-5 items-center justify-center" >
       <button class="btn btn-sm bg-accent outline border-none" @click="randomize">
         RANDOMIZE
       </button>

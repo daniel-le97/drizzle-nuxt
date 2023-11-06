@@ -4,8 +4,9 @@ import NavBar from '~/components/NavBar/NavBar.vue';
 </script>
 
 <template>
+
   <NavBar />
-  <div class="min-h-screen">
+  <div >
     <slot />
   </div>
   <Footer />
