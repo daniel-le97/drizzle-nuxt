@@ -21,11 +21,15 @@ definePageMeta({ middleware: 'guest-only' })
 
           </a>
         </li>
-        <li v-if="!session" class="mx-auto">
-          <button class="p-0 m-0 rounded-full w-fit" @click="signIn('github')">
-            <Icon name="uil:github" class="text-8xl" />
+        <li v-if="!session" class=" flex-row mx-auto space-x-4 flex">
+          <button class="p-0 m-0 rounded-full w-fit" @click="() => signIn( 'google')">
+            <Icon name="uil:google" class="text-8xl" />
           </button>
+            <button class="p-0 m-0 rounded-full w-fit" @click="() => signIn('github')">
+                <Icon name="uil:github" class="text-8xl" />
+              </button>
         </li>
+
         <li v-if="session" class="mx-auto">
           <div class="tooltip" data-tip="Logout">
             <button class="p-0 m-0 rounded-full w-fit" @click="signOut()">
