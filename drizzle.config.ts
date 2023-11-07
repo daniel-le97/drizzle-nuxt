@@ -1,8 +1,8 @@
 /* eslint-disable node/prefer-global/process */
 import type { Config } from 'drizzle-kit'
 import { config } from 'dotenv'
-config()
 
+config()
 
 // Create an .env File and add your connection String then plug it in here..
 
@@ -11,6 +11,6 @@ export default {
   out: './server/db/migrations',
   driver: 'pg',
   dbCredentials: {
-    connectionString: process.env.PG_DB_URL!,
+    connectionString: process.env.NUXT_DB_URL!,
   },
 } satisfies Config
