@@ -23,11 +23,21 @@ export default defineNuxtConfig({
     '@formkit/auto-animate/nuxt',
   ],
 
-
+  colorMode: {
+    classSuffix: '',
+    // preference: 'system', // default value of $colorMode.preference
+    // fallback: 'light', // fallback value if not system preference found
+    // hid: 'nuxt-color-mode-script',
+    // globalName: '__NUXT_COLOR_MODE__',
+    // componentName: 'ColorScheme',
+    // classPrefix: '',
+    // classSuffix: '-mode',
+    // storageKey: 'nuxt-color-mode'
+  },
   authJs: {
     // default configuration
     // verifyClientOnEveryRequest: true,
-    // guestRedirectTo: '/', // where to redirect if the user is not authenticated
+    guestRedirectTo: '/', // where to redirect if the user is not authenticated
     // authenticatedRedirectTo: '/', // where to redirect if the user is authenticated
     // baseUrl: 'http://localhost:3000' // should be something like https://www.my-app.com
   },
@@ -57,30 +67,27 @@ export default defineNuxtConfig({
     transpile: ['trpc-nuxt'],
   },
   runtimeConfig: {
- authJs: {
-      secret: process.env.NUXT_NEXTAUTH_SECRET,
-    },
-      github: {
-      clientId: process.env.NUXT_GITHUB_CLIENT_ID,
-      clientSecret: process.env.NUXT_GITHUB_CLIENT_SECRET,
+    public: {
+      authJs: {
+        baseUrl: process.env.NUXT_PUBLIC_AUTH_JS_BASE_URL, // The URL of your deployed app (used for origin Check in production)
+        verifyClientOnEveryRequest: true, // whether to hit the /auth/session endpoint on every client request
+      },
+
     },
     google: {
       clientId: process.env.NUXT_GOOGLE_CLIENT_ID,
       clientSecret: process.env.NUXT_GOOGLE_CLIENT_SECRET,
     },
-
-
+    authJs: {
+      secret: process.env.NUXT_AUTH_JS_SECRET,
+    },
+    github: {
+      clientId: process.env.NUXT_GITHUB_CLIENT_ID,
+      clientSecret: process.env.NUXT_GITHUB_CLIENT_SECRET,
+    },
     db: {
       url: process.env.NUXT_DB_URL,
       dir: './server/db',
-    },
-
-        public: {
-      authJs: {
-        baseUrl: process.env.NUXT_NEXTAUTH_URL, // The URL of your deployed app (used for origin Check in production)
-        verifyClientOnEveryRequest: true, // whether to hit the /auth/session endpoint on every client request
-      },
-
     },
   },
 })
