@@ -25,5 +25,4 @@ const { title, subtitle } = props
 .subtitle{
   @apply opacity-80 text-2xl font-semibold px-44
 }
-
 </style>

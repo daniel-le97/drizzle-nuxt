@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SectionHeader from './Global/SectionHeader.vue';
+import SectionHeader from './globals/SectionHeader.vue'
 
 const testimonials = ref([
   {
@@ -51,18 +51,17 @@ const testimonials = ref([
 
 ])
 
-const randomize = () => {
+function randomize() {
   setInterval(() => {
-    const randomIndex1 = Math.floor(Math.random() * testimonials.value.length);
-    const randomIndex2 = Math.floor(Math.random() * testimonials.value.length);
+    const randomIndex1 = Math.floor(Math.random() * testimonials.value.length)
+    const randomIndex2 = Math.floor(Math.random() * testimonials.value.length)
 
     // Move the element at randomIndex1 to randomIndex2
-    const movedItem = testimonials.value.splice(randomIndex1, 1)[0];
-    testimonials.value.splice(randomIndex2, 0, movedItem);
-  }, 5000); // 3000 milliseconds = 3 seconds
+    const movedItem = testimonials.value.splice(randomIndex1, 1)[0]
+    testimonials.value.splice(randomIndex2, 0, movedItem)
+  }, 5000) // 3000 milliseconds = 3 seconds
 }
 randomize()
-
 </script>
 
 <template>
@@ -86,7 +85,7 @@ randomize()
           </div>
           <div class="flex flex-col space-y-2 text-start">
             <p class="text-neutral-content ">
-           <Icon name="mdi:format-quote-open" class="text-2xl text-accent"/>   {{ t.comment }}
+              <Icon name="mdi:format-quote-open" class="text-2xl text-accent" />   {{ t.comment }}
             </p>
           </div>
         </div>

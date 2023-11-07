@@ -20,7 +20,7 @@ export const authOptions: AuthConfig = {
       clientId: runtimeConfig.github.clientId,
       clientSecret: runtimeConfig.github.clientSecret,
     }),
-     GoogleProvider({
+    GoogleProvider({
       clientId: runtimeConfig.google.clientId,
       clientSecret: runtimeConfig.google.clientSecret,
     }),

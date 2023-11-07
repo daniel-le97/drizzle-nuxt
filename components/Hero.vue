@@ -4,7 +4,6 @@
 
 <template>
   <div class="hero min-h-screen relative">
-
     <div v-motion-pop-visible class="hero-content text-center">
       <div
         class="mx-auto text-center flex flex-col items-center justify-center w-2/3"
@@ -21,23 +20,24 @@
     </div>
 
     <Icon
-    v-motion
-    :initial="{
-      scale: 1,
-      rotate:-25
-    }"
-    :enter="{
-      rotate: 25,
-      transition: {
-        repeat: Infinity,
-        repeatType: 'mirror',
-        type: 'spring',
-        stiffness: 150,
-        damping: 45,
-        mass: 1,
-      },
-    }"
-     name="uil:github" size="80" class="text-black cursor-pointer  absolute bottom-3 right-6 -rotate-45 p-0 m-0  " />
+      v-motion
+      :initial="{
+        scale: 1,
+        rotate: -25,
+      }"
+      :enter="{
+        rotate: 25,
+        transition: {
+          repeat: Infinity,
+          repeatType: 'mirror',
+          type: 'spring',
+          stiffness: 150,
+          damping: 45,
+          mass: 1,
+        },
+      }"
+      name="uil:github" size="80" class="text-black cursor-pointer  absolute bottom-3 right-6 -rotate-45 p-0 m-0  "
+    />
   </div>
 </template>
 
@@ -55,5 +55,4 @@
 .hero-subtitle{
   @apply   drop-shadow-md lg:text-5xl text-2xl md:text-3xl font-bold  mt-4
 }
-
 </style>

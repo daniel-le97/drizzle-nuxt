@@ -50,14 +50,14 @@ export default defineNuxtConfig({
       daisyui: {
         themes: true,
       },
-      themes:{
-        extend:{
-         flex: {
-        center: 'flex flex-col justify-center items-center',
-        'row-center': 'flex justify-center items-center',
+      themes: {
+        extend: {
+          flex: {
+            'center': 'flex flex-col justify-center items-center',
+            'row-center': 'flex justify-center items-center',
+          },
+        },
       },
-        }
-      }
     },
     exposeConfig: true,
     injectPosition: 'last',

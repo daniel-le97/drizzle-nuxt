@@ -11,7 +11,7 @@ const { session, signOut } = useAuth()
     >
       <div class="avatar">
         <div class="w-14 mask mask-hexagon">
-          <NuxtImg :src="session?.user?.image ?? ''"/>
+          <NuxtImg :src="session?.user?.image ?? ''" />
         </div>
       </div>
     </label>
@@ -19,7 +19,6 @@ const { session, signOut } = useAuth()
       tabindex="0"
       class="menu menu-sm rounded-sm dropdown-content mt-[0.7rem] z-[1] shadow-md p-2 bg-base-100 text-base-content rounded-box w-52"
     >
-
       <li>
         <button type="button" @click="() => signOut()">
           Logout

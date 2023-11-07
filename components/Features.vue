@@ -1,19 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useIntersectionObserver } from '@vueuse/core'
-import SectionHeader from './Global/SectionHeader.vue';
+import SectionHeader from './globals/SectionHeader.vue'
 
-const target = ref(null)
-const targetIsVisible = ref(false)
 const itemRefs = ref([])
 
-const { stop } = useIntersectionObserver(
-  target,
-  ([{ isIntersecting }], observerElement) => {
-    targetIsVisible.value = isIntersecting
-    // console.log(isIntersecting);
-  },
-)
+
 const plugins = [
   {
     name: 'Nuxt',
@@ -103,7 +94,7 @@ const plugins = [
         <div class="p-4 card bg-neutral shadow-xl h-full hover:bg-[hsl(var(--nf))] duration-300 ease-linear group">
           <div v-motion-pop-visible :delay="100" class="flex justify-between mb-4">
             <NuxtImg :src="p.image" :modifiers="{ grayscale: true, tint: '#00DC82' }" :alt="p.name" class="w-16 h-16 rounded-md group-hover:scale-125 group-hover:-translate-x-4 group-hover:-translate-y-4" />
-<Icon name="uil:external-link-alt" size="20" class="text-neutral-content scale-0 group-hover:scale-100 duration-300"/>
+            <Icon name="uil:external-link-alt" size="20" class="text-neutral-content scale-0 group-hover:scale-100 duration-300" />
           </div>
           <div class="flex flex-col space-y-2 text-start">
             <p v-motion-pop-visible :delay="100" class="text-neutral-content font-bold">{{ p.name }}</p>

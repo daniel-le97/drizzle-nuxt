@@ -1,8 +1,7 @@
 import { createInsertSchema, createSelectSchema } from 'drizzle-zod'
-import { boolean, char, integer, pgTable, text, uuid, varchar } from 'drizzle-orm/pg-core'
-import { sql } from 'drizzle-orm'
-import { id, timestamps } from '~/server/utils/dbFields'
+import { boolean, pgTable, text } from 'drizzle-orm/pg-core'
 import { users } from './auth'
+import { id, timestamps } from '~/server/utils/dbFields'
 
 /**
  * Provides a Drizzle schema for "todos" and also exposes Zod schemas for usage in tRPC routes

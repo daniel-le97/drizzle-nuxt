@@ -1,39 +1,37 @@
 <script setup lang="ts">
-import { getAllJSDocTagsOfKind } from 'typescript';
-import SectionHeader from './Global/SectionHeader.vue';
+import SectionHeader from './globals/SectionHeader.vue'
 
-const { $client } = useNuxtApp();
+const { $client } = useNuxtApp()
 
 // Fetch the todos data using useAsyncData
-const { data: todosData } = await useAsyncData('todos', () => $client.todos.getAll.query());
+const { data: todosData } = await useAsyncData('todos', () => $client.todos.getAll.query())
 
 // Create a ref for todos data
-const todos = ref(todosData);
+const todos = ref(todosData)
 
 // Create a ref for a new todo item
 const todo = ref({
   completed: false,
   userId: '5f235168-e290-4f80-b046-5d38988cd43d',
   task: '',
-});
-
+})
 
 // Handle the submission of a new todo
 async function handleSubmit(): Promise<void> {
   try {
- if (todo.value.task.length >= 3) {
+    if (todo.value.task.length >= 3) {
       // Insert the new todo using the API client
-      await $client.todos.insertTodo.mutate(todo.value);
+      await $client.todos.insertTodo.mutate(todo.value)
 
       // Refresh the data to update the list of todos
-      refreshNuxtData('todos');
+      refreshNuxtData('todos')
 
       // Clear the task input
-      todo.value.task = '';
- }
-  } catch (error) {
-
-    console.log(error);
+      todo.value.task = ''
+    }
+  }
+  catch (error) {
+    console.log(error)
   }
 }
 
@@ -41,12 +39,13 @@ async function handleSubmit(): Promise<void> {
 async function handleCompleted(_id: string): Promise<void> {
   try {
     // Update the todo as completed using the API client
-    await $client.todos.updateTodo.mutate({ id: _id });
+    await $client.todos.updateTodo.mutate({ id: _id })
 
     // Refresh the data to update the list of todos
-    refreshNuxtData('todos');
-  } catch (error) {
-    console.log(error);
+    refreshNuxtData('todos')
+  }
+  catch (error) {
+    console.log(error)
   }
 }
 
@@ -56,18 +55,16 @@ async function handleDelete(id: string): Promise<void> {
     // Confirm the deletion with a user prompt
     if (window.confirm('Are You Sure')) {
       // Delete the todo using the API client
-      await $client.todos.deleteTodo.mutate({ id });
+      await $client.todos.deleteTodo.mutate({ id })
     }
 
     // Refresh the data to update the list of todos
-    refreshNuxtData('todos');
-  } catch (error) {
-    console.log(error);
+    refreshNuxtData('todos')
+  }
+  catch (error) {
+    console.log(error)
   }
 }
-
-
-
 
 const randomize = () => todos?.value?.sort(() => Math.random() - 0.5)
 </script>
@@ -95,11 +92,10 @@ const randomize = () => todos?.value?.sort(() => Math.random() - 0.5)
         <span v-if=" todo.task.length <= 2" class=" p-2  text-center text-error text-xs">* Must be at least 3 characters long.</span>
       </div>
     </form>
-    <div  v-if="todos?.length > 1" class="flex space-x-4 my-5 items-center justify-center" >
+    <div v-if="todos?.length > 1" class="flex space-x-4 my-5 items-center justify-center">
       <button class="btn btn-sm bg-accent outline border-none" @click="randomize">
         RANDOMIZE
       </button>
-
     </div>
     <div v-if="todos?.length > 0" v-auto-animate class="pt-5 h-96 overflow-y-scroll">
       <div v-for="t in todos" :key="t.id" class="py-2">

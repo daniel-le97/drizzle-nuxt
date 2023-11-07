@@ -6,8 +6,6 @@ import { insertTodoSchema, todos } from '~/server/db/schema/todos'
 
 export const todosRouter = router({
 
-
-
   getAll: publicProcedure
     .query(async () => {
       const db = useDb()
@@ -47,10 +45,10 @@ export const todosRouter = router({
       try {
         const db = useDb()
         const caller = appRouter.createCaller({})
-        const todoToUpdate = await caller.todos.getById({ id:input.id })
+        const todoToUpdate = await caller.todos.getById({ id: input.id })
         if (todoToUpdate)
           todoToUpdate.completed = !todoToUpdate.completed ?? false
-     await db.update(todos).set({ completed: todoToUpdate.completed }).where(eq(todos.id, input.id))
+        await db.update(todos).set({ completed: todoToUpdate.completed }).where(eq(todos.id, input.id))
       }
       catch (error) {
         console.log(error.message)

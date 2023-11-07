@@ -1,13 +1,11 @@
-
 <script setup lang="ts">
-import SectionHeader from './Global/SectionHeader.vue';
+import SectionHeader from './globals/SectionHeader.vue'
 </script>
 
-
 <template>
-    <SectionHeader
-      title="Pricing Plans" subtitle="Our Budget Plan costs you absolutely nothing. That's right, it's zilch, zero, nada. Perfect for frugal individuals."
-    />
+  <SectionHeader
+    title="Pricing Plans" subtitle="Our Budget Plan costs you absolutely nothing. That's right, it's zilch, zero, nada. Perfect for frugal individuals."
+  />
   <div class="flex lg:flex-row flex-col space-y-4 lg:space-y-0 mx-auto lg:space-x-10">
     <div class="rounded-2xl background-gradient flex items-center justify-center p-1">
       <div class="card shadow-xl bg-base-100">
@@ -42,14 +40,15 @@ import SectionHeader from './Global/SectionHeader.vue';
       </div>
     </div>
     <!-- GRADIENT BACKGROUND CARD -->
-    <div   v-motion
+    <div
+      v-motion
       :initial="{
 
-       y:-10
+        y: -10,
       }"
       :enter="{
-       y: -20,
-       scale:1.1,
+        y: -20,
+        scale: 1.1,
         transition: {
           repeat: Infinity,
           repeatType: 'mirror',
@@ -58,7 +57,8 @@ import SectionHeader from './Global/SectionHeader.vue';
           damping: 30,
           mass: 1,
         },
-      }" class="card shadow-xl background-gradient scale-110">
+      }" class="card shadow-xl background-gradient scale-110"
+    >
       <div class="card-body items-center text-center">
         <h2 class="mb-4 text-neutral-content font-bold">
           Premium

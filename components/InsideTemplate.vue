@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import SectionHeader from './Global/SectionHeader.vue';
-
+import SectionHeader from './globals/SectionHeader.vue'
 
 const sections = [
   {
@@ -21,7 +20,7 @@ const sections = [
         content: 'Elevate your design game with Tailwind CSS, the beloved utility-first CSS framework. Achieve stunning and consistent styling while speeding up your development process.',
       },
 
-    ]
+    ],
   },
   {
     title: 'Design Flexibility: Layouts, Colors, Customization',
@@ -44,7 +43,7 @@ const sections = [
         header: 'Page Layout and Transitions',
         content: 'Our default Nuxt layout comes with a dynamic NavBar and active Nuxt router link classes, providing a seamless and engaging web navigation experience.',
       },
-    ]
+    ],
 
   },
   {
@@ -65,21 +64,18 @@ const sections = [
         content: 'Discover 29 amazing color themes to give your website a distinct and aesthetically pleasing look. Explore various design possibilities and transform your online presence with Daisy UI. Be sure to check it out on the NavBar ',
       },
 
+    ],
 
-
-    ]
-
-  }
+  },
 ]
-
-
-
 </script>
 
 <template>
   <div>
-    <SectionHeader title="Inside Template"
-      subtitle="What this templates offers with the Power of Nuxt, Drizzle and Tailwind." />
+    <SectionHeader
+      title="Inside Template"
+      subtitle="What this templates offers with the Power of Nuxt, Drizzle and Tailwind."
+    />
     <div class="flex flex-col items-center justify-center space-y-24">
       <div v-for="(section, index) in sections" :key="section.title" class="flex items-center justify-center space-x-4">
         <div :class="index % 2 === 0 ? ' order-1' : ' order-0'" class="  lg:w-1/3 w-1/2 flex items-center justify-center">

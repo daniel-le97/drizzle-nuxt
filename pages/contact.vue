@@ -3,14 +3,16 @@
 <template>
   <main class=" text-base-content ">
     <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md flex flex-col items-center justify-center">
-      <div class="font-bold text-accent text-xl uppercase">Contact</div>
+      <div class="font-bold text-accent text-xl uppercase">
+        Contact
+      </div>
       <div class="mb-4 text-6xl tracking-tight font-extrabold text-center">
-   Let's Connect!
+        Let's Connect!
       </div>
       <p class="mb-8 lg:mb-16  opacity-80 text-center sm:text-xl">
         Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know, our support team is delighted to help you.
       </p>
-    <div class="card  p-10 bg-neutral text-neutral-content">
+      <div class="card  p-10 bg-neutral text-neutral-content">
         <form action="#" class="space-y-8">
           <div class="flex space-x-8   justify-between">
             <div class="flex flex-col space-y-8">
@@ -37,7 +39,7 @@
             Send message
           </button>
         </form>
-    </div>
+      </div>
     </div>
   </main>
 </template>
