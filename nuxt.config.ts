@@ -1,13 +1,17 @@
 /* eslint-disable node/prefer-global/process */
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+import { resolve } from "node:path"
+
+
 export default defineNuxtConfig({
   experimental: {
     componentIslands: true,
   },
   alias: {
     // if not using pnpm
-    // cookie: resolve(__dirname, "node_modules/cookie")
-    cookie: 'cookie',
+    cookie: resolve(__dirname, "node_modules/cookie")
+    // cookie: 'cookie',
   },
   devtools: { enabled: true },
   app: {
@@ -66,10 +70,15 @@ export default defineNuxtConfig({
   build: {
     transpile: ['trpc-nuxt'],
   },
+
+
+  nitro: {
+    preset: "node-server"
+  },
   runtimeConfig: {
     public: {
       authJs: {
-        baseUrl: process.env.NUXT_PUBLIC_AUTH_JS_BASE_URL, // The URL of your deployed app (used for origin Check in production)
+        baseUrl: process.env.NUXT_NEXTAUTH_URL, // The URL of your deployed app (used for origin Check in production)
         verifyClientOnEveryRequest: true, // whether to hit the /auth/session endpoint on every client request
       },
 
