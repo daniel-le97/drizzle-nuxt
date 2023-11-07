@@ -128,9 +128,8 @@ const randomize = () => todos?.value?.sort(() => Math.random() - 0.5)
     </div>
     <div v-else v-motion-pop-visible class=" flex flex-col items-center justify-center space-y-6">
       <div class="text-4xl">
-        NONE
+        NO Current Tasks
       </div>
-      <Icon name="uil:sad-crying" size="100" />
       <progress class="progress progress-accent  w-full" />
     </div>
   </div>
