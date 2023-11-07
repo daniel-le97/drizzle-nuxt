@@ -15,7 +15,6 @@
       <Todos />
       <div class="divider " />
       <PricingPlan />
-
       <div class="divider " />
       <Testimonials />
       <div class="divider " />
