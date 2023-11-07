@@ -24,10 +24,6 @@ export const authOptions: AuthConfig = {
       clientId: runtimeConfig.google.clientId,
       clientSecret: runtimeConfig.google.clientSecret,
     }),
-    // EmailProvider({
-    //   server:runtimeConfig.email.server,
-    //   from: runtimeConfig.email.from
-    // })
   ],
 }
 
