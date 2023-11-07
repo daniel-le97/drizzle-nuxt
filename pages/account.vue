@@ -7,7 +7,7 @@ definePageMeta({ middleware: "auth", auth: { guestRedirectTo: "/login" } })
 
 <template>
   <main>
-    <SectionHeader title="Thi is a Protected Route"
+    <SectionHeader title="This is a Protected Route"
       subtitle="Data displayed here only visible to authenticated and signed in users." />
     <div class="  flex  items-center justify-center">
       <div v-if="session?.user" class="mt-10 p-10 card glass flex flex-wrap items-center justify-center">

@@ -76,7 +76,7 @@ onBeforeUnmount(() => {
         </ul>
       </div>
       <!-- //NOTE -  MOBILE MENU -->
-      <a v-motion-pop-visible class="p-2 rounded-md text-lg font-bold bg-neutral text-neutral-content  hidden  lg:flex">Drizzle Nuxt</a>
+      <a v-motion-pop-visible class="p-3 px-5 rounded-md text-xl font-bold bg-neutral text-neutral-content  hidden  lg:flex">Drizzle Nuxt</a>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="flex space-x-10 items-center justify-center">

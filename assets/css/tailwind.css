@@ -20,7 +20,7 @@ main{
 }
 
 img{
-  @apply hover:brightness-75 transition-all duration-300 ease-linear
+  @apply hover:brightness-75 transition-all duration-300 ease-linear rounded-md shadow-md
 }
 
 
