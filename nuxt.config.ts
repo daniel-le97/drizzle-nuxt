@@ -69,25 +69,21 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       authJs: {
-        baseUrl: process.env.NUXT_NEXTAUTH_URL, // The URL of your deployed app (used for origin Check in production)
+        baseUrl: process.env.NUXT_PUBLIC_AUTH_JS_BASE_URL, // The URL of your deployed app (used for origin Check in production)
         verifyClientOnEveryRequest: true, // whether to hit the /auth/session endpoint on every client request
       },
 
     },
+    google: {
+      clientId: process.env.NUXT_GOOGLE_CLIENT_ID,
+      clientSecret: process.env.NUXT_GOOGLE_CLIENT_SECRET,
+    },
     authJs: {
-      secret: process.env.NUXT_NEXTAUTH_SECRET,
+      secret: process.env.NUXT_AUTH_JS_SECRET,
     },
     github: {
       clientId: process.env.NUXT_GITHUB_CLIENT_ID,
       clientSecret: process.env.NUXT_GITHUB_CLIENT_SECRET,
-    },
-       google: {
-      clientId: process.env.NUXT_GOOGLE_CLIENT_ID,
-      clientSecret: process.env.NUXT_GOOGLE_CLIENT_SECRET,
-    },
-    email: {
-      server: process.env.EMAIL_SERVER,
-      from: process.env.EMAIL_FROM,
     },
     db: {
       url: process.env.NUXT_DB_URL,
