@@ -14,8 +14,12 @@ definePageMeta({ middleware: "guest-only" })
     <div class="flex flex-col items-center  w-2/3 ">
 
       <ul class="menu  rounded-box ">
-        <li class="my-6">
-          <a href="/api/auth/signin" class="mx-auto  w-full text-2xl ">Native Link Sign in</a>
+        <li class="my-6 ">
+<p  class=" flex items-center justify-center">Native Link Sign in</p>
+             <a href="/api/auth/signin" class="mx-auto  w-full text-xl btn  ">Https://yourWebsite.com/api/auth/signin
+
+
+            </a>
         </li>
         <li v-if="!session" class="mx-auto">
           <button class="p-0 m-0 rounded-full w-fit" @click="signIn()">
