@@ -86,7 +86,7 @@ export default defineNuxtConfig({
       from: process.env.EMAIL_FROM,
     },
     db: {
-      url: process.env.PG_DB_URL,
+      url: process.env.NUXT_DB_URL,
       dir: './server/db',
     },
   },
