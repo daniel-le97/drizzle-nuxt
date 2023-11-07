@@ -74,6 +74,10 @@ export default defineNuxtConfig({
       },
 
     },
+    google: {
+      clientId: process.env.NUXT_GOOGLE_CLIENT_ID,
+      clientSecret: process.env.NUXT_GOOGLE_CLIENT_SECRET,
+    },
     authJs: {
       secret: process.env.NUXT_AUTH_JS_SECRET,
     },
@@ -82,7 +86,6 @@ export default defineNuxtConfig({
       clientSecret: process.env.NUXT_GITHUB_CLIENT_SECRET,
     },
     db: {
-      url: process.env.NUXT_DB_URL,
       url: process.env.NUXT_DB_URL,
       dir: './server/db',
     },
