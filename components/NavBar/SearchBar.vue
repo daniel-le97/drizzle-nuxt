@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <div class="dropdown">
-      <label tabindex="0" class=""> <input v-model="searchTerm" @input="showResults" type="text" placeholder="Search..."
+      <label tabindex="0" class=""> <input v-model="searchTerm " @keydown="focusInput" @input="showResults" type="text" placeholder="Search..."
           class="input focus:bg-transparent w-full   py-0   relative"></label>
       <ul v-if="showResultsList" tabindex="0"
         class="dropdown-content rounded-md z-[1] mt-4 w-full   menu  shadow-md bg-base-100 rounded-box ">
@@ -47,6 +47,7 @@ function highlightMatch(text) {
   const regex = new RegExp(searchTerm.value, 'gi');
   return text.replace(regex, match => `<span class="  text-accent">${match}</span>`);
 }
+
 </script>
 
 <style scoped>
