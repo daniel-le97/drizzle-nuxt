@@ -9,66 +9,62 @@ const sections = [
     image: 'https://images.unsplash.com/photo-1489465033131-30f7e2025f68?auto=format&fit=crop&q=80&w=1170&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     list: [
       {
-        header: 'Amazing Modules',
-        content: 'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+        header: 'Enhanced Module Integration',
+        content: 'Experience seamless integration of some of the most popular Nuxt Modules and other essential libraries, opening up a world of possibilities for your project.',
       },
       {
-        header: 'Integrated Drizzle ORM',
-        content: 'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+        header: 'Drizzle ORM: Beyond Prisma',
+        content: 'The Prisma alternative, Meet Drizzle, your lightweight, high-performance TypeScript ORM designed with developers in mind. Discover a new level of development efficiency.',
       },
       {
-        header: 'Styled using Tailwind CSS',
-        content: 'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+        header: 'Tailwind CSS for Rapid Styling',
+        content: 'Elevate your design game with Tailwind CSS, the beloved utility-first CSS framework. Achieve stunning and consistent styling while speeding up your development process.',
       },
 
     ]
   },
   {
-    title: 'Building on solid foundations',
+    title: 'Design Flexibility: Layouts, Colors, Customization',
     subtitle: 'Gain the ease and advantage by incorporating Nuxt Modules',
     image: 'https://images.unsplash.com/photo-1582298538104-fe2e74c27f59?auto=format&fit=crop&q=80&w=1287&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     list: [
       {
-        header: 'High level of customization',
-        content: `Unlock a wealth of customization options to effortlessly tailor the template to your brand's identity and unique requirements, ensuring a distinct and efficient website.`,
+        header: 'Unleash Your Creativity',
+        content: `Enjoy an extensive range of customization options, effortlessly tailoring the template to your brand's identity and unique requirements. Ensure your website stands out and functions precisely the way you want.`,
       },
       {
-        header: 'Daisy UI Component Library',
-        content: `Elevate your web design with the Daisu UI Component Library. Experience stunning, customizable components that effortlessly match your brand's identity.Say goodbye to complex HTML class names and enjoy a selection of beautifully crafted tailwind components.`,
+        header: 'Elevate with Daisy UI',
+        content: `Take your web design to new heights with the Daisy UI Component Library. Explore a collection of stunning, fully customizable components that seamlessly blend with your brand's identity. Say farewell to complex HTML class names and embrace beautifully crafted Tailwind components.`,
       },
       {
-        header: 'Tired of just dark mode?',
-        content: '29 amazing color themes for a distinct, aesthetically pleasing website. Explore design possibilities and transform your online presence with Daisy UI. Check it out on the NavBar component.',
+        header: '29 Inspiring Color Themes',
+        content: 'Discover 29 amazing color themes to give your website a distinct and aesthetically pleasing look. Explore various design possibilities and transform your online presence with Daisy UI. Be sure to check it out on the NavBar ',
       },
       {
         header: 'Page Layout and Transitions',
-        content: 'Enhanced Page Layout and Transitions: Our default Nuxt layout features a dynamic NavBar and active Nuxt router links for seamless and engaging web navigation',
+        content: 'Our default Nuxt layout comes with a dynamic NavBar and active Nuxt router link classes, providing a seamless and engaging web navigation experience.',
       },
-
     ]
 
   },
   {
-    title: 'Extensive ways to customize to taste',
+    title: 'Design Flexibility: Layouts, Colors, Customization',
     subtitle: 'Gain the ease and advantage by incorporating Nuxt Modules',
     image: 'https://images.unsplash.com/photo-1665686377065-08ba896d16fd?auto=format&fit=crop&q=80&w=1170&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     list: [
       {
-        header: 'High level of customization',
-        content: `Unlock a wealth of customization options to effortlessly tailor the template to your brand's identity and unique requirements, ensuring a distinct and efficient website.`,
+        header: 'Elevate User Engagement with Animation',
+        content: `Enhance user interaction and engagement through captivating animations powered by Vueuse/Motion and Z-Animate plugins. Bring your app to life with subtle and effective motion effects.`,
       },
       {
-        header: 'Daisy UI Component Library',
-        content: `Elevate your web design with the Daisu UI Component Library. Experience stunning, customizable components that effortlessly match your brand's identity.Say goodbye to complex HTML class names and enjoy a selection of beautifully crafted tailwind components.`,
+        header: 'Elevate with Daisy UI',
+        content: `Take your web design to new heights with the Daisy UI Component Library. Explore a collection of stunning, fully customizable components that seamlessly blend with your brand's identity. Say farewell to complex HTML class names and embrace beautifully crafted Tailwind components.`,
       },
       {
-        header: 'Tired of just dark mode?',
-        content: '29 amazing color themes for a distinct, aesthetically pleasing website. Explore design possibilities and transform your online presence with Daisy UI. Check it out on the NavBar component.',
+        header: '29 Inspiring Color Themes',
+        content: 'Discover 29 amazing color themes to give your website a distinct and aesthetically pleasing look. Explore various design possibilities and transform your online presence with Daisy UI. Be sure to check it out on the NavBar ',
       },
-      {
-        header: 'Page Layout and Transitions',
-        content: 'Enhanced Page Layout and Transitions: Our default Nuxt layout features a dynamic NavBar and active Nuxt router links for seamless and engaging web navigation',
-      },
+  
 
     ]
 

@@ -1,9 +1,10 @@
 /* eslint-disable node/prefer-global/process */
 import type { Config } from 'drizzle-kit'
 import { config } from 'dotenv'
-
 config()
-// console.log(process.env.PG_DB_URL);
+
+
+// Create an .env File and add your connection String then plug it in here..
 
 export default {
   schema: './server/db/schema',

@@ -34,9 +34,9 @@ const plugins = [
     link: 'https://orm.drizzle.team/drizzle-studio/overview',
   },
   {
-    name: 'ESLINT',
+    name: 'ESLint',
     image: 'https://cdn.iconscout.com/icon/free/png-512/free-eslint-3521412-2944856.png?f=webp&w=256',
-    description: 'ESLint module for Nuxt, helps you find and fix problems in your JavaScript code.',
+    description: 'Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards.',
     link: 'https://nuxt.com/modules/eslint',
   },
 
@@ -62,7 +62,7 @@ const plugins = [
   {
     name: 'Nuxt Tailwind',
     image: 'https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg',
-    description: 'Add Tailwind CSS to your Nuxt application in seconds with PurgeCSS included for minimal CSS.',
+    description: 'Use the power of Tailwind to greatly improve your productivity and enhance your developer workflow.',
     link: 'https://nuxt.com/modules/tailwindcss',
   },
   {

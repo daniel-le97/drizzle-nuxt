@@ -88,11 +88,11 @@ const randomize = () => todos?.value?.sort(() => Math.random() - 0.5)
       <div class="form-control w-full">
         <div class="input-group">
           <input v-model="todo.task" type="text" placeholder="New Task" class="input text-base-content w-full ">
-          <button class="btn btn-square" :disabled="todo.task.length <= 3">
+          <button class="btn btn-square" :disabled="todo.task.length <= 2">
             Add
           </button>
         </div>
-        <span v-if="todo.task.length <= 3" class=" p-2  text-center text-error text-xs">* Must be at least 3 characters long.</span>
+        <span v-if=" todo.task.length <= 2" class=" p-2  text-center text-error text-xs">* Must be at least 3 characters long.</span>
       </div>
     </form>
     <div  v-if="todos?.length > 1" class="flex space-x-4 my-5 items-center justify-center" >
@@ -103,7 +103,7 @@ const randomize = () => todos?.value?.sort(() => Math.random() - 0.5)
     </div>
     <div v-if="todos?.length > 0" v-auto-animate class="pt-5 h-96 overflow-y-scroll">
       <div v-for="t in todos" :key="t.id" class="py-2">
-        <div class="p-2  bg-primary rounded-md flex justify-between">
+        <div class="px-3  bg-primary rounded-md flex justify-between">
           <div class="flex items-center justify-center space-x-3">
             <div class="form-control">
               <input
@@ -116,7 +116,7 @@ const randomize = () => todos?.value?.sort(() => Math.random() - 0.5)
             </div>
           </div>
           <div class="flex space-x-4 items-center justify-center">
-            <div class="">
+            <div class=" text-primary-content text-xs">
               {{ new Date(t.createdAt!).toLocaleTimeString() }}
             </div>
             <button class="btn btn-ghost btn-circle" @click="handleDelete(t.id)">
