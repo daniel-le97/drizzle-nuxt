@@ -22,7 +22,7 @@ definePageMeta({ middleware: "guest-only" })
             </a>
         </li>
         <li v-if="!session" class="mx-auto">
-          <button class="p-0 m-0 rounded-full w-fit" @click="signIn()">
+          <button class="p-0 m-0 rounded-full w-fit" @click="signIn('github')">
             <Icon name="uil:github" class="text-8xl" />
           </button>
         </li>
