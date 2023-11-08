@@ -16,19 +16,24 @@ const todo = ref({
   task: '',
 })
 
-// Handle the submission of a new todo
+
 async function handleSubmit(): Promise<void> {
   try {
-    if (todo.value.task.length >= 3) {
-      // Insert the new todo using the API client
-      await $client.todos.insertTodo.mutate(todo.value)
 
-      // Refresh the data to update the list of todos
+
+
+ await useFetch('/api/todos/post',{
+method:'post',
+  body:todo.value
+ })
+
+
+
       refreshNuxtData('todos')
 
-      // Clear the task input
-      todo.value.task = ''
-    }
+
+      // todo.value.task = ''
+
   }
   catch (error) {
     console.log(error)
@@ -38,10 +43,22 @@ async function handleSubmit(): Promise<void> {
 // Mark a todo as completed
 async function handleCompleted(_id: string): Promise<void> {
   try {
-    // Update the todo as completed using the API client
-    await $client.todos.updateTodo.mutate({ id: _id })
 
-    // Refresh the data to update the list of todos
+
+
+
+const body =await useFetch('/api/todos/index.update',{
+  method:'PUT',
+  body:todo.value
+})
+
+console.log(body.data);
+
+
+
+    // await $client.todos.updateTodo.mutate({ id: _id })
+
+
     refreshNuxtData('todos')
   }
   catch (error) {
@@ -52,13 +69,10 @@ async function handleCompleted(_id: string): Promise<void> {
 // Delete a todo
 async function handleDelete(id: string): Promise<void> {
   try {
-    // Confirm the deletion with a user prompt
-    if (window.confirm('Are You Sure')) {
-      // Delete the todo using the API client
-      await $client.todos.deleteTodo.mutate({ id })
-    }
 
-    // Refresh the data to update the list of todos
+
+ await useFetch('/api/todos/:id',{method:'DELETE',body:{id}})
+
     refreshNuxtData('todos')
   }
   catch (error) {
