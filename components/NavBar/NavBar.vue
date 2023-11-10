@@ -64,6 +64,7 @@ onBeforeUnmount(() => {
               Contact
             </NuxtLink>
           </li>
+
           <li v-motion-pop-visible>
             <NuxtLink v-if="!session?.user" to="/login" class="link" active-class="active-link">
               Login
@@ -73,6 +74,7 @@ onBeforeUnmount(() => {
               Account
             </NuxtLink>
           </li>
+
         </ul>
       </div>
       <!-- //NOTE -  MOBILE MENU -->
@@ -95,6 +97,7 @@ onBeforeUnmount(() => {
             Contact
           </NuxtLink>
         </li>
+     
         <li v-motion-pop-visible>
           <NuxtLink v-if="!session?.user" to="/login" class="link" active-class="active-link">
             Login
