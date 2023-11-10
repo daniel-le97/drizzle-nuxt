@@ -51,24 +51,24 @@ const testimonials = ref([
 
 ])
 
-function randomize() {
-  setInterval(() => {
-    const randomIndex1 = Math.floor(Math.random() * testimonials.value.length)
-    const randomIndex2 = Math.floor(Math.random() * testimonials.value.length)
+// function randomize() {
+//   setInterval(() => {
+//     const randomIndex1 = Math.floor(Math.random() * testimonials.value.length)
+//     const randomIndex2 = Math.floor(Math.random() * testimonials.value.length)
 
-    // Move the element at randomIndex1 to randomIndex2
-    const movedItem = testimonials.value.splice(randomIndex1, 1)[0]
-    testimonials.value.splice(randomIndex2, 0, movedItem)
-  }, 5000) // 3000 milliseconds = 3 seconds
-}
-randomize()
+//     // Move the element at randomIndex1 to randomIndex2
+//     const movedItem = testimonials.value.splice(randomIndex1, 1)[0]
+//     testimonials.value.splice(randomIndex2, 0, movedItem)
+//   }, 5000) // 3000 milliseconds = 3 seconds
+// }
+// randomize()
 </script>
 
 <template>
   <div class="">
     <SectionHeader subtitle="Joke This is all made up." title="What people are saying." />
 
-    <div v-auto-animate="{ duration: 1000 }" class="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div  class="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       <div v-for="t in testimonials" :key="t.username" class="card bg-base-100 p-0.5 h-fit  glass  ">
         <div class="p-4 card bg-neutral shadow-xl h-full hover:bg-[hsl(var(--nf))] duration-300 ease-linear group">
           <div class="flex items-center space-x-4 justify-start mb-4">

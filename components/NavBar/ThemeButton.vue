@@ -66,7 +66,8 @@ onMounted(() => {
       >
         <li v-for="theme in themes" :key="theme" :value="theme">
           <div
-            v-motion-slide-visible-right :data-set-theme="theme" :data-theme="theme" data-act-class="active-theme"
+          v-motion-pop-visible
+            :data-set-theme="theme" :data-theme="theme" data-act-class="active-theme"
             class="theme"
           >
             <p :data-theme="theme" class="text-dark bg-transparent font-bold">

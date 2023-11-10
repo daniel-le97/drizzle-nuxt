@@ -41,23 +41,7 @@ import SectionHeader from './globals/SectionHeader.vue'
     </div>
     <!-- GRADIENT BACKGROUND CARD -->
     <div
-      v-motion
-      :initial="{
-
-        y: -10,
-      }"
-      :enter="{
-        y: -20,
-        scale: 1.1,
-        transition: {
-          repeat: Infinity,
-          repeatType: 'mirror',
-          type: 'spring',
-          stiffness: 125,
-          damping: 30,
-          mass: 1,
-        },
-      }" class="card shadow-xl background-gradient scale-110"
+   class="card shadow-xl background-gradient scale-110"
     >
       <div class="card-body items-center text-center">
         <h2 class="mb-4 text-neutral-content font-bold">
