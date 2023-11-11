@@ -40,8 +40,8 @@ onBeforeUnmount(() => {
     :style="{ transform: navTransform }"
   >
     <div class="navbar-start">
-      <!-- //NOTE -  MOBILE MENU -->
-      <div class="dropdown">
+
+      <div role="Mobile-NavBar" class="dropdown">
         <label tabindex="0" class="btn btn-ghost btn-circle lg:hidden">
           <Icon name="tdesign:hamburger" size="35" />
         </label>
@@ -77,11 +77,13 @@ onBeforeUnmount(() => {
 
         </ul>
       </div>
-      <!-- //NOTE -  MOBILE MENU -->
+
       <a v-motion-pop-visible class="p-3 px-5 rounded-md text-xl font-bold bg-neutral text-neutral-content  hidden  lg:flex">Drizzle Nuxt</a>
     </div>
-    <div class="navbar-center hidden lg:flex">
-      <ul class="flex space-x-10 items-center justify-center">
+
+
+    <div role="Large-NavBar" class=" ">
+      <ul class="flex  justify-around space-x-14">
         <li v-motion-pop-visible>
           <NuxtLink to="/" class="link" active-class="active-link">
             Home
@@ -97,7 +99,7 @@ onBeforeUnmount(() => {
             Contact
           </NuxtLink>
         </li>
-     
+
         <li v-motion-pop-visible>
           <NuxtLink v-if="!session?.user" to="/login" class="link" active-class="active-link">
             Login
@@ -107,7 +109,9 @@ onBeforeUnmount(() => {
             Account
           </NuxtLink>
         </li>
+           <div class="active-indicator">23423565</div>
       </ul>
+
     </div>
     <div class="navbar-end space-x-4">
       <SearchBar />
@@ -123,20 +127,21 @@ onBeforeUnmount(() => {
   z-index: 100;
 }
 .active-link {
-  @apply font-bold  transition-all duration-300 ease-linear relative;
+  @apply font-bold bg-lime-200 px-2 py-1 rounded-md  transition-all duration-300 ease-linear relative;
 
 }
-
-.active-link::before {
-  content: '';
-  width: 100%;
-  height: 4px; /* Adjust the height of the underline as needed */
-  background-color: red;
+.active-indicator {
   position: absolute;
-  bottom: -6px;
-  left: 0;
-  transition: all 0.3s ease; /* Add a smooth transition effect */
+  height: 7px; /* Your desired height */
+  background-color: #000; /* Your desired color */
+  transition: transform 0.3s ease; /* Adjust the transition as needed */
 }
+
+/* TranslateX to active link */
+.active-link + .active-indicator {
+  transform: translateX(calc(50% - 50px)); /* Adjust the translation amount */
+}
+
 .link{
   @apply text-lg hover:text-[var(--info)] text-[hsl(var(--bc))] ;
 }

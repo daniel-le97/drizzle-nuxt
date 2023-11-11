@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import SectionHeader from './globals/SectionHeader.vue'
 
-
-
-
 const { data: todos, refresh } = await useFetch('/api/todos')
-const todosCopy = ref(todos)
+
+
 
 
 
@@ -17,20 +15,16 @@ const todo = ref({
 })
 
 
-async function handleSubmit() {
+const handleSubmit = async () => {
   try {
+    // IN THIS CASE USE $fetch instead of useFetch After initializing useFetch, you pass the reactive form as body. When updating it, the fetch all will be executed again. With $fetch, this does not happen.
+    await $fetch('/api/todos/post', {
+      method: 'post', body: todo.value
+    })
 
-    const res =  await useFetch('/api/todos/post', {
-        method: 'post',
-        body: todo.value
-      })
+todo.value.task = ''
 
-      console.log(res.data.value);
-
-
-    todosCopy.value = [...todosCopy.value,res.data.value]
-
-    // refresh()
+    refresh()
 
   } catch (error) {
     console.log(error)
@@ -38,25 +32,14 @@ async function handleSubmit() {
 }
 
 // Mark a todo as completed
-async function handleCompleted(_id: string): Promise<void> {
+async function handleCompleted(todo: { value: any; }): Promise<void> {
   try {
-
-
-
-
-    const body = await useFetch('/api/todos/index.update', {
+    todo.completed = !todo.completed
+     await $fetch('/api/todos/index.update', {
       method: 'PUT',
-      body: todo.value
+      body: todo
     })
-
-    console.log(body.data);
-
-
-
-    // await $client.todos.updateTodo.mutate({ id: _id })
-
-
-    // refreshNuxtData('todos')
+refresh()
   }
   catch (error) {
     console.log(error)
@@ -107,12 +90,12 @@ const randomize = () => todos?.value?.sort(() => Math.random() - 0.5)
       </button>
     </div>
     <div v-if="todos?.length > 0" v-auto-animate class="pt-5 h-96 overflow-y-scroll">
-      <div v-for="t in todosCopy" :key="t.id" class="py-2">
+      <div v-for="t in todos" :key="t.id" class="py-2">
         <div class="px-3  bg-primary rounded-md flex justify-between">
           <div class="flex items-center justify-center space-x-3">
             <div class="form-control">
               <input type="checkbox" :checked="t.completed !== null ? t.completed : false" class="checkbox bg-accent "
-                @change="handleCompleted(t.id)">
+                @change="handleCompleted(t)">
             </div>
             <div class="text-primary-content">
               {{ t.task }}
