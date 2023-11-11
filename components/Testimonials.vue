@@ -76,7 +76,7 @@ const testimonials = ref([
               class="avatar p-0.5 bg-accent shadow-md mask mask-hexagon scale-150 -translate-x-4 -translate-y-4 duration-300"
             >
               <div class="w-12 mask mask-hexagon">
-                <NuxtImg :src="t.image" :modifiers="{ grayscale: true, tint: '#00DC82' }" />
+                <NuxtImg :src="t.image"  />
               </div>
             </div>
             <p class="text-neutral-content font-bold">

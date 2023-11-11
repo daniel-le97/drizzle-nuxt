@@ -11,7 +11,7 @@ useSeoMeta({
 
 <template>
   <NuxtLayout>
-    <NuxtLoadingIndicator :height="3" color="emerald" />
+    <NuxtLoadingIndicator :height="4" color="red" class="z-50" />
     <NuxtPage />
   </NuxtLayout>
 </template>
