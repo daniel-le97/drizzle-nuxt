@@ -9,7 +9,7 @@ const navTransform = ref('translateY(0)');
 let lastScrollPosition = 0;
 
 const route = useRoute()
- route.path
+route.path
 
 function handleScroll() {
   const scrollY = window.scrollY;
@@ -58,21 +58,14 @@ onBeforeUnmount(() => {
 
 
 <template>
-  <div
-    ref="nav"
-    class="navbar  bg-base-100 "
-    :style="{ transform: navTransform }"
-  >
+  <div ref="nav" class="navbar  bg-base-100 " :style="{ transform: navTransform }">
     <div class="navbar-start">
-
       <div role="Mobile-NavBar" class="dropdown">
         <label tabindex="0" class="btn btn-ghost btn-circle lg:hidden">
           <Icon name="tdesign:hamburger" size="35" />
         </label>
-        <ul
-          tabindex="0"
-          class="menu menu-sm dropdown-content mt-3 z-50 bg-base-100 text-base-content p-2 shadow rounded-box w-52"
-        >
+        <ul tabindex="0"
+          class="menu menu-sm dropdown-content mt-3 z-50 bg-base-100 text-base-content p-2 shadow rounded-box w-52">
           <li v-motion-pop-visible>
             <NuxtLink to="/" class="link" active-class="active-link">
               Home
@@ -88,37 +81,27 @@ onBeforeUnmount(() => {
               Contact
             </NuxtLink>
           </li>
-
           <li v-motion-pop-visible>
             <NuxtLink v-if="!session?.user" to="/login" class="link" active-class="active-link">
               Login
             </NuxtLink>
-
             <NuxtLink v-else to="/account" class="link" active-class="active-link">
               Account
             </NuxtLink>
           </li>
-
         </ul>
       </div>
-
-      <a v-motion-pop-visible class="p-3 px-5 rounded-md text-xl font-bold bg-neutral text-neutral-content  hidden  lg:flex">Drizzle Nuxt</a>
+      <a v-motion-pop-visible
+        class="p-3 px-5 rounded-md text-xl font-bold bg-neutral text-neutral-content  hidden  lg:flex">Drizzle Nuxt</a>
     </div>
-
-
-
-  <div class="nav-ul">
-    <NuxtLink href="/" class="nav-item is-active" active-color="orange" >Home</NuxtLink>
-    <NuxtLink href="/about" class="nav-item " active-color="orange" >About</NuxtLink>
-    <NuxtLink href="/contact" class="nav-item " active-color="orange" >Contact</NuxtLink>
-    <NuxtLink v-if="session?.user" href="/account" class="nav-item " active-color="orange" >Account</NuxtLink>
-    <NuxtLink v-else href="/login" class="nav-item " active-color="orange" >Login</NuxtLink>
-
-    <span class="nav-indicator"></span>
-  </div>
-
-
-
+    <div class="nav-ul">
+      <NuxtLink href="/" class="nav-item is-active" active-color="orange">Home</NuxtLink>
+      <NuxtLink href="/about" class="nav-item " active-color="orange">About</NuxtLink>
+      <NuxtLink href="/contact" class="nav-item " active-color="orange">Contact</NuxtLink>
+      <NuxtLink v-if="session?.user" href="/account" class="nav-item " active-color="orange">Account</NuxtLink>
+      <NuxtLink v-else href="/login" class="nav-item " active-color="orange">Login</NuxtLink>
+      <span class="nav-indicator"></span>
+    </div>
     <div class="navbar-end space-x-4">
       <SearchBar />
       <ThemeButton />
@@ -138,8 +121,8 @@ onBeforeUnmount(() => {
 /* TranslateX to active link */
 
 
-.link{
-  @apply text-lg hover:text-[var(--info)] text-[hsl(var(--bc))] ;
+.link {
+  @apply text-lg hover:text-[var(--info)] text-[hsl(var(--bc))];
 }
 
 
@@ -153,7 +136,7 @@ onBeforeUnmount(() => {
 }
 
 .nav-item {
-  color: #d7d7d7;
+
   padding: 20px;
   text-decoration: none;
   transition: .3s;
@@ -183,7 +166,9 @@ onBeforeUnmount(() => {
 }
 
 
-.nav-item:not(.is-active):hover { color: #333; }
+.nav-item:not(.is-active):hover {
+  color: #333;
+}
 
 .nav-indicator {
   position: absolute;
@@ -197,10 +182,8 @@ onBeforeUnmount(() => {
 }
 
 @media (max-width: 580px) {
-  .nav { overflow: auto; }
+  .nav {
+    overflow: auto;
+  }
 }
-
-
-
-
 </style>

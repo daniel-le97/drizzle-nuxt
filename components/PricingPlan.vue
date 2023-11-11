@@ -7,7 +7,9 @@ import SectionHeader from './globals/SectionHeader.vue'
     title="Pricing Plans" subtitle="Our Budget Plan costs you absolutely nothing. That's right, it's zilch, zero, nada. Perfect for frugal individuals."
   />
   <div class="flex lg:flex-row flex-col space-y-4 lg:space-y-0 mx-auto lg:space-x-10">
-    <div class="rounded-2xl background-gradient flex items-center justify-center p-1">
+    <div
+    v-motion-pop-visible :delay="100"
+    class="rounded-2xl background-gradient flex items-center justify-center p-1">
       <div class="card shadow-xl bg-base-100">
         <div class="card-body items-center text-center  text-base-content ">
           <h2 class="mb-4  font-bold">
@@ -41,6 +43,7 @@ import SectionHeader from './globals/SectionHeader.vue'
     </div>
     <!-- GRADIENT BACKGROUND CARD -->
     <div
+    v-motion-pop-visible :delay="1800"
    class="card shadow-xl background-gradient scale-110"
     >
       <div class="card-body items-center text-center">
@@ -73,7 +76,9 @@ import SectionHeader from './globals/SectionHeader.vue'
       </div>
     </div>
     <!-- GRADIENT BACKGROUND CARD -->
-    <div class="rounded-2xl background-gradient flex items-center justify-center p-1">
+    <div
+    v-motion-pop-visible :delay="100"
+    class="rounded-2xl background-gradient flex items-center justify-center p-1">
       <div class="card shadow-xl bg-base-100">
         <div class="card-body items-center text-center  text-base-content ">
           <h2 class="mb-4  font-bold">

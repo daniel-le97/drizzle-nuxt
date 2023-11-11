@@ -8,7 +8,7 @@ const { title, subtitle } = props
 </script>
 
 <template>
-  <div class="  my-8 lg:my-20    flex-center   text-center">
+  <div v-motion-pop-visible class="  my-8 lg:my-20    flex-center   text-center">
     <h1 class="   title   text-base-content   ">
       {{ title }}
     </h1>

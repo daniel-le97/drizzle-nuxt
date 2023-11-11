@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import mockData from '../../MOCK_DATA.json'
+import mockData from '../../MockData/MOCK_DATA.json'
 
 const searchTerm = ref('')
 const originalData = mockData // Store the original data

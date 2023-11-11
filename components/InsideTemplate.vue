@@ -77,7 +77,7 @@ const sections = [
       subtitle="What this templates offers with the Power of Nuxt, Drizzle and Tailwind."
     />
     <div class="flex flex-col items-center justify-center space-y-24">
-      <div v-for="(section, index) in sections" :key="section.title" class="flex items-center justify-center space-x-4">
+      <div v-motion-fade-visible v-for="(section, index) in sections" :key="section.title" class="flex items-center justify-center space-x-4">
         <div :class="index % 2 === 0 ? ' order-1' : ' order-0'" class="  lg:w-1/3 w-1/2 flex items-center justify-center">
           <NuxtImg :src="section.image" alt="accent image" />
         </div>

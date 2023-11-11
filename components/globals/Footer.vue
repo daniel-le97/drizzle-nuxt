@@ -62,14 +62,7 @@ const socials = [
   flex: 1;
 }
 
-.link {
-  width: fit-content;
-  height: fit-content;
 
-  @media only screen and (max-width: 768px) {
-    font-size: 16px !important;
-  }
-}
 
 .footer-title{
   @apply text-5xl font-bold w-full md:w-1/2 drop-shadow-md
