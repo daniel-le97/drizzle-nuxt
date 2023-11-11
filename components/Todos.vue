@@ -105,8 +105,8 @@ const randomize = () => todos?.value?.sort(() => Math.random() - 0.5)
             <div class=" text-primary-content text-xs">
               {{ new Date(t.createdAt!).toLocaleTimeString() }}
             </div>
-            <button class="btn btn-ghost btn-circle" @click="handleDelete(t.id)">
-              <Icon name="uil:x" size="30" class="text-primary-content" />
+            <button class="btn btn-ghost btn-circle p-1" @click="handleDelete(t.id)">
+              <Icon name="uil:x" size="25" class="text-primary-content" />
             </button>
           </div>
         </div>
