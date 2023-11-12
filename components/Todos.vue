@@ -32,7 +32,7 @@ todo.value.task = ''
 }
 
 // Mark a todo as completed
-async function handleCompleted(todo: { value: any; }): Promise<void> {
+async function handleCompleted(todo:any): Promise<void> {
   try {
     todo.completed = !todo.completed
      await $fetch('/api/todos/index.update', {
