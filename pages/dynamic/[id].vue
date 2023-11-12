@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 import SectionHeader from '../../components/globals/SectionHeader.vue'
-import mockData from '../../MOCK_DATA.json'
+import mockData from '../../MockData/MOCK_DATA.json'
 
 const originalData = ref(mockData)
 const route = useRoute()
