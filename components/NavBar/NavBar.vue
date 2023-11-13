@@ -4,8 +4,12 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 import SearchBar from './SearchBar.vue';
 import ThemeButton from './ThemeButton.vue';
 
+
+
+
 const { session } = useAuth();
 const navTransform = ref('translateY(0)');
+
 let lastScrollPosition = 0;
 
 const route = useRoute()
@@ -16,6 +20,7 @@ function handleScroll() {
   navTransform.value = scrollY > lastScrollPosition ? 'translateY(-100%)' : 'translateY(0)';
   lastScrollPosition = scrollY;
 }
+
 
 function handleIndicator(el: HTMLElement) {
   const indicator = document.querySelector('.nav-indicator') as HTMLElement;
@@ -28,23 +33,34 @@ function handleIndicator(el: HTMLElement) {
 
   indicator.style.width = `${el.offsetWidth}px`;
   indicator.style.left = `${el.offsetLeft}px`;
-  indicator.style.backgroundColor = el.getAttribute('active-color');
+
+  const activeColor = el.getAttribute('active-color');
+  if (activeColor !== null) {
+    indicator.style.backgroundColor = activeColor;
+    el.style.color = activeColor;
+  }
 
   el.classList.add('is-active');
-  el.style.color = el.getAttribute('active-color');
 }
 
-function setupIndicatorListeners() {
-  const items = document.querySelectorAll('.nav-item');
-  const indicator = document.querySelector('.nav-indicator');
+interface HTMLElementWithActiveClass extends HTMLElement {
+  classList: DOMTokenList & {
+    contains(token: string): boolean;
+  };
+}
+// Function to setup listeners
+const setupIndicatorListeners = () => {
+  const items: NodeListOf<HTMLElement> = document.querySelectorAll('.nav-item');
+  const indicator: HTMLElement | null = document.querySelector('.nav-indicator');
 
-  items.forEach(item => {
-    item.addEventListener('click', (e) => handleIndicator(e.target));
-    if (item.classList.contains('is-active')) {
+  items.forEach((item: HTMLElement) => {
+    item.addEventListener('click', (e) => handleIndicator(e.target as HTMLElement));
+    if ((item as HTMLElementWithActiveClass).classList.contains('is-active')) {
       handleIndicator(item);
     }
   });
-}
+};
+
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
@@ -118,9 +134,6 @@ onBeforeUnmount(() => {
 
 
 
-/* TranslateX to active link */
-
-
 .link {
   @apply text-lg hover:text-[var(--info)] text-[hsl(var(--bc))];
 }
@@ -166,9 +179,7 @@ onBeforeUnmount(() => {
 }
 
 
-.nav-item:not(.is-active):hover {
-  color: #333;
-}
+
 
 .nav-indicator {
   position: absolute;

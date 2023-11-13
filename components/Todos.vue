@@ -4,9 +4,6 @@ import SectionHeader from './globals/SectionHeader.vue'
 const { data: todos, refresh } = await useFetch('/api/todos')
 
 
-
-
-
 // Create a ref for a new todo item
 const todo = ref({
   completed: false,
@@ -42,6 +39,7 @@ async function handleCompleted(todo:any): Promise<void> {
 refresh()
   }
   catch (error) {
+    
     console.log(error)
   }
 }
