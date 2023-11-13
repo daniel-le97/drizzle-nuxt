@@ -101,7 +101,7 @@ const sections = [
                   <div class="opacity-80">
                     {{ l.content }}
                   </div>
-                </div>
+                </div>  
               </div>
             </li>
           </ul>

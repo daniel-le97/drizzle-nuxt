@@ -49,7 +49,7 @@ export default defineNuxtConfig({
   tailwindcss: {
     config: {
       // eslint-disable-next-line ts/no-require-imports
-      plugins: [require('daisyui')],
+      plugins: [require('daisyui'),  require('@tailwindcss/typography')],
       darkMode: 'class',
       daisyui: {
         themes: true,

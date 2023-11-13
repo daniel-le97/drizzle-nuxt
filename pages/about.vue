@@ -32,21 +32,22 @@ IT Consultation: Our IT specialists provide expert guidance to help you make the
   },
 
 ]
+
 </script>
 
 <template>
-  <main class="text-base-content pt-10">
+  <main class="text-base-content pt-16">
 
 
-  <div class="hero min-h-screen" style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
+  <div class="hero " style="background-image: url(https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
     <div class="hero-overlay bg-opacity-20"></div>
 
-<div class="bg-black  opacity-80 bg-opacity-25   w-5/6    h-5/6  border-8 border-white"></div>
+<div v-motion-pop-visible class="hero-inner-border"></div>
 
-    <div class="hero-content  text-center text-neutral-content">
+    <div class="hero-content  text-center text-neutral-content ">
       <div class="lg:max-w-lg max-w-sm drop-shadow-md">
         <h1 class="mb-5   text-5xl lg:text-8xl font-bold ">Hello there</h1>
-        <p class="mb-5">
+        <p class="mb-5 ">
           We appreciate you taking the time to check out this project. i hope you like it and if so check it out on github and clone it!
         </p>
 
@@ -69,21 +70,21 @@ IT Consultation: Our IT specialists provide expert guidance to help you make the
         <div :class="index % 2 === 0 ? ' order-1' : ' order-0'" class=" w-1/2 flex items-center justify-center">
           <NuxtImg :src="section.image" alt="about image" />
         </div>
-        <div :class="index % 2 === 1 ? ' order-1' : ' order-0'" class="w-1/2  flex flex-col space-y-6 p-10">
-          <div class="text-5xl font-bold font-serif">
+        <article :class="index % 2 === 1 ? ' order-1' : ' order-0'" class="w-1/2  flex flex-col space-y-6 p-10 prose">
+          <h1 class="mb-0">
             {{ section.title }}
-          </div>
-          <div class="text-2xl font-bold text-accent font-sans">
+          </h1>
+          <h2 >
             {{ section.subtitle }}
-          </div>
-          <p class="opacity-80 text-xl  ">
+          </h2>
+          <p >
             Our Mission
             Our mission is to harness the power of technology to solve complex problems and make the world a better place.
             We are driven by the belief that the right software can transform businesses and improve lives. We aim to
             create solutions that are not only efficient but also user-friendly, ensuring a seamless experience for our
             clients and their customers.
           </p>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -91,4 +92,14 @@ IT Consultation: Our IT specialists provide expert guidance to help you make the
   </main>
 </template>
 
-<style></style>
+<style  scoped>
+.hero{
+  height: 95.5vh;
+}
+
+.hero-inner-border{
+  @apply bg-black  opacity-80 bg-opacity-25     border-8 border-white;
+  height: 89%;
+  width: 89%;
+}
+</style>
