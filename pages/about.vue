@@ -42,9 +42,9 @@ IT Consultation: Our IT specialists provide expert guidance to help you make the
   <div class="hero " style="background-image: url(https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
     <div class="hero-overlay bg-opacity-20"></div>
 
-<div v-motion-pop-visible class="hero-inner-border"></div>
+<div v-motion-fade-visible :delay="200"   class="hero-inner-border"></div>
 
-    <div class="hero-content  text-center text-neutral-content ">
+    <div v-motion-fade-visible :delay="200"  class="hero-content  text-center text-neutral-content ">
       <div class="lg:max-w-lg max-w-sm drop-shadow-md">
         <h1 class="mb-5   text-5xl lg:text-8xl font-bold ">Hello there</h1>
         <p class="mb-5 ">
@@ -92,7 +92,7 @@ IT Consultation: Our IT specialists provide expert guidance to help you make the
   </main>
 </template>
 
-<style  scoped>
+<style  >
 .hero{
   height: 95.5vh;
 }

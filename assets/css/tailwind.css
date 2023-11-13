@@ -17,7 +17,8 @@
 }
 
 a{
- text-decoration: none ;
+ text-decoration: none !important ;
+
 }
 
 /* TO ACCOUNT FOR NAVBAR HEIGHT */
@@ -84,3 +85,8 @@ img{
   background: #555;
   transition: all 0.5s ease;
 }
+
+
+
+
+

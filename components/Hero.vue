@@ -4,7 +4,7 @@
 
 <template>
   <div class="hero min-h-screen relative">
-    
+
     <div v-motion-fade-visible class="hero-content text-center">
       <div
         class="mx-auto text-center flex flex-col items-center justify-center w-2/3"
