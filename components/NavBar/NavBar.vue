@@ -17,8 +17,8 @@ function handleScroll() {
   lastScrollPosition = scrollY;
 }
 
-function handleIndicator(el) {
-  const indicator = document.querySelector('.nav-indicator');
+function handleIndicator(el: HTMLElement) {
+  const indicator = document.querySelector('.nav-indicator') as HTMLElement;
   const items = document.querySelectorAll('.nav-item');
 
   items.forEach(item => {
