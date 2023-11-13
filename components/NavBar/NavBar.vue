@@ -84,7 +84,7 @@ onBeforeUnmount(() => {
     <div class="">
       <div role="Mobile-NavBar" class="dropdown">
         <label tabindex="0" class="btn btn-ghost btn-circle lg:hidden">
-          <Icon name="tdesign:hamburger" size="35" />
+          <Icon name="logos:delicious-burger" size="35" />
         </label>
         <ul tabindex="0"
           class="menu menu-sm dropdown-content mt-3 z-50 bg-base-100 text-base-content p-2 shadow rounded-box w-52">
@@ -116,7 +116,7 @@ onBeforeUnmount(() => {
       <a v-motion-fade-visible
         class="p-3 px-5 rounded-md text-xl font-bold bg-neutral text-neutral-content  hidden  lg:flex">Drizzle Nuxt</a>
     </div>
-    <div class="nav-ul">
+    <div class=" hidden lg:inline-flex relative  overflow-hidden w-fit">
       <NuxtLink v-motion-fade-visible href="/" class="nav-item is-active" active-color="orange">Home</NuxtLink>
       <NuxtLink v-motion-fade-visible href="/about" class="nav-item " active-color="orange">About</NuxtLink>
       <NuxtLink v-motion-fade-visible href="/contact" class="nav-item " active-color="orange">Contact</NuxtLink>
@@ -143,9 +143,7 @@ onBeforeUnmount(() => {
 
 
 
-.link {
-  @apply text-lg hover:text-[var(--info)] text-[hsl(var(--bc))];
-}
+
 
 
 .nav-ul {
@@ -160,11 +158,10 @@ onBeforeUnmount(() => {
 .nav-item {
 
   padding: 20px;
-  text-decoration: none;
   transition: .3s;
   margin: 0 6px;
   z-index: 1;
-  font-family: 'DM Sans', sans-serif;
+
   font-weight: 500;
   position: relative;
 

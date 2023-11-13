@@ -37,47 +37,36 @@ IT Consultation: Our IT specialists provide expert guidance to help you make the
 
 <template>
   <main class="text-base-content pt-16">
-
-
-  <div class="hero " style="background-image: url(https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
-    <div class="hero-overlay bg-opacity-20"></div>
-
-<div v-motion-fade-visible :delay="200"   class="hero-inner-border"></div>
-
-    <div v-motion-fade-visible :delay="200"  class="hero-content  text-center text-neutral-content ">
-      <div class="lg:max-w-lg max-w-sm drop-shadow-md">
-        <h1 class="mb-5   text-5xl lg:text-8xl font-bold ">Hello there</h1>
-        <p class="mb-5 ">
-          We appreciate you taking the time to check out this project. i hope you like it and if so check it out on github and clone it!
-        </p>
-
-<a href="https://github.com/daniel-le97/drizzle-nuxt" class="link text-2xl">
-   Github
-</a>
-
-
+    <div class="hero "
+      style="background-image: url(https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+      <div class="hero-overlay bg-opacity-20"></div>
+      <div v-motion-fade-visible :delay="200" class="hero-inner-border border-base-content"></div>
+      <div v-motion-fade-visible :delay="200" class="hero-content  text-center text-neutral-content ">
+        <div class="lg:max-w-lg max-w-sm drop-shadow-md">
+          <h1 class="mb-5   text-5xl lg:text-8xl font-bold ">Hello there</h1>
+          <p class="mb-5 ">
+            We appreciate you taking the time to check out this project. i hope you like it and if so check it out on
+            github and clone it!
+          </p>
+          <a href="https://github.com/daniel-le97/drizzle-nuxt" class="link text-2xl">
+            Github
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-
-
-
-
-
-
-    <section v-for="(section, index) in sections" :key="section.title" class=" p-8 flex flex-col space-y-4 bg-base-100 ">
+    <section v-motion-fade-visible  v-for="(section, index) in sections" :key="section.title" class=" my-12 p-8 flex flex-col space-y-4 bg-base-100 ">
       <div class="flex">
         <div :class="index % 2 === 0 ? ' order-1' : ' order-0'" class=" w-1/2 flex items-center justify-center">
-          <NuxtImg :src="section.image" alt="about image" />
+          <NuxtImg  :src="section.image" alt="about image" />
         </div>
         <article :class="index % 2 === 1 ? ' order-1' : ' order-0'" class="w-1/2  flex flex-col space-y-6 p-10 prose">
           <h1 class="mb-0">
             {{ section.title }}
           </h1>
-          <h2 >
+          <h2>
             {{ section.subtitle }}
           </h2>
-          <p >
+          <p>
             Our Mission
             Our mission is to harness the power of technology to solve complex problems and make the world a better place.
             We are driven by the belief that the right software can transform businesses and improve lives. We aim to
@@ -88,17 +77,31 @@ IT Consultation: Our IT specialists provide expert guidance to help you make the
       </div>
     </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <TemplateBanner />
   </main>
 </template>
 
 <style  >
-.hero{
+.hero {
   height: 95.5vh;
 }
 
-.hero-inner-border{
-  @apply bg-black  opacity-80 bg-opacity-25     border-8 border-white;
+.hero-inner-border {
+  @apply bg-black opacity-80 bg-opacity-25 border-8 ;
   height: 89%;
   width: 89%;
 }

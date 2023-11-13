@@ -12,12 +12,14 @@
         <h1
           class="gradient-text font-primary text-center font-extrabold  text-4xl md:text-6xl sm:text-5xl lg:text-8xl"
         >
-          Nuxt Drizzle Made Beautiful with Tailwind
+          Nuxt <span class="text-base-content"> With a</span> Drizzle <span class="text-base-content"> of</span> Tailwind
         </h1>
-        <p class="hero-subtitle text-base-100  ">
-          Simplify Development
+        <p class=" drop-shadow-md lg:text-5xl text-2xl md:text-3xl font-bold  mt-4 text-base-content  ">
+          Start off with some of the best features of this stack.
         </p>
       </div>
+
+
     </div>
 
   <a href="https://github.com/daniel-le97/drizzle-nuxt" target="_blank">
@@ -58,7 +60,5 @@
 
 }
 
-.hero-subtitle{
-  @apply   drop-shadow-md lg:text-5xl text-2xl md:text-3xl font-bold  mt-4
-}
+
 </style>
