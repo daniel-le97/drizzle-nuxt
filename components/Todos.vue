@@ -39,7 +39,7 @@ async function handleCompleted(todo:any): Promise<void> {
 refresh()
   }
   catch (error) {
-    
+
     console.log(error)
   }
 }
@@ -66,7 +66,7 @@ const randomize = () => todos?.value?.sort(() => Math.random() - 0.5)
     <SectionHeader title="TODO"
       subtitle="Check out this component that is utilziing the Basic usage of Drizzle and tRPC routes. Connect your db string and start adding!" />
   </div>
-  <div class=" card bg-neutral text-neutral-content p-5   w-1/2 ">
+  <div class=" card bg-neutral text-neutral-content p-5   lg:w-1/2 ">
     <div class="flex justify-between">
       <Icon name="uil:sun" size="30" />
     </div>
@@ -87,7 +87,7 @@ const randomize = () => todos?.value?.sort(() => Math.random() - 0.5)
         RANDOMIZE
       </button>
     </div>
-    <div v-if="todos?.length > 0" v-auto-animate class="pt-5 h-96 overflow-y-scroll">
+    <div v-if="todos?.length > 0" v-auto-animate class="pt-5 h-96 pr-4 overflow-y-scroll">
       <div v-for="t in todos" :key="t.id" class="py-2">
         <div class="px-3  bg-primary rounded-md flex justify-between">
           <div class="flex items-center justify-center space-x-3">

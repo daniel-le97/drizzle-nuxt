@@ -8,7 +8,7 @@ import SectionHeader from './globals/SectionHeader.vue'
   />
   <div class="flex lg:flex-row flex-col space-y-4 lg:space-y-0 mx-auto lg:space-x-10">
     <div
-    v-motion-pop-visible :delay="100"
+    v-motion-pop-visible
     class="rounded-2xl background-gradient flex items-center justify-center p-1">
       <div class="card shadow-xl bg-base-100">
         <div class="card-body items-center text-center  text-base-content ">
@@ -43,7 +43,7 @@ import SectionHeader from './globals/SectionHeader.vue'
     </div>
     <!-- GRADIENT BACKGROUND CARD -->
     <div
-    v-motion-pop-visible :delay="1800"
+    v-motion-pop-visible
    class="card shadow-xl background-gradient scale-110"
     >
       <div class="card-body items-center text-center">
@@ -77,7 +77,7 @@ import SectionHeader from './globals/SectionHeader.vue'
     </div>
     <!-- GRADIENT BACKGROUND CARD -->
     <div
-    v-motion-pop-visible :delay="100"
+    v-motion-pop-visible 
     class="rounded-2xl background-gradient flex items-center justify-center p-1">
       <div class="card shadow-xl bg-base-100">
         <div class="card-body items-center text-center  text-base-content ">

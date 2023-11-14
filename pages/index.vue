@@ -7,8 +7,8 @@ import Features from '~/components/Features.vue';
 <template>
   <div>
     <Hero />
- 
-    <main class="p-8 flex flex-col items-center justify-start gap-8 ">
+
+    <main class=" flex flex-col items-center justify-start gap-8 ">
       <Todos />
       <Features/>
       <InsideTemplate />
@@ -16,7 +16,7 @@ import Features from '~/components/Features.vue';
       <div class="divider mt-24 m-0 text-4xl font-bold text-base-content">
         Pre-made Components
       </div>
-      <div class="divider " />
+
       <PricingPlan />
       <div class="divider " />
       <Testimonials />

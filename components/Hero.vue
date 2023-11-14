@@ -10,7 +10,7 @@
         class="mx-auto text-center flex flex-col items-center justify-center w-2/3"
       >
         <h1
-          class="gradient-text font-primary text-center font-extrabold  text-4xl md:text-6xl sm:text-5xl lg:text-8xl"
+          class="gradient-text font-primary text-center font-extrabold text-6xl sm:text-5xl lg:text-8xl"
         >
           Nuxt <span class="text-base-content"> With a</span> Drizzle <span class="text-base-content"> of</span> Tailwind
         </h1>

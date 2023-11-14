@@ -77,11 +77,11 @@ const sections = [
       subtitle="What this templates offers with the Power of Nuxt, Drizzle and Tailwind."
     />
     <div class="flex flex-col items-center justify-center space-y-24">
-      <div v-motion-fade-visible v-for="(section, index) in sections" :key="section.title" class="flex items-center justify-center space-x-4">
-        <div :class="index % 2 === 0 ? ' order-1' : ' order-0'" class="  lg:w-1/3 w-1/2 flex items-center justify-center">
+      <div v-motion-fade-visible v-for="(section, index) in sections" :key="section.title" class="lg:flex items-center justify-center space-x-4">
+        <div :class="index % 2 === 0 ? ' order-1' : ' order-0'" class="p-2 lg:p-0  lg:w-1/3 md:w-1/2 flex items-center justify-center">
           <NuxtImg :src="section.image" alt="accent image" />
         </div>
-        <div :class="index % 2 === 1 ? ' order-1' : ' order-0'" class=" w-1/2 flex flex-col p-5">
+        <div :class="index % 2 === 1 ? ' order-1' : ' order-0'" class=" md:w-1/2 flex flex-col p-5">
           <div class="text-2xl font-bold">
             {{ section.title }}
           </div>
@@ -101,7 +101,7 @@ const sections = [
                   <div class="opacity-80">
                     {{ l.content }}
                   </div>
-                </div>  
+                </div>
               </div>
             </li>
           </ul>

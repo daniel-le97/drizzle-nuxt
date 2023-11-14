@@ -116,7 +116,7 @@ onBeforeUnmount(() => {
       <a v-motion-fade-visible
         class="p-3 px-5 rounded-md text-xl font-bold bg-neutral text-neutral-content  hidden  lg:flex">Drizzle Nuxt</a>
     </div>
-    <div class=" hidden lg:inline-flex relative  overflow-hidden w-fit">
+    <div class=" hidden lg:inline-flex relative  overflow-hidden w-fit ">
       <NuxtLink v-motion-fade-visible href="/" class="nav-item is-active" active-color="orange">Home</NuxtLink>
       <NuxtLink v-motion-fade-visible href="/about" class="nav-item " active-color="orange">About</NuxtLink>
       <NuxtLink v-motion-fade-visible href="/contact" class="nav-item " active-color="orange">Contact</NuxtLink>
@@ -125,7 +125,7 @@ onBeforeUnmount(() => {
       <NuxtLink v-motion-fade-visible v-else href="/login" class="nav-item " active-color="orange">Login</NuxtLink>
       <span class="nav-indicator"></span>
     </div>
-    <div class="space-x-4">
+    <div class="flex items-center justify-center space-x-4">
       <button class="btn hidden lg:block" onclick="my_modal_1.showModal()">Login Modal
       </button>
       <SearchBar />
