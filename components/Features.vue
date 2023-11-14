@@ -86,7 +86,7 @@ const plugins = [
 <template>
   <section class="lg:px-20 ">
     <SectionHeader title="Features" subtitle="Empowering Your Web Experience with Amazing  Development Technologies" />
-    <div class="gap-4 grid place-items-center grid-cols-1  space-y-4 lg:space-y-0   md:grid-cols-2 lg:grid-cols-3">
+    <div class="gap-4 grid place-items-center grid-cols-1  space-y-4 lg:space-y-0   md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cold-5">
       <a
         v-for="p in plugins" :key="p.name" ref="itemRefs" v-motion-fade-visible :delay="100" :href="p.link"
         target="_blank" class="feature-link h-full w-2/3 lg:w-full flex justify-center "
