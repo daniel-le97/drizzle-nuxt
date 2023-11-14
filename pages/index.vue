@@ -7,7 +7,7 @@ import Features from '~/components/Features.vue';
 <template>
   <div>
     <Hero />
-    <!-- <TestHero/> -->
+ 
     <main class="p-8 flex flex-col items-center justify-start gap-8 ">
       <Todos />
       <Features/>

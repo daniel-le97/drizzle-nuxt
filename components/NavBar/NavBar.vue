@@ -87,27 +87,27 @@ onBeforeUnmount(() => {
           <Icon name="logos:delicious-burger" size="35" />
         </label>
         <ul tabindex="0"
-          class="menu menu-sm dropdown-content mt-3 z-50 bg-base-100 text-base-content p-2 shadow rounded-box w-52">
-          <li v-motion-fade-visible>
-            <NuxtLink to="/" class="link" active-class="active-link">
+          class="menu menu-sm dropdown-content mt-3 z-50 bg-base-100 text-base-content p-2 shadow rounded-box ">
+          <li >
+            <NuxtLink to="/" class="mobile-link" active-class="active-link">
               Home
             </NuxtLink>
           </li>
-          <li v-motion-fade-visible>
-            <NuxtLink to="/about" class="link" active-class="active-link">
+          <li >
+            <NuxtLink to="/about" class="mobile-link" active-class="active-link">
               About
             </NuxtLink>
           </li>
-          <li v-motion-fade-visible>
-            <NuxtLink to="/contact" class="link" active-class="active-link">
+          <li >
+            <NuxtLink to="/contact" class="mobile-link" active-class="active-link">
               Contact
             </NuxtLink>
           </li>
-          <li v-motion-fade-visible>
-            <NuxtLink v-if="!session?.user" to="/login" class="link" active-class="active-link">
+          <li >
+            <NuxtLink v-if="!session?.user" to="/login" class="mobile-link" active-class="active-link">
               Login
             </NuxtLink>
-            <NuxtLink v-else to="/account" class="link" active-class="active-link">
+            <NuxtLink v-else to="/account" class="mobile-link" active-class="active-link">
               Account
             </NuxtLink>
           </li>
@@ -126,7 +126,7 @@ onBeforeUnmount(() => {
       <span class="nav-indicator"></span>
     </div>
     <div class="space-x-4">
-      <button class="btn" onclick="my_modal_1.showModal()">Login Modal
+      <button class="btn hidden lg:block" onclick="my_modal_1.showModal()">Login Modal
       </button>
       <SearchBar />
       <ThemeButton />
@@ -143,7 +143,9 @@ onBeforeUnmount(() => {
 
 
 
-
+.mobile-link{
+  @apply text-lg;
+}
 
 
 .nav-ul {

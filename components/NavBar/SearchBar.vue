@@ -29,7 +29,7 @@ function highlightMatch(text) {
 </script>
 
 <template>
-  <div class="relative">
+  <div class="relative hidden lg:block">
     <div class="dropdown">
       <label tabindex="0" class=""> <input
         v-model="searchTerm " type="text" placeholder="Search..." class="input focus:bg-transparent w-full   py-0   relative" @keydown="focusInput"

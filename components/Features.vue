@@ -8,7 +8,7 @@ const itemRefs = ref([])
 const plugins = [
   {
     name: 'Nuxt',
-    image: 'https://imgs.search.brave.com/H-lJ3BpWOxay8dqqBF5qIjMeRk2AKZCwa09lkFZymPw/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9kZXZl/bG9wMzY1LmdpdGxh/Yi5pby9udXh0anMt/Mi44LlgtZG9jL2Vu/L2xvZ29zL251eHQu/c3Zn.svg',
+    image: 'https://api.iconify.design/logos:nuxt-icon.svg',
     description: 'The Intuitive Vue Framework',
     link: 'https://nuxt.com/',
   },
@@ -26,27 +26,27 @@ const plugins = [
   },
   {
     name: 'ESLint',
-    image: 'https://cdn.iconscout.com/icon/free/png-512/free-eslint-3521412-2944856.png?f=webp&w=256',
+    image: 'https://api.iconify.design/logos:eslint.svg',
     description: 'Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards.',
     link: 'https://nuxt.com/modules/eslint',
   },
 
   {
     name: 'trpc',
-    image: 'https://trpc.io/img/logo.svg',
+    image: 'https://api.iconify.design/logos:trpc.svg',
 
     description: 'tRPC allows you to easily build & consume fully typesafe APIs without schemas or code generation.',
     link: 'https://trpc.io/',
   },
   {
     name: 'TypeScript',
-    image: 'https://imgs.search.brave.com/sXYprDxK8_0Up5vaW62rpLfRGZ5J1rxgZsxrNEMqUes/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy80/LzRjL1R5cGVzY3Jp/cHRfbG9nb18yMDIw/LnN2Zw.svg',
+    image: 'https://api.iconify.design/logos:typescript-icon.svg?color=%23a00e0e',
     description: ' TypeScript speeds up your development experience by catching errors and providing fixes before you even run your code.',
     link: 'https://www.typescriptlang.org/',
   },
   {
     name: 'VueUse',
-    image: 'https://raw.githubusercontent.com/nuxt/modules/main/icons/vueuse.svg',
+    image: 'https://api.iconify.design/logos:vueuse.svg?color=%23a00e0e',
     description: 'Collection of Vue Composition Utilities based on Composition API.',
     link: '',
   },
@@ -84,14 +84,14 @@ const plugins = [
 </script>
 
 <template>
-  <section class="px-20">
+  <section class="lg:px-20 ">
     <SectionHeader title="Features" subtitle="Empowering Your Web Experience with Amazing  Development Technologies" />
-    <div class="gap-4 grid  space-y-4 lg:space-y-0  grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <div class="gap-4 grid place-items-center grid-cols-1  space-y-4 lg:space-y-0   md:grid-cols-2 lg:grid-cols-3">
       <a
         v-for="p in plugins" :key="p.name" ref="itemRefs" v-motion-fade-visible :delay="100" :href="p.link"
-        target="_blank" class="feature-link"
+        target="_blank" class="feature-link h-full w-2/3 lg:w-full flex justify-center "
       >
-        <div class="p-4 card bg-neutral shadow-xl h-full hover:bg-[hsl(var(--nf))] duration-300 ease-linear group">
+        <div class="p-4 card w-full   bg-neutral shadow-xl h-full hover:bg-[hsl(var(--nf))] duration-300 ease-linear group">
           <div  class="flex justify-between mb-4">
             <NuxtImg :src="p.image"  :alt="p.name" class="w-16 h-16 rounded-md group-hover:scale-125 group-hover:-translate-x-4 group-hover:-translate-y-4" />
             <Icon name="uil:external-link-alt" size="20" class="text-neutral-content scale-0 group-hover:scale-100 duration-300" />
